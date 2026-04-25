@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-04-25T06:36:00+09:00",
+  "ideas": [
+    {
+      "id": "lb-001",
+      "title": "텍스트를 좌표처럼 다뤄라",
+      "body": "각 글자를 독립된 파티클로 취급한다. 스크롤 또는 마우스에 따라 분해/재조립되는 키네틱 타이포그래피는 방문자에게 강렬한 첫인상을 남긴다. GSAP SplitText + motionPath 조합이 효과적.",
+      "category": "web",
+      "tags": ["typography", "scroll", "gsap", "kinetic"],
+      "date": "2026-04-25",
+      "source": "agent-discovery",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-002",
+      "title": "수직 스크롤은 목적이 있을 때만",
+      "body": "레이아웃 선택은 목적에서 시작한다. 감성 전달 목적이라면 수직 스크롤이 맞지만, 포트폴리오 임팩트 전달에는 풀스크린 갤러리가 더 적합할 수 있다. Purpose Archaeology 단계에서 반드시 검토할 것.",
+      "category": "design",
+      "tags": ["layout", "ux", "purpose", "scroll"],
+      "date": "2026-04-25",
+      "source": "agent-discovery",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-003",
+      "title": "Data slop을 경계하라",
+      "body": "불필요한 숫자, 카운터, 아이콘 반복은 디자인을 오히려 약하게 만든다. '고객 만족도 98%' 같은 공허한 수치보다 단 하나의 강렬한 인상이 낫다. One thousand no's for every yes.",
+      "category": "design",
+      "tags": ["content", "minimalism", "quality"],
+      "date": "2026-04-25",
+      "source": "ceo-memo",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-004",
+      "title": "60fps는 협상 불가",
+      "body": "top/left/width/height 애니메이션은 Layout Reflow를 유발한다. transform/opacity만 애니메이션에 사용하고, will-change를 필수로 선언한다. GSAP에서는 x/y를 사용하고 scrub:true는 금지.",
+      "category": "web",
+      "tags": ["performance", "animation", "gsap", "60fps"],
+      "date": "2026-04-25",
+      "source": "agent-discovery",
+      "added_by": "yuna",
+      "status": "in-use",
+      "url": ""
+    },
+    {
+      "id": "lb-005",
+      "title": "클리셰를 알아야 클리셰를 피한다",
+      "body": "이 주제에서 흔히 보이는 패턴 5가지를 먼저 선언하고 금지한다. 단, 패턴은 적이 아니다. 관성이 적이다. 성공 패턴을 파악해야 올바르게 변주할 수 있다.",
+      "category": "ai",
+      "tags": ["creativity", "prompt", "cliche", "design"],
+      "date": "2026-04-25",
+      "source": "ceo-memo",
+      "added_by": "yuna",
+      "status": "in-use",
+      "url": ""
+    }
+  ]
+}
