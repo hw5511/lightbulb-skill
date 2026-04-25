@@ -1,11 +1,11 @@
 {
   "version": "1.0",
-  "updated_at": "2026-04-25T10:30:00+09:00",
+  "updated_at": "2026-04-25T11:30:00+09:00",
   "ideas": [
     {
       "id": "lb-001",
-      "title": "텍스트를 좌표처럼 다뤄라",
-      "body": "각 글자를 독립된 파티클로 취급한다. 스크롤 또는 마우스에 따라 분해/재조립되는 키네틱 타이포그래피는 방문자에게 강렬한 첫인상을 남긴다. GSAP SplitText + motionPath 조합이 효과적.",
+      "title": "글자는 좌표 위의 파티클이다",
+      "body": "텍스트를 정보 덩어리가 아닌 공간을 부유하는 수천 개의 독립 입자로 상상하라. 흩어지고 모이는 글자들은 방문자에게 \"이 웹사이트는 다르다\"는 첫 신호를 준다. 읽는 것이 아니라 경험하는 타이포그래피.",
       "category": "web",
       "tags": [
         "typography",
@@ -20,59 +20,9 @@
       "url": ""
     },
     {
-      "id": "lb-002",
-      "title": "수직 스크롤은 목적이 있을 때만",
-      "body": "레이아웃 선택은 목적에서 시작한다. 감성 전달 목적이라면 수직 스크롤이 맞지만, 포트폴리오 임팩트 전달에는 풀스크린 갤러리가 더 적합할 수 있다. Purpose Archaeology 단계에서 반드시 검토할 것.",
-      "category": "design",
-      "tags": [
-        "layout",
-        "ux",
-        "purpose",
-        "scroll"
-      ],
-      "date": "2026-04-25",
-      "source": "agent-discovery",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-003",
-      "title": "Data slop을 경계하라",
-      "body": "불필요한 숫자, 카운터, 아이콘 반복은 디자인을 오히려 약하게 만든다. '고객 만족도 98%' 같은 공허한 수치보다 단 하나의 강렬한 인상이 낫다. One thousand no's for every yes.",
-      "category": "design",
-      "tags": [
-        "content",
-        "minimalism",
-        "quality"
-      ],
-      "date": "2026-04-25",
-      "source": "ceo-memo",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-004",
-      "title": "60fps는 협상 불가",
-      "body": "top/left/width/height 애니메이션은 Layout Reflow를 유발한다. transform/opacity만 애니메이션에 사용하고, will-change를 필수로 선언한다. GSAP에서는 x/y를 사용하고 scrub:true는 금지.",
-      "category": "web",
-      "tags": [
-        "performance",
-        "animation",
-        "gsap",
-        "60fps"
-      ],
-      "date": "2026-04-25",
-      "source": "agent-discovery",
-      "added_by": "yuna",
-      "status": "in-use",
-      "url": ""
-    },
-    {
       "id": "lb-006",
-      "title": "물리 기반 모션의 해방 (Spring Physics)",
-      "body": "정해진 이징 함수 대신 탄성, 무게, 마찰력을 적용한 스프링 물리 모델을 인터랙션에 도입하라. 사용자의 드래그나 클릭이 끝난 후에도 미세한 관성이 느껴질 때 웹은 비로소 살아있는 유기체로 인식된다.",
+      "title": "무게와 탄성을 가진 움직임",
+      "body": "세상의 모든 물체는 관성이 있다. 클릭 후 즉시 멈추는 인터페이스는 죽어있다. 움직임이 끝난 후에도 미세하게 흔들리는 잔향, 그것이 디지털에 질량감을 부여한다. 스프링 물리는 기술이 아니라 생명의 언어다.",
       "category": "web",
       "tags": [
         "FramerMotion",
@@ -119,8 +69,8 @@
     },
     {
       "id": "lb-009",
-      "title": "스크롤은 애니메이션의 재생 헤드다",
-      "body": "스크롤을 위치 이동이 아닌 타임라인의 진행도로 취급하라. CSS @scroll-timeline을 활용해 스크롤 속도와 방향에 따라 요소의 스케일, 회전, 필터를 정밀하게 동기화하면 정적인 레이아웃에 서사적인 몰입감을 부여할 수 있다.",
+      "title": "스크롤은 영화의 타임라인이다",
+      "body": "마우스 휠은 사실 영화 편집기의 재생 헤드다. 사용자가 스크롤할 때 시간이 앞으로 가는 것이 아니라, 이미 완성된 장면들을 하나씩 열어보는 것이다. 웹을 시간축 위의 영화로 설계하면 내러티브가 생긴다.",
       "category": "web",
       "tags": [
         "CSS-only",
@@ -150,73 +100,9 @@
       "url": ""
     },
     {
-      "id": "lb-011",
-      "title": "브레이크포인트 없는 유연함 (Fluid Scale Logic)",
-      "body": "미디어 쿼리에 의존하는 단계별 크기 조절을 버리고 clamp() 함수를 통해 모든 수치를 선형적으로 설계하라. 폰트 크기뿐만 아니라 여백, 너비까지 루트 단위를 기준으로 유동적으로 변하게 하면 어떤 해상도에서도 의도한 시각적 밀도가 유지된다.",
-      "category": "web",
-      "tags": [
-        "FluidDesign",
-        "CSS-Clamp",
-        "Responsive"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-012",
-      "title": "컴포넌트 단위의 공간 인지 (Container Queries)",
-      "body": "전체 화면이 아닌 자신이 놓인 부모 컨테이너의 크기에 따라 레이아웃을 결정하라. container-type을 활용하면 배치되는 위치에 따라 내부 구조를 스스로 최적화하는 진정한 독립적 모듈을 구현할 수 있다.",
-      "category": "web",
-      "tags": [
-        "ContainerQueries",
-        "Modular",
-        "LayoutStrategy"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-013",
-      "title": "보이지 않는 정렬의 연속성 (Subgrid)",
-      "body": "중첩된 그리드 구조에서 자식 요소가 부모의 그리드 라인을 그대로 상속받게 하라. grid-template-rows: subgrid를 사용하면 서로 다른 카드 내부에 있는 제목이나 버튼들이 내용 길이에 상관없이 수평 선상에서 완벽하게 정렬된다.",
-      "category": "web",
-      "tags": [
-        "CSSGrid",
-        "Subgrid",
-        "Precision"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-014",
-      "title": "서체를 반응형 유기체로 (Variable Font Axes)",
-      "body": "가변 폰트의 굵기(wght), 너비(wdth), 기울기(slnt) 축을 인터랙션 데이터와 직접 연결하라. 사용자의 스크롤 깊이나 마우스 거리 등에 따라 서체가 미세하게 수축하고 팽창하는 반응은 텍스트에 목소리를 부여한다.",
-      "category": "web",
-      "tags": [
-        "VariableFonts",
-        "Typography",
-        "DynamicType"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
       "id": "lb-015",
-      "title": "직사각형 박스 모델의 파괴 (shape-outside)",
-      "body": "shape-outside 속성을 사용하여 텍스트가 정형화된 사각형이 아닌 유기적인 실루엣이나 원형 경로를 따라 흐르게 하라. 웹 특유의 딱딱한 블록 구조를 지우고 잡지 편집 디자인과 같은 예술적 구성을 완성한다.",
+      "title": "텍스트가 실루엣을 껴안는다",
+      "body": "웹의 모든 텍스트는 사각형 안에 갇혀있다 — 그것은 기본값이지 진실이 아니다. 이미지의 윤곽선을 따라 문장이 곡선으로 흐를 때, 독자는 텍스트와 이미지 사이에 살아있는 관계가 생겼다고 느낀다.",
       "category": "web",
       "tags": [
         "CSSShapes",
@@ -238,22 +124,6 @@
         "Threejs",
         "MatCap",
         "Performance"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-017",
-      "title": "기하학적 반복의 최적화 (Instanced Mesh)",
-      "body": "수천 개의 독립된 오브젝트를 렌더링해야 할 때 InstancedMesh를 사용해 단 한 번의 드로우 콜로 처리하라. 나뭇잎, 파티클, 군중 등을 구현할 때 CPU와 GPU 사이의 병목 현상을 제거하여 수만 개의 요소를 60fps로 유지하는 비결이다.",
-      "category": "web",
-      "tags": [
-        "WebGL",
-        "Instancing",
-        "Optimization"
       ],
       "date": "2026-04-25",
       "source": "gemini-discussion",
@@ -295,8 +165,8 @@
     },
     {
       "id": "lb-020",
-      "title": "접지력을 만드는 그림자 (Contact Shadows)",
-      "body": "무거운 실시간 그림자 대신 바닥면에 밀착된 정적인 평면 그림자(Contact Shadows)를 활용하라. 물체가 바닥에 닿는 지점만 어둡게 처리하는 텍스처를 배치하면, 복잡한 라이팅 없이도 오브젝트가 공간에 안착되어 있다는 강력한 공간감을 준다.",
+      "title": "부유하는 것들에게 중력을 선물하라",
+      "body": "화면 위의 모든 요소는 기본적으로 중력이 없다. 그러나 물체 아래 바닥에 밀착된 그림자 하나가 추가되는 순간, 픽셀은 무게를 얻고 공간에 착지한다. 그림자는 장식이 아니라 현실 감각의 닻이다.",
       "category": "web",
       "tags": [
         "Realism",
@@ -310,22 +180,6 @@
       "url": ""
     },
     {
-      "id": "lb-021",
-      "title": "지각적 균일함의 표준 (OKLCH System)",
-      "body": "HSL 대신 인간의 눈이 느끼는 밝기를 정확히 반영하는 OKLCH를 사용하라. 서로 다른 색상(Hue)에서도 L(Lightness) 수치만 맞추면 시각적 무게감이 동일하게 유지되어, UI 구성 요소의 일관성을 완벽하게 제어할 수 있다.",
-      "category": "design",
-      "tags": [
-        "OKLCH",
-        "ColorSystem",
-        "Perceptual"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "in-use",
-      "url": ""
-    },
-    {
       "id": "lb-022",
       "title": "브랜드의 DNA가 담긴 무채색 (Tinted Neutrals)",
       "body": "순수한 검정이나 회색 대신, 브랜드의 핵심 색상을 1~5% 섞은 틴티드 그레이를 설계하라. 무채색 영역에 아주 미세한 색조가 감도는 것만으로도 화면 전체에 고급스러운 통일감이 생기며 디자인의 깊이가 달라진다.",
@@ -334,22 +188,6 @@
         "ColorHarmony",
         "Branding",
         "Neutrals"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-023",
-      "title": "대비를 넘어서는 인지성 (Contextual Luminance)",
-      "body": "다크 모드에서는 라이트 모드보다 채도를 낮추고 명도를 미세하게 올려라. 어두운 배경에서 고채도 색상은 눈부심(Vibration)을 유발하므로, 배경과의 명도 대비뿐만 아니라 눈의 피로도를 고려한 인지적 휘도를 조정해야 한다.",
-      "category": "design",
-      "tags": [
-        "DarkMode",
-        "Accessibility",
-        "UI"
       ],
       "date": "2026-04-25",
       "source": "gemini-discussion",
@@ -390,102 +228,6 @@
       "url": ""
     },
     {
-      "id": "lb-026",
-      "title": "여백을 선처럼 다뤄라 (Active Negative Space)",
-      "body": "정보의 그룹을 나누기 위해 보더나 라인을 치는 대신, 여백의 크기 차이만으로 구역을 정의하라. 더 넓은 여백은 더 강력한 단절이자 새로운 시작을 의미하며, 이는 레이아웃을 숨 쉬게 만들고 사용자가 정보의 덩어리를 직관적으로 파악하게 돕는다.",
-      "category": "design",
-      "tags": [
-        "NegativeSpace",
-        "Hierarchy",
-        "LayoutLogic"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-027",
-      "title": "크기에 따른 자간의 반비례 (Optical Tracking)",
-      "body": "폰트 사이즈가 커질수록 자간(Letter-spacing)을 미세하게 조이고, 작아질수록 넓혀라. 거대한 타이틀은 자간을 조여 시각적 응집력을 높여야 오브젝트처럼 보이며, 작은 본문은 글자 사이 공간을 확보해야 가독성이 살아난다.",
-      "category": "design",
-      "tags": [
-        "Typography",
-        "Readability",
-        "OpticalAdjustment"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-028",
-      "title": "행간은 정보의 호흡이다 (Dynamic Line Height)",
-      "body": "본문은 가독성을 위해 넓은 행간(1.5~1.7)을 확보하되, 제목은 시각적 임팩트를 위해 좁은 행간(1.1~1.2)을 유지하라. 짧고 강렬한 메시지는 행간을 좁혀 시선을 단단하게 묶어두는 수직 리듬의 설계가 필요하다.",
-      "category": "design",
-      "tags": [
-        "VerticalRhythm",
-        "LineHeight",
-        "InformationArchitecture"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-029",
-      "title": "서체 조합은 기능의 분리다 (Functional Pairing)",
-      "body": "비슷한 성격의 서체를 섞지 말고, 확실한 형태적 대조를 주라. 예리한 세리프(제목)와 기하학적인 산세리프(본문)의 조합은 단순한 미감을 넘어 주장과 설명이라는 정보의 기능을 시각적으로 분리하여 인지 부하를 줄여준다.",
-      "category": "design",
-      "tags": [
-        "TypePairing",
-        "Contrast",
-        "VisualCommunication"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-030",
-      "title": "시선의 끝을 설계하라 (Terminal Points)",
-      "body": "위계의 최상단(제목)에서 시작된 시선이 어디서 멈춰야 할지 명확한 종착지(CTA)를 제공하라. 중간 단계의 텍스트가 너무 강하면 시선이 분산되어 전환으로 이어지지 않는다. 모든 텍스트 요소는 최종 목적지를 향한 징검다리 역할을 수행해야 한다.",
-      "category": "design",
-      "tags": [
-        "VisualAnchor",
-        "Conversion",
-        "EyeTracking"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-031",
-      "title": "의도적 비대칭과 시각적 긴장 (Asymmetric Balance)",
-      "body": "완벽한 대칭이 주는 안정감 대신 6:4나 7:3의 비율로 요소를 배치하여 시각적 긴장감을 조성하라. 좌우 무게 중심이 미세하게 어긋날 때 사용자의 시선은 화면에 더 오래 머물며, 정적인 페이지에서 동적인 에너지를 느끼게 된다.",
-      "category": "design",
-      "tags": [
-        "Asymmetry",
-        "VisualTension",
-        "LayoutComposition"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
       "id": "lb-032",
       "title": "타이포그래피의 공간화 (Type-as-Architecture)",
       "body": "서체를 단순한 정보 전달 도구가 아닌, 레이아웃을 지탱하는 구조물로 사용하라. 거대한 타이포그래피를 배경 오브젝트로 배치하거나 이미지와 중첩시켜 공간의 깊이감을 만들면, 텍스트 자체가 디자인의 핵심 아이덴티티가 된다.",
@@ -503,8 +245,8 @@
     },
     {
       "id": "lb-033",
-      "title": "경계를 허무는 중첩 (Intentional Overlapping)",
-      "body": "섹션과 섹션, 이미지와 텍스트의 경계를 명확히 나누지 말고 의도적으로 겹쳐라. 요소들이 서로의 영역을 침범할 때 브라우저 특유의 박스 모델 느낌이 사라지고, 마치 잡지나 포스터처럼 하나의 완결된 캔버스처럼 느껴지게 된다.",
+      "title": "요소들이 서로의 영역을 침범할 때",
+      "body": "이미지와 텍스트가 경계를 존중하며 각자의 칸 안에 머물면 웹사이트는 잡지 레이아웃이 된다. 그러나 요소들이 경계를 넘어 서로의 공간으로 침투할 때, 페이지는 긴장감과 비밀스러운 에너지를 갖는다.",
       "category": "design",
       "tags": [
         "Z-Index",
@@ -534,38 +276,6 @@
       "url": ""
     },
     {
-      "id": "lb-035",
-      "title": "여백의 압도적 권위 (Aggressive White Space)",
-      "body": "여백을 남는 공간이 아닌 가장 비싼 오브젝트로 대우하라. 화면의 80% 이상을 비우고 단 하나의 단어나 이미지만 배치하는 극단적인 여백 활용은, 그 공간에 놓인 정보에 범접할 수 없는 권위와 미니멀한 아름다움을 부여한다.",
-      "category": "design",
-      "tags": [
-        "Minimalism",
-        "LuxuryDesign",
-        "Focus"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-046",
-      "title": "선택의 역설을 해결하는 골든 패스 (Guided Path)",
-      "body": "너무 많은 옵션은 사용자를 마비시킨다. 가장 수익성이 높거나 만족도가 높은 단 하나의 옵션을 시각적으로 압도적으로 강조하여 의사결정 에너지를 아껴줘라. 사용자는 선택의 고통 대신 제안에 따르는 안도감을 느끼며 전환된다.",
-      "category": "ux",
-      "tags": [
-        "ChoiceArchitecture",
-        "CRO",
-        "DecisionLogic"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
       "id": "lb-047",
       "title": "완성되지 않은 과업의 갈증 (Zeigarnik Onboarding)",
       "body": "가입이나 설문 절차를 여러 단계로 나누고, 진행률 바를 0%가 아닌 15%(이미 시작됨)에서 시작하라. 인간은 미완성된 과업을 끝내려는 강력한 심리적 본능(자이가르닉 효과)이 있으며, 이는 복잡한 온보딩 완료율을 비약적으로 높인다.",
@@ -582,57 +292,9 @@
       "url": ""
     },
     {
-      "id": "lb-048",
-      "title": "보상 먼저, 요구는 나중에 (Reciprocity Loop)",
-      "body": "이메일 주소를 요구하기 전에 사용자가 즉각적으로 가치를 느낄 수 있는 작은 결과를 먼저 제공하라. 먼저 받은 혜택은 심리적 부채감을 만들어, 이후의 데이터 입력이나 결제 요구에 대한 저항을 극적으로 낮춘다.",
-      "category": "ux",
-      "tags": [
-        "Reciprocity",
-        "GrowthHacking",
-        "ValueFirst"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-049",
-      "title": "마지막 1초의 확신 (Frictionless Reassurance)",
-      "body": "결제나 가입 버튼 바로 아래에 신용카드 필요 없음, 30초 만에 완료, 언제든 해지 가능과 같은 마이크로 카피를 배치하라. 클릭 직전 사용자가 느끼는 마지막 심리적 마찰(Friction)을 버튼 주변에서 즉시 해소하는 것이 페이지 전체를 고치는 것보다 효과적이다.",
-      "category": "ux",
-      "tags": [
-        "Microcopy",
-        "TrustSignals",
-        "Conversion"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-050",
-      "title": "정적 증명을 넘어선 동적 증거 (Live Social Proof)",
-      "body": "박제된 추천사 대신 현재 X명이 이 상품을 보고 있습니다 또는 방금 서울에서 Y님이 가입했습니다와 같은 실시간 데이터를 인터랙션에 녹여라. 타인의 실시간 활동은 가장 강력한 신뢰를 주며, 웹사이트에 지금 당장 참여해야 할 것 같은 활기를 부여한다.",
-      "category": "ux",
-      "tags": [
-        "SocialProof",
-        "Urgency",
-        "RealtimeData"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
       "id": "lb-051",
-      "title": "서사적 스크롤링의 미학 (Narrative Sequence)",
-      "body": "웹사이트를 단편적인 정보의 나열이 아닌, 기승전결이 있는 한 편의 이야기로 설계하라. 사용자가 스크롤을 내릴 때마다 문제 제기, 해결책 제시, 비전 공유의 순서로 정보가 전개되도록 배치하면 사용자는 구매자를 넘어 브랜드 서사의 주인공이 된다.",
+      "title": "스크롤이 내려갈수록 무대 장치가 바뀐다",
+      "body": "방문자는 정보를 읽는 독자가 아니라 무대 위를 걸어가는 관객이다. 스크롤 한 번에 조명이 바뀌고 배우가 등장한다. 웹사이트가 연극적 구성을 가질 때, 방문자는 끝까지 무대를 떠나지 않는다.",
       "category": "ux",
       "tags": [
         "Storytelling",
@@ -662,25 +324,9 @@
       "url": ""
     },
     {
-      "id": "lb-053",
-      "title": "공유된 결핍과 가치관의 연대 (Belief-based Branding)",
-      "body": "제품의 기능(What)이 아니라 우리가 왜 존재하는지(Why)와 무엇을 경계하는지를 먼저 선언하라. 브랜드가 맞서 싸우는 문제나 지향하는 가치에 공감하는 사용자는 단순한 소비자를 넘어 강력한 팬덤이자 옹호자(Evangelist)로 진화한다.",
-      "category": "ux",
-      "tags": [
-        "BrandPurpose",
-        "Community",
-        "EmotionalBond"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
       "id": "lb-054",
-      "title": "디지털의 차가움을 녹이는 휴먼 터치",
-      "body": "완벽하게 정렬된 픽셀 사이에 의도적인 손글씨, 거친 질감의 종이 텍스처, 혹은 제작자의 진솔한 메시지를 삽입하라. 기술 뒤에 살아있는 사람이 있다는 느낌은 디지털 환경 특유의 불신을 제거하고 브랜드에 대한 친밀감과 깊은 신뢰를 형성한다.",
+      "title": "완벽한 픽셀 속에 사람의 흔적을 심어라",
+      "body": "디지털은 완벽하다 — 그래서 차갑다. 반듯하게 정렬된 요소들 사이에 의도적으로 기울어진 손글씨 한 줄, 종이 질감 한 조각을 심어라. 완벽함이 지배하는 공간에서 작은 불완전함이 가장 인간적인 신호가 된다.",
       "category": "ux",
       "tags": [
         "HumanCentric",
@@ -710,302 +356,14 @@
       "url": ""
     },
     {
-      "id": "lb-070",
-      "title": "애니메이션의 품격 있는 후퇴 (Motion Redesign)",
-      "body": "prefers-reduced-motion 대응 시 단순히 애니메이션을 끄는 것에 그치지 말고, 이동(Translation) 효과를 불투명도(Opacity)나 블러(Blur) 전환으로 대체하라. 움직임에 민감한 사용자에게 멀미를 유발하지 않으면서도 상태 변화의 연속성을 우아하게 전달할 수 있다.",
-      "category": "web",
-      "tags": [
-        "A11y",
-        "ReducedMotion",
-        "UX"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-071",
-      "title": "포커스 링의 아이덴티티화 (Branded Focus-Visible)",
-      "body": "기본 아웃라인을 제거하는 대신 :focus-visible을 사용하여 키보드 사용자에게만 노출되는 브랜드 고유의 포커스 스타일을 설계하라. 요소의 곡률을 반영한 이중 보더나 미세한 글로우 효과는 접근성을 미적 완성도로 승화시키는 장치가 된다.",
-      "category": "web",
-      "tags": [
-        "FocusVisible",
-        "Accessibility",
-        "UI"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-072",
-      "title": "인지적 흐름을 만드는 스테거링 (Sequential Appearance)",
-      "body": "리스트나 카드 요소를 한꺼번에 노출하지 말고 0.05초 단위의 미세한 시차(Stagger)를 두어 순차적으로 등장시켜라. 이는 시선의 흐름을 자연스럽게 유도하여 사용자가 정보의 계층 구조와 양을 직관적으로 파악하게 돕는 인지적 가이드 역할을 한다.",
-      "category": "web",
-      "tags": [
-        "Micro-interaction",
-        "CognitiveLoad",
-        "Stagger"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-073",
-      "title": "맥락을 설명하는 인터랙티브 레이블 (Contextual ARIA)",
-      "body": "단순한 닫기 버튼 대신 팝업 창 닫기 혹은 장바구니에서 삭제와 같이 목적이 명확한 aria-label을 제공하라. 인터랙션의 결과가 무엇인지 스크린 리더 사용자에게 실시간으로 중계함으로써, 보이지 않는 곳에서도 사용자 여정이 끊기지 않도록 설계해야 한다.",
-      "category": "web",
-      "tags": [
-        "Aria-label",
-        "ScreenReader",
-        "Interactivity"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-074",
-      "title": "가상 광원과 다중 레이어 그림자",
-      "body": "단일 그림자 속성 대신, 농도와 퍼짐 정도가 다른 3~5개의 그림자를 겹쳐서 설계하라. 실제 물리 세계의 빛은 여러 번 회절하며 부드러운 그림자를 만드는데, 이 부드러움의 밀도가 디지털 오브젝트를 실제 손에 잡힐 듯한 고급스러운 물체로 변모시킨다.",
-      "category": "design",
-      "tags": [
-        "SoftShadows",
-        "Depth",
-        "Lighting"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-075",
-      "title": "곡률의 연속성 (G2 Continuity / Squircle)",
-      "body": "표준적인 CSS border-radius가 만드는 급격한 직선-곡선 전환 대신, 슈퍼엘립스(Squircle)와 같은 부드러운 곡률을 적용하라. 애플 제품의 모서리처럼 곡선이 시작되는 지점이 느껴지지 않을 만큼 매끄러운 연속성은 사용자의 눈에 본능적인 편안함과 프리미엄한 인상을 준다.",
-      "category": "design",
-      "tags": [
-        "Squircle",
-        "SmoothCorner",
-        "IndustrialDesign"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-076",
-      "title": "1픽셀의 미학, 헤어라인 디테일",
-      "body": "면과 면이 만나는 지점에 배경보다 아주 미세하게 밝거나 어두운 1px(또는 0.5px)의 헤어라인 보더를 삽입하라. 이 미세한 선은 금속 시계의 모서리가 빛을 받아 반짝이는 듯한 효과를 주며, 디자인이 극도로 정밀하게 관리되고 있다는 장인 정신의 인상을 심어준다.",
-      "category": "design",
-      "tags": [
-        "Precision",
-        "Micro-detail",
-        "Elegance"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
       "id": "lb-077",
-      "title": "심도를 통한 공간의 위계 (Atmospheric Blur)",
-      "body": "단순히 요소를 위에 쌓지 말고, 배경 요소에 backdrop-filter: blur()를 적용하여 카메라의 보케(Bokeh) 효과를 흉내 내라. 사용자는 초점이 맞은 레이어와 공간적 배경을 본능적으로 구분하게 되며, 이는 화면 안에 깊이 있는 입체적 공간이 존재한다는 감각을 일깨운다.",
+      "title": "블러는 공기의 밀도를 표현한다",
+      "body": "가까운 것은 선명하고 먼 것은 흐리다 — 이것은 눈의 물리법칙이자 공간 인식의 언어다. 배경을 흐리게 처리하는 순간 화면 안에 깊이와 공기의 밀도가 생기고, 방문자는 2D 화면에서 3D 공간을 경험한다.",
       "category": "design",
       "tags": [
         "BlurFilter",
         "SpatialDesign",
         "DepthOfField"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-078",
-      "title": "디지털의 살결을 만드는 미세 노이즈 (Film Grain)",
-      "body": "완벽하게 매끄러운 단색 배경 위에 투명도 2~3%의 미세한 노이즈(Grain) 텍스처를 오버레이하라. 픽셀의 결이 느껴지는 미세한 질감은 디지털 특유의 차갑고 가공된 느낌을 지우고, 마치 고급 종이나 필름 인화물 같은 아날로그적인 따뜻함과 예술적 깊이를 부여한다.",
-      "category": "design",
-      "tags": [
-        "Texture",
-        "AnalogAesthetic",
-        "VisualDepth"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-083",
-      "title": "독보적 관점의 시대 (E-E-A-T & Perspectives)",
-      "body": "AI가 생성한 일반 정보는 상품화되었다. 이제 검색 엔진은 뻔한 설명보다 저자만이 가진 독특한 경험, 실패 사례, 주관적 통찰이 담긴 관점을 최상단에 배치한다. 무엇인가가 아닌 나는 어떻게 했는가를 말하는 콘텐츠만이 AI 검색 엔진의 선택을 받는다.",
-      "category": "ux",
-      "tags": [
-        "SEO",
-        "E-E-A-T",
-        "ContentStrategy"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-084",
-      "title": "키워드에서 엔티티로 (Semantic SEO)",
-      "body": "개별 키워드 순위에 집착하지 말고 주제 간의 관계를 정의하는 엔티티(Entity) 중심으로 콘텐츠를 설계하라. AI 모델은 웹을 지식 그래프로 인식한다. 특정 주제에 대해 구조적이고 깊이 있는 답변(Topic Cluster)을 제공하여 당신의 사이트를 해당 분야의 권위자로 인식하게 만들어야 한다.",
-      "category": "ux",
-      "tags": [
-        "KnowledgeGraph",
-        "TopicCluster",
-        "SemanticSearch"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-085",
-      "title": "클릭 너머의 브랜딩 (Zero-Click Strategy)",
-      "body": "제로 클릭 시대에는 사용자가 사이트에 유입되지 않아도 누가 이 정보를 줬는지 기억하게 해야 한다. 검색 스니펫에 노출되는 강렬한 브랜드 메시지와 로고는 SERP(검색 결과 페이지) 자체를 브랜딩 보드로 활용하여 잠재적 신뢰를 쌓는 기회가 된다.",
-      "category": "ux",
-      "tags": [
-        "BrandAwareness",
-        "SERP",
-        "Zero-Click"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-086",
-      "title": "규모의 자동화와 개인화 (Programmatic SEO)",
-      "body": "반복적인 데이터 기반 페이지는 AI를 활용해 대량 생성(Programmatic)하되, 사용자 의도(Intent)에 맞춘 마이크로 세그먼트화를 진행하라. 수만 개의 니즈별 페이지를 자동화하면서도 각 페이지가 사용자의 특정 문제에 대한 정밀한 해답을 줄 때, 롱테일 키워드를 통한 폭발적인 유기적 성장이 가능하다.",
-      "category": "ux",
-      "tags": [
-        "GrowthHacking",
-        "Automation",
-        "Personalization"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-087",
-      "title": "멀티모달 최적화 (Multi-modal Search Discovery)",
-      "body": "AI 비서는 이제 텍스트뿐만 아니라 이미지, 영상, 오디오를 동시에 이해하고 검색 결과에 반영한다. 시각 자료에 상세한 구조화 데이터(Schema.org)를 입히고, 영상의 핵심 구간을 텍스트화하여 제공하라. 어떤 형태의 질문을 받아도 당신의 자산을 가장 먼저 추천할 수 있는 공감각적 최적화가 필수적이다.",
-      "category": "ux",
-      "tags": [
-        "Schema",
-        "Multi-modal",
-        "SearchTrends"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-088",
-      "title": "실패를 기회로 바꾸는 회복 탄력적 오류 설계",
-      "body": "에러 메시지를 단순히 잘못을 지적하는 경고문이 아니라, 해결책을 제시하는 가이드로 정의하라. 유머러스한 어조나 명확한 액션 플랜(비밀번호 찾기 링크 포함)을 제공할 때, 사용자는 좌절 대신 브랜드에 대한 의외의 호감과 신뢰를 얻는다.",
-      "category": "design",
-      "tags": [
-        "ErrorUX",
-        "Copywriting",
-        "Resilience"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-089",
-      "title": "인지적 흐름을 깨지 않는 실시간 검증 (Dynamic Validation)",
-      "body": "데이터 입력 중(Focus-on)에 에러를 띄워 흐름을 끊지 말고, 입력을 마치고 다음 필드로 넘어갈 때(Blur) 검증하라. 반대로 성공 시에는 즉각적인 시각적 피드백(체크 표시 등)을 주어 성취감을 부여함으로써 폼 작성을 하나의 능동적인 게임처럼 느끼게 유도해야 한다.",
-      "category": "design",
-      "tags": [
-        "FormUX",
-        "FeedbackLoop",
-        "CognitiveFlow"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-090",
-      "title": "빈 상태를 통한 시작의 두려움 해소 (Active Empty States)",
-      "body": "내역이 없습니다라는 무미건조한 문구 대신, 첫 데이터를 생성하도록 유도하는 템플릿이나 예시 가이드를 배치하라. 비어있는 공간은 정보의 부재를 알리는 곳이 아니라, 사용자가 무엇을 할 수 있는지 알려주는 기회의 공간으로 인지되어야 한다.",
-      "category": "design",
-      "tags": [
-        "EmptyState",
-        "Onboarding",
-        "Engagement"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-091",
-      "title": "인지적 과부하를 막는 정보의 덩어리화 (Progressive Disclosure)",
-      "body": "20개의 입력 필드를 한 화면에 보여주지 말고, 성격이 같은 3~5개씩 묶어 단계별로 노출하라. 한 단계씩 완료하며 얻는 작은 승리의 경험은 복잡한 작업에 따르는 심리적 저항을 낮추고 전체 완수율을 비약적으로 높인다.",
-      "category": "design",
-      "tags": [
-        "Miller'sLaw",
-        "InformationArchitecture",
-        "CompletionRate"
-      ],
-      "date": "2026-04-25",
-      "source": "gemini-discussion",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": ""
-    },
-    {
-      "id": "lb-092",
-      "title": "불안을 제거하는 미래 예측적 버튼 (Descriptive Action)",
-      "body": "확인이나 제출 같은 모호한 단어 대신 결제하고 강의 시작하기처럼 클릭 후 벌어질 일을 구체적으로 서술하라. 버튼을 누르기 직전 사용자가 느끼는 미세한 망설임(Anxiety)을 제거하는 가장 강력한 방법은 다음 단계에 대한 명확한 약속이다.",
-      "category": "design",
-      "tags": [
-        "Affordance",
-        "Microcopy",
-        "UXPsychology"
       ],
       "date": "2026-04-25",
       "source": "gemini-discussion",
@@ -1065,8 +423,8 @@
     },
     {
       "id": "lb-102",
-      "title": "초정밀 스크롤 기반 내러티브 (Scrollytelling)",
-      "body": "사용자의 스크롤 속도와 방향에 맞춰 3D 모델 각도가 변하거나 레이아웃이 완전히 재배치된다. 단순 애니메이션을 넘어 내러티브의 완급을 조절하는 것이 핵심. Lenis + GSAP ScrollTrigger + 스크롤 속도 감지로 구현.",
+      "title": "스크롤이 열면 공간이 틀어진다",
+      "body": "단순히 아래로 내려가는 것이 아니라, 스크롤할수록 카메라 각도가 비틀리고 3D 공간이 뒤집힌다. 방문자는 평면을 탐색하는 것이 아니라 다차원 공간을 유영한다는 착각 속에 빠진다. 이것이 진짜 몰입이다.",
       "category": "web",
       "tags": [
         "scroll",
@@ -1098,24 +456,6 @@
       "added_by": "yuna",
       "status": "reviewed",
       "url": "https://linear.app"
-    },
-    {
-      "id": "lb-104",
-      "title": "마이크로 노이즈와 아날로그 텍스처 (Grainy Analog)",
-      "body": "디지털의 매끈함 대신 종이 질감, 필름 노이즈, 하프톤 패턴을 섞어 시각적 피로감을 줄이고 따뜻한 감성을 전달한다. mix-blend-mode Overlay + SVG feTurbulence + CSS grain 레이어를 ::after 가상 요소로 오버레이.",
-      "category": "design",
-      "tags": [
-        "texture",
-        "noise",
-        "analog",
-        "blend-mode",
-        "awwwards"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://studiofreight.com"
     },
     {
       "id": "lb-105",
@@ -1154,45 +494,9 @@
       "url": "https://thefwa.com"
     },
     {
-      "id": "lb-107",
-      "title": "브루탈리스트 UI (Lo-Fi Brutalism)",
-      "body": "세련된 그래픽 대신 투박한 시스템 폰트, 기본 단추, 그리드 라인을 노출시켜 날것의 느낌과 힙한 감성을 강조한다. 과도한 장식 없이 CSS border/outline 속성과 모노스페이스 폰트만으로 강렬한 개성을 만들 수 있다.",
-      "category": "design",
-      "tags": [
-        "brutalism",
-        "minimal",
-        "typography",
-        "border",
-        "fwa"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://thefwa.com"
-    },
-    {
-      "id": "lb-108",
-      "title": "세리프-산세리프 극단적 대조",
-      "body": "매우 큰 장식적 세리프 폰트와 아주 작은 산세리프 텍스트를 한 화면에 배치해 시각적 위계를 극대화한다. clamp() 함수로 유동적 타이포그래피를 설정하면 반응형에서도 비율이 깨지지 않는다.",
-      "category": "design",
-      "tags": [
-        "typography",
-        "contrast",
-        "serif",
-        "hierarchy",
-        "siteinspire"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://www.siteinspire.com"
-    },
-    {
       "id": "lb-109",
-      "title": "미묘한 이미지 호버 (Soft Hover Displacement)",
-      "body": "이미지에 마우스 오버 시 갑작스러운 변화가 아닌 안개처럼 나타나거나 물결처럼 일렁이는 부드러운 전환. SVG feDisplacementMap + feTurbulence scale을 CSS transition으로 0에서 30까지 올리면 자연스러운 왜곡 호버를 구현한다.",
+      "title": "이미지 위에 손을 얹으면 파동이 인다",
+      "body": "정적인 이미지는 사진이고, 손길에 반응하는 이미지는 살아있는 표면이다. 마우스가 지나갈 때 잔잔한 물결처럼 이미지가 일렁이는 순간, 방문자는 화면 너머에 물리적 질감이 있다는 착각에 빠진다.",
       "category": "web",
       "tags": [
         "hover",
@@ -1226,331 +530,9 @@
       "url": "https://www.siteinspire.com"
     },
     {
-      "id": "lb-111",
-      "title": "CSS 스크롤 드리븐 애니메이션 (No JS Required)",
-      "body": "JS 없이 CSS만으로 스크롤 위치에 따른 애니메이션을 제어해 성능을 극대화한다. animation-timeline: scroll() + animation-range: entry/exit로 요소가 뷰포트에 진입/퇴장할 때 애니메이션을 트리거할 수 있다.",
-      "category": "web",
-      "tags": [
-        "css",
-        "scroll",
-        "animation",
-        "performance",
-        "no-js"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://css-tricks.com"
-    },
-    {
-      "id": "lb-112",
-      "title": "컬러 폰트 + 가변 폰트 애니메이션",
-      "body": "하나의 폰트 파일로 굵기, 기울기뿐 아니라 애니메이션까지 제어한다. font-variation-settings의 wght 축을 GSAP으로 100에서 900까지 변화시키면 타이포그래피 자체가 생명을 가진다. Recursive, Fraunces 폰트 추천.",
-      "category": "web",
-      "tags": [
-        "variable-font",
-        "typography",
-        "animation",
-        "gsap"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://www.smashingmagazine.com"
-    },
-    {
-      "id": "lb-113",
-      "title": "다크 모드 2.0 - 지능형 대비 조절",
-      "body": "단순한 색상 반전이 아닌 사용자 환경에 맞춰 대비(Contrast)를 조절하는 지능형 테마. prefers-color-scheme + prefers-contrast 조합으로 저시력 사용자와 일반 사용자 모두를 위한 최적 대비를 자동 제공한다.",
-      "category": "design",
-      "tags": [
-        "dark-mode",
-        "accessibility",
-        "css",
-        "contrast",
-        "a11y"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://www.smashingmagazine.com"
-    },
-    {
-      "id": "lb-114",
-      "title": "글래스모피즘 2.0 (Frosted Glass Evolution)",
-      "body": "배경 흐림(Blur)에 정교한 그라데이션 테두리와 내부 광채(Inner Glow)를 더해 더욱 입체적인 유리 느낌을 구현한다. backdrop-filter: blur(20px) + border: 1px solid rgba(255,255,255,0.2) + box-shadow: inset 조합이 핵심.",
-      "category": "design",
-      "tags": [
-        "glassmorphism",
-        "backdrop-filter",
-        "blur",
-        "ui",
-        "dribbble"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://dribbble.com"
-    },
-    {
-      "id": "lb-115",
-      "title": "3D 아이콘과 마이크로 인터랙션",
-      "body": "평면적인 아이콘 대신 정교하게 렌더링된 3D 아이콘을 사용하며 클릭 시 통통 튀거나 회전하는 반응을 준다. Spline으로 제작한 3D 장면을 iframe으로 임베드하거나 Lottie JSON 애니메이션으로 경량화해 사용.",
-      "category": "web",
-      "tags": [
-        "3d",
-        "icon",
-        "lottie",
-        "spline",
-        "micro-interaction",
-        "dribbble"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://dribbble.com"
-    },
-    {
-      "id": "lb-116",
-      "title": "메쉬 그라데이션 배경 (Mesh Gradient Animation)",
-      "body": "정적인 그라데이션이 아닌 여러 색상이 살아있는 생물처럼 섞이고 움직이는 메쉬 그라데이션. CSS @keyframes로 여러 radial-gradient를 독립적으로 이동시키면 JS 없이도 유동적인 생명감을 표현할 수 있다.",
-      "category": "design",
-      "tags": [
-        "gradient",
-        "mesh",
-        "animation",
-        "css",
-        "dribbble"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://dribbble.com"
-    },
-    {
-      "id": "lb-117",
-      "title": "플로팅 아일랜드 내비게이션",
-      "body": "화면에 고정된 바 대신 콘텐츠 위에 떠 있는 섬 형태의 내비게이션으로 가볍고 현대적인 인상을 준다. position: fixed + border-radius: 9999px + backdrop-filter + 스크롤에 따른 width 축소 애니메이션으로 세련된 네비게이션을 구현한다.",
-      "category": "web",
-      "tags": [
-        "navigation",
-        "floating",
-        "island",
-        "ui",
-        "dribbble"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://dribbble.com"
-    },
-    {
-      "id": "lb-118",
-      "title": "뷰포트 기반 텍스트 스케일링 (Fluid Typography)",
-      "body": "px/rem 고정값 대신 vw/vh 기반 fluid typography로 모든 화면 크기에서 완벽한 비율을 유지한다. clamp(min, preferred, max) 패턴으로 최소/최대 크기를 제한하면서 중간 범위에서 유동적으로 확대/축소.",
-      "category": "design",
-      "tags": [
-        "typography",
-        "fluid",
-        "clamp",
-        "responsive",
-        "css-tricks"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://css-tricks.com"
-    },
-    {
-      "id": "lb-119",
-      "title": "스크롤 기반 색상 팔레트 전환",
-      "body": "페이지를 내려갈수록 전체 색상 팔레트가 부드럽게 전환되어 각 섹션만의 감성을 강화한다. CSS 변수(Custom Properties)를 GSAP ScrollTrigger로 실시간 업데이트하면 모든 컴포넌트가 동기화되어 변환된다.",
-      "category": "web",
-      "tags": [
-        "color",
-        "scroll",
-        "css-variables",
-        "gsap",
-        "awwwards"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://www.awwwards.com"
-    },
-    {
-      "id": "lb-120",
-      "title": "스플릿 뷰포트 레이아웃 (Split Screen Storytelling)",
-      "body": "화면을 두 영역으로 나누어 각각 독립적으로 스크롤되거나 한 쪽이 고정된 상태에서 다른 쪽이 움직이는 구조. position: sticky를 한 패널에 적용하고 나머지를 스크롤하면 복잡한 JS 없이도 영화적 연출이 가능하다.",
-      "category": "web",
-      "tags": [
-        "layout",
-        "split",
-        "sticky",
-        "scroll",
-        "storytelling"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://www.siteinspire.com"
-    },
-    {
-      "id": "lb-121",
-      "title": "엄지 최적화 레이아웃 (Thumb Zone Design)",
-      "body": "스마트폰 사용 시 엄지가 자연스럽게 닿는 화면 하단 영역(Thumb Zone)에 핵심 액션 버튼을 배치한다. 상단 영역은 정보 표시용으로만 사용하고, 핵심 CTA는 항상 엄지 닿는 범위에 위치시켜야 한다.",
-      "category": "mobile",
-      "tags": [
-        "ux",
-        "thumb-zone",
-        "mobile",
-        "cta",
-        "layout"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://www.smashingmagazine.com"
-    },
-    {
-      "id": "lb-122",
-      "title": "터치 타겟 최소 44px 원칙",
-      "body": "버튼, 링크, 아이콘 등 터치 가능한 요소는 시각적 크기와 관계없이 터치 타겟을 최소 44x44px로 설정한다. 작은 아이콘도 padding으로 터치 영역을 확장하면 오탭 오류를 크게 줄일 수 있다.",
-      "category": "mobile",
-      "tags": [
-        "accessibility",
-        "touch",
-        "mobile",
-        "a11y",
-        "ux"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://developer.apple.com/design/human-interface-guidelines"
-    },
-    {
-      "id": "lb-123",
-      "title": "모바일 우선 타이포그래피 스케일",
-      "body": "모바일에서는 최소 16px body 텍스트를 유지해야 iOS Safari의 자동 확대를 방지한다. 제목은 clamp(1.5rem, 5vw, 3rem) 패턴으로 화면 폭에 유기적으로 반응하도록 설정. line-height는 1.5~1.6 고정.",
-      "category": "mobile",
-      "tags": [
-        "typography",
-        "mobile",
-        "font-size",
-        "responsive"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://css-tricks.com"
-    },
-    {
-      "id": "lb-124",
-      "title": "스와이프 제스처 패턴 (Swipe Gesture UX)",
-      "body": "모바일에서 스와이프는 가장 자연스러운 인터랙션이다. 카드형 UI에서는 수평 스와이프로 탐색, 수직 스와이프로 스크롤이라는 일관된 규칙을 유지해야 한다. Hammer.js나 Pointer Events API로 구현.",
-      "category": "mobile",
-      "tags": [
-        "gesture",
-        "swipe",
-        "interaction",
-        "mobile"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://www.nngroup.com"
-    },
-    {
-      "id": "lb-125",
-      "title": "바텀 시트 패턴 (Bottom Sheet UI)",
-      "body": "모달 대화상자 대신 화면 하단에서 슬라이드 업되는 바텀 시트를 사용하면 엄지 접근성과 맥락 유지가 동시에 가능하다. CSS transform: translateY() + transition 조합으로 네이티브급 느낌을 구현.",
-      "category": "mobile",
-      "tags": [
-        "bottom-sheet",
-        "modal",
-        "mobile",
-        "ux",
-        "interaction"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://material.io/components/sheets-bottom"
-    },
-    {
-      "id": "lb-126",
-      "title": "모바일 스켈레톤 스크린 (Skeleton Loading)",
-      "body": "콘텐츠 로딩 중 빈 화면 대신 실제 레이아웃과 동일한 형태의 회색 플레이스홀더를 표시한다. 사용자는 로딩 중에도 레이아웃을 인지하고 기다림에 대한 심리적 부담이 낮아진다. CSS animation pulse 효과 적용.",
-      "category": "mobile",
-      "tags": [
-        "loading",
-        "skeleton",
-        "ux",
-        "mobile",
-        "performance"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://dribbble.com"
-    },
-    {
-      "id": "lb-127",
-      "title": "안전 영역 대응 (Safe Area Inset)",
-      "body": "iPhone 노치/Dynamic Island, Android 상태바, 홈 인디케이터 영역을 침범하지 않도록 env(safe-area-inset-top/bottom)을 padding에 적용해야 한다. 모바일 웹에서 네이티브앱과 동일한 완성도를 보여주는 핵심.",
-      "category": "mobile",
-      "tags": [
-        "safe-area",
-        "ios",
-        "android",
-        "mobile",
-        "css"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://developer.apple.com/design/human-interface-guidelines"
-    },
-    {
-      "id": "lb-128",
-      "title": "모바일 입력 폼 최적화",
-      "body": "모바일 폼에서 inputmode 속성으로 적절한 키보드를 호출하면 UX가 크게 개선된다. 전화번호는 inputmode=\"tel\", 숫자는 inputmode=\"numeric\", 이메일은 type=\"email\". 또한 autocomplete 속성을 필수로 설정해 자동완성을 지원.",
-      "category": "mobile",
-      "tags": [
-        "form",
-        "input",
-        "mobile",
-        "keyboard",
-        "ux"
-      ],
-      "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
-      "status": "reviewed",
-      "url": "https://www.smashingmagazine.com"
-    },
-    {
       "id": "lb-129",
-      "title": "모바일 햅틱 피드백 연동 (Haptic Feedback)",
-      "body": "버튼 탭, 슬라이더 조작, 오류 발생 시 Vibration API로 미세한 햅틱 피드백을 추가하면 인터랙션의 실재감이 높아진다. navigator.vibrate([10])로 짧은 진동, 오류 시 [10,50,10] 패턴으로 차별화.",
+      "title": "손끝에 전해지는 디지털의 실재감",
+      "body": "화면은 눈으로만 보는 것이 아니다. 버튼을 누를 때 손끝에 미세한 진동이 전해지면 디지털 행위가 물리적 현실과 연결된다. 촉각은 시각보다 더 원초적이며, 진동 하나가 사용자를 화면 속으로 끌어당긴다.",
       "category": "mobile",
       "tags": [
         "haptic",
@@ -1566,22 +548,1396 @@
       "url": "https://developer.mozilla.org"
     },
     {
-      "id": "lb-130",
-      "title": "다크 패턴 없는 모바일 온보딩",
-      "body": "앱/사이트 첫 방문자에게 권한 요청, 알림 허용, 회원가입을 즉시 요구하지 않는다. 먼저 핵심 가치를 체험하게 한 후 자연스럽게 유도하면 전환율이 높아진다. 온보딩은 최대 3단계, 건너뛰기 버튼 필수.",
+      "id": "lb-131",
+      "title": "루미노시티의 깊이",
+      "body": "빛은 화면 위에서 단순히 밝기를 조절하는 수단이 아니라 공간의 깊이를 결정하는 조각 도구가 된다. 루미노시티의 원리를 웹에 투영할 때 사용자에게 전달되는 시각적 온도와 무게감이 달라진다. 어둠 속에서 스며나오는 은은한 발광은 UI에 생명력을 불어넣는 호흡과도 같다.",
+      "category": "design",
+      "tags": [
+        "빛",
+        "심도",
+        "조형원리"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-132",
+      "title": "게슈탈트의 폐쇄성",
+      "body": "완성되지 않은 형태는 사용자의 상상력 안에서 비로소 완성되며 더 강력한 각인을 남긴다. 끊어진 선과 생략된 면 사이의 여백은 뇌가 스스로 정보를 채우게 만드는 능동적인 참여의 공간이 된다. 불완전함이 주는 긴장감은 디자인에 세련된 리듬을 부여한다.",
+      "category": "design",
+      "tags": [
+        "심리학",
+        "형태",
+        "인지"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-133",
+      "title": "황금비의 디지털 변주",
+      "body": "자연의 질서인 피보나치 수열을 그리드 시스템에 녹여낼 때 화면은 본능적인 편안함을 획득한다. 고정된 픽셀 안에서도 황금비에 따른 분할은 정적인 균형을 넘어 동적인 흐름을 만들어낸다. 이는 기술적 수치를 넘어 인간의 감각이 이해하는 조화의 언어이다.",
+      "category": "design",
+      "tags": [
+        "비례",
+        "수학",
+        "그리드"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-134",
+      "title": "색면추상의 배경학",
+      "body": "마크 로스코의 작품처럼 거대한 색의 면은 사용자에게 공간에 들어와 있는 듯한 몰입감을 선사한다. 경계가 모호한 색의 중첩은 디지털 스크린의 평면성을 극복하고 무한한 깊이감을 형성한다. 배경은 더 이상 뒤에 머물지 않고 사용자의 감정을 감싸는 대기가 된다.",
+      "category": "design",
+      "tags": [
+        "현대미술",
+        "추상",
+        "색채"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-135",
+      "title": "매거진의 타이포 리듬",
+      "body": "편집 디자인의 과감한 타이포그래피 배치는 웹 페이지를 하나의 움직이는 지면으로 탈바꿈시킨다. 글자는 정보 전달의 도구를 넘어 그 자체로 시각적 조형물이자 레이아웃의 핵심 축이 된다. 여백과 서체의 대비는 정갈한 종이 잡지를 읽는 듯한 아날로그적 감성을 불러일으킨다.",
+      "category": "design",
+      "tags": [
+        "편집",
+        "타이포",
+        "레이아웃"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-136",
+      "title": "애플식 미학적 함축",
+      "body": "모든 불필요한 수식어를 제거한 광고 문법은 사용자의 시선을 오직 본질에만 머물게 한다. 극단적인 단순함은 역설적으로 제품의 가치를 가장 화려하게 드러내는 방식이 된다. 여백은 비어있는 공간이 아니라 브랜드의 자신감을 담아내는 그릇이다.",
+      "category": "design",
+      "tags": [
+        "광고",
+        "미니멀리즘",
+        "브랜딩"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-137",
+      "title": "나이키의 서사적 전개",
+      "body": "제품이 아닌 승리와 도전에 대한 이야기를 UI에 담을 때 사용자는 브랜드와 정서적 동질감을 느낀다. 역동적인 이미지와 강렬한 서사는 정적인 웹사이트에 영웅적인 서사 구조를 부여한다. 디자인은 단순한 기능의 나열을 넘어 하나의 드라마틱한 여정이 된다.",
+      "category": "design",
+      "tags": [
+        "스토리텔링",
+        "서사",
+        "역동성"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-138",
+      "title": "K-드라마의 공간 미학",
+      "body": "드라마의 인물 배치와 컷 구성에서 차용된 시각적 구도는 사용자에게 익숙하면서도 세련된 몰입감을 준다. 시선의 흐름을 유도하는 여백과 피사체의 황금 분할은 UI 요소들 사이의 유기적인 관계를 형성한다. 화면은 하나의 프레임 안에서 완결된 미장센을 보여준다.",
+      "category": "design",
+      "tags": [
+        "연출",
+        "미장센",
+        "구도"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-139",
+      "title": "여백의 철학적 부재",
+      "body": "여백은 아무것도 없는 상태가 아니라 다음 행동을 유도하는 침묵의 메시지이다. 공간을 비움으로써 비로소 채워지는 것은 사용자의 시선과 브랜드가 전하고자 하는 핵심 메시지이다. 절제된 공간은 디자인에 숨구멍을 틔워주며 시각적 피로를 우아하게 상쇄한다.",
+      "category": "design",
+      "tags": [
+        "철학",
+        "여백",
+        "절제"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-140",
+      "title": "개념미술의 UI 투영",
+      "body": "형태보다 아이디어 자체가 예술이 되는 개념미술처럼 UI 또한 사용자의 인지적 경험 자체를 목적으로 삼을 수 있다. 시각적 장식을 배제하고 논리적 구조와 의미에 집중할 때 디자인은 지적인 유희가 된다. 이는 관습적인 인터페이스에 대한 신선한 도발이자 새로운 질서이다.",
+      "category": "design",
+      "tags": [
+        "현대미술",
+        "개념",
+        "철학"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-141",
+      "title": "팝아트적 색채 대비",
+      "body": "앤디 워홀의 작품처럼 대담하고 원색적인 색채의 결합은 평범한 정보를 강렬한 아이콘으로 변모시킨다. 일상적인 요소를 예술적 층위로 끌어올리는 팝아트의 문법은 UI에 유쾌한 에너지를 불어넣는다. 반복과 변주는 사용자에게 리드미컬한 시각적 즐거움을 제공한다.",
+      "category": "design",
+      "tags": [
+        "팝아트",
+        "컬러",
+        "에너지"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-142",
+      "title": "미니멀리즘의 정수",
+      "body": "더 이상 뺄 것이 없는 상태는 디자인이 도달할 수 있는 가장 순수한 완성도에 가깝다. 핵심만 남은 인터페이스는 사용자의 직관을 방해하는 모든 노이즈를 침묵시킨다. 단순함은 단순히 적은 것이 아니라 브랜드의 가치를 압축하여 보여주는 고도의 기술이다.",
+      "category": "design",
+      "tags": [
+        "미니멀리즘",
+        "본질",
+        "단순성"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-143",
+      "title": "막시멀리즘의 환희",
+      "body": "넘치는 색상과 복잡한 패턴의 조화는 사용자에게 시각적 풍요로움과 해방감을 선사한다. 정돈된 혼돈 속에서 발견되는 다채로운 요소들은 탐험의 재미를 자극하는 디자인 요소가 된다. 절제된 미학과는 다른 방향에서 인간의 수집 본능과 화려함에 대한 열망을 충족시킨다.",
+      "category": "design",
+      "tags": [
+        "막시멀리즘",
+        "풍요",
+        "복잡성"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-144",
+      "title": "바우하우스의 기능미",
+      "body": "형태는 기능을 따르고 기능은 다시 형태를 완성하는 바우하우스의 정신은 현대 UI의 근간이 된다. 기하학적 기본 도형의 조합만으로도 충분히 아름답고 효율적인 인터페이스를 구축할 수 있다. 장식을 걷어낸 자리에는 견고한 논리와 시대를 초월하는 보편적 미학이 남는다.",
+      "category": "design",
+      "tags": [
+        "바우하우스",
+        "기능미",
+        "기하학"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-145",
+      "title": "시각적 무게의 균형",
+      "body": "화면 위의 각 요소는 크기와 색상에 따라 고유한 물리적 무게를 지니며 이를 조화롭게 배치하는 것이 디자인의 핵심이다. 좌우 대칭을 넘어선 불균형의 균형은 화면에 긴장감 넘치는 생동감을 부여한다. 보이지 않는 지렛대를 상상하며 요소를 배치할 때 안정감 있는 레이아웃이 완성된다.",
+      "category": "design",
+      "tags": [
+        "균형",
+        "무게감",
+        "컴포지션"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-146",
+      "title": "텍스처의 촉각적 환영",
+      "body": "매끄러운 스크린 너머로 느껴지는 종이의 질감이나 거친 캔버스의 입자는 디지털 경험에 온기를 더한다. 시각적 자극이 뇌를 통해 촉각으로 전이될 때 사용자는 웹사이트를 더 실재감 있게 받아들인다. 눈으로 만지는 질감은 브랜드의 개성을 가장 직접적으로 전달하는 수단이다.",
+      "category": "design",
+      "tags": [
+        "질감",
+        "촉각",
+        "아날로그"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-147",
+      "title": "보케 효과의 시각적 심도",
+      "body": "초점이 흐려진 배경과 선명한 피사체의 대비는 사용자의 시선을 즉각적으로 주인공에게 고정시킨다. 카메라 렌즈를 통해 세상을 보는 듯한 연출은 디지털 공간에 낭만적인 분위기를 형성한다. 빛망울의 부드러움은 차가운 UI에 감성적인 레이어를 덧입히는 마법과 같다.",
+      "category": "design",
+      "tags": [
+        "심도",
+        "초점",
+        "사진"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-148",
+      "title": "규모의 극적인 대비",
+      "body": "압도적으로 큰 타이포그래피와 아주 작은 아이콘의 충돌은 화면에 드라마틱한 에너지를 발생시킨다. 크기의 변주는 정보의 위계를 명확히 할 뿐만 아니라 시각적인 즐거움을 주는 리듬감이 된다. 스케일의 대담한 사용은 정적인 페이지에 공간적 확장성을 부여한다.",
+      "category": "design",
+      "tags": [
+        "스케일",
+        "대비",
+        "위계"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-149",
+      "title": "리듬 있는 반복의 미",
+      "body": "일정한 규칙에 따라 나열된 요소들은 시각적 음악이 되어 사용자의 눈을 즐겁게 한다. 반복 속에서 살짝 비틀린 변주는 지루함을 깨뜨리고 디자인의 디테일을 완성하는 지점이 된다. 질서와 파격 사이의 줄타기는 세련된 조형 언어를 구축하는 핵심 원리이다.",
+      "category": "design",
+      "tags": [
+        "리듬",
+        "반복",
+        "패턴"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-150",
+      "title": "와비사비의 불완전함",
+      "body": "매끈하게 다듬어진 픽셀 사이로 스며든 비정형적인 선과 의도적인 결함은 디자인에 인간미를 부여한다. 완벽하지 않기에 아름다운 자연의 섭리를 디지털 세계로 가져올 때 사용자는 편안함을 느낀다. 세월의 흔적이 묻어나는 듯한 낡은 느낌은 신선한 충격이 된다.",
+      "category": "design",
+      "tags": [
+        "와비사비",
+        "불완전",
+        "자연"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-151",
+      "title": "사이버펑크의 네온광",
+      "body": "어둠 속에서 강렬하게 빛나는 네온 컬러와 금속성 질감은 미래지향적이고 반항적인 분위기를 자아낸다. 빛의 산란과 글리치 효과는 디지털 원주민들에게 익숙하면서도 자극적인 시각적 문법이 된다. 차가운 기술과 뜨거운 감성이 교차하는 지점에서 새로운 스타일이 탄생한다.",
+      "category": "design",
+      "tags": [
+        "사이버펑크",
+        "빛",
+        "미래"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-152",
+      "title": "아트데코의 기하학",
+      "body": "직선과 곡선의 기하학적 반복, 황금빛 장식은 1920년대의 화려한 번영을 현대적 UI로 재해석하게 한다. 대칭과 균형을 중시하면서도 화려함을 잃지 않는 이 문법은 고급스러운 브랜드 이미지를 구축하는 데 탁월하다. 과거의 화려함은 현대의 미니멀리즘과 만나 독특한 변주를 일으킨다.",
+      "category": "design",
+      "tags": [
+        "아트데코",
+        "기하학",
+        "클래식"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-153",
+      "title": "초현실주의적 배치",
+      "body": "중력을 거스르는 듯한 오브제의 배치와 낯선 사물의 결합은 사용자의 고정관념을 흔들어 깨운다. 꿈속을 걷는 듯한 몽환적인 레이아웃은 논리적인 웹 구조 안에서 신선한 일탈을 제공한다. 기묘한 아름다움은 사용자에게 잊을 수 없는 시각적 충격을 남긴다.",
+      "category": "design",
+      "tags": [
+        "초현실주의",
+        "상상력",
+        "일탈"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-154",
+      "title": "딥블루의 심리적 안정",
+      "body": "깊은 바다를 닮은 남색은 사용자에게 신뢰감과 평온함을 동시에 전달하는 강력한 심리적 도구이다. 지적인 권위와 차분함을 상징하는 이 색상은 복잡한 정보를 다루는 플랫폼에서 힘을 발휘한다. 차가운 색조 속에 숨겨진 깊이감은 디자인의 품격을 결정짓는다.",
+      "category": "design",
+      "tags": [
+        "색채심리",
+        "블루",
+        "신뢰"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-155",
+      "title": "대지의 따뜻한 색감",
+      "body": "흙과 나무, 모래를 연상시키는 뉴트럴 톤의 색채는 스크린의 피로감을 줄이고 사용자에게 안도감을 준다. 자연에서 온 색상들은 유행을 타지 않으며 다양한 이미지와 유연하게 어우러진다. 따스한 온기를 머금은 색감은 기술을 사람에게 더 가깝게 밀착시킨다.",
+      "category": "design",
+      "tags": [
+        "뉴트럴",
+        "자연",
+        "온기"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-156",
+      "title": "소극적 공간의 적극성",
+      "body": "채우지 않은 공간이 디자인의 주인공이 될 때 정보는 비로소 선명한 목소리를 내기 시작한다. 소극적으로 보였던 여백은 사실 시선을 안내하고 강조점을 만드는 가장 적극적인 전략이다. 비움은 곧 사용자를 향한 배려이자 디자인의 가장 고차원적인 언어이다.",
+      "category": "design",
+      "tags": [
+        "공간",
+        "여백",
+        "전략"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-157",
+      "title": "3분할 법칙의 시각적 안정",
+      "body": "화면을 가로세로 세 칸씩 나누고 교차점에 핵심 요소를 배치하는 고전적 기법은 웹에서도 여전히 유효하다. 정중앙을 비껴간 배치는 화면에 자연스러운 긴장감과 시선의 흐름을 만들어낸다. 익숙한 안정감 속에서 발견되는 변주는 사용자에게 편안한 세련미를 전달한다.",
+      "category": "design",
+      "tags": [
+        "구도",
+        "안정감",
+        "클래식"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-158",
+      "title": "모더니즘의 형태와 기능",
+      "body": "불필요한 장식을 걷어내고 본질적인 조형 원리에 충실할 때 디자인은 시대를 초월하는 생명력을 얻는다. 명확한 타이포그래피와 정교한 그리드는 사용자가 길을 잃지 않게 돕는 든든한 이정표가 된다. 이성적 설계와 감성적 표현의 결합은 현대 디자인이 지향해야 할 정점이다.",
+      "category": "design",
+      "tags": [
+        "모더니즘",
+        "본질",
+        "기능미"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-159",
+      "title": "감정의 색채 그라데이션",
+      "body": "하나의 색에서 다른 색으로 부드럽게 전이되는 단계는 시간의 흐름이나 감정의 변화를 시각화한다. 고정된 단색보다 풍부한 이야기를 담고 있는 그라데이션은 UI에 깊이와 입체감을 부여한다. 색의 경계가 무너지는 지점에서 사용자의 감각은 유연하게 확장된다.",
+      "category": "design",
+      "tags": [
+        "그라데이션",
+        "감성",
+        "색채"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-160",
+      "title": "비율의 음악적 배치",
+      "body": "음계가 조화를 이루듯 디자인의 요소들도 서로 유기적인 크기 비율을 가질 때 시각적 선율이 형성된다. 크고 작은 요소들이 만들어내는 리듬은 사용자가 정보를 인지하는 과정을 즐거운 감상으로 바꾼다. 보이지 않는 악보를 그리듯 레이아웃을 구성할 때 디자인은 완성된다.",
+      "category": "design",
+      "tags": [
+        "비율",
+        "음악",
+        "하모니"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-161",
+      "title": "GLSL 유기적 노이즈",
+      "body": "수학적으로 생성된 노이즈는 디지털 공간에 안개처럼 흐르거나 물결치는 유기적인 생동감을 부여한다. 계산된 무작위성은 인위적이지 않은 자연의 질감을 스크린 위에 구현하는 가장 정교한 방법이다. 매 순간 다르게 변화하는 배경은 정적인 웹사이트에 살아있는 호흡을 불어넣는다.",
+      "category": "web",
+      "tags": [
+        "쉐이더",
+        "노이즈",
+        "유기적"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-162",
+      "title": "레이마칭의 입체 조각",
+      "body": "빛이 물체와 부딪히는 지점을 계산하여 형태를 빚어내는 방식은 웹상에서 조각 같은 입체감을 구현한다. 전통적인 폴리곤 방식과는 다른 부드러운 곡면과 복잡한 질감을 실시간으로 연출할 수 있다. 이는 단순한 그래픽을 넘어 가상 세계의 물리적 실재감을 선사하는 기술적 예술이다.",
+      "category": "web",
+      "tags": [
+        "3D",
+        "기술",
+        "입체감"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-163",
+      "title": "가변 폰트의 유연성",
+      "body": "하나의 서체가 굵기와 너비를 자유롭게 변화시키며 화면의 리듬에 따라 춤을 추듯 반응한다. 가변 폰트는 텍스트를 단순한 정보 전달자가 아닌, 맥락에 따라 형태를 바꾸는 지능적인 시각 요소로 격상시킨다. 스크롤이나 움직임에 반응하는 서체는 사용자에게 대화하는 듯한 경험을 준다.",
+      "category": "web",
+      "tags": [
+        "타이포",
+        "가변폰트",
+        "인터랙션"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-164",
+      "title": "호버의 미학적 반응",
+      "body": "마우스 포인터가 닿는 순간 펼쳐지는 미세한 변화는 사용자의 호기심을 자극하는 작은 보상이다. 호버는 정적인 페이지와 사용자 사이의 첫 번째 교감이 일어나는 은밀하고도 강력한 지점이다. 절제되었지만 감각적인 반응은 웹사이트의 디테일한 완성도를 결정짓는다.",
+      "category": "web",
+      "tags": [
+        "호버",
+        "마이크로애니메이션",
+        "피드백"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-165",
+      "title": "로딩의 서사적 시간",
+      "body": "대기의 시간은 지루함이 아니라 앞으로 펼쳐질 세계에 대한 기대를 빌드업하는 서사의 도입부가 된다. 창의적인 로딩 애니메이션은 브랜드의 정체성을 가장 압축적으로 보여주는 짧은 영상 예술이다. 기다림을 즐거움으로 바꾸는 순간, 기술적 한계는 감성적 연결로 승화된다.",
+      "category": "web",
+      "tags": [
+        "로딩",
+        "스토리텔링",
+        "기다림"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-166",
+      "title": "블렌드 모드의 중첩미",
+      "body": "레이어와 레이어가 겹쳐지며 만들어내는 색의 혼합은 디지털 환경에서만 가능한 독특한 시각 효과이다. 투명도와 혼합 방식에 따라 배경과 텍스트가 유기적으로 섞이며 깊이 있는 텍스처를 형성한다. 중첩의 미학은 평면적인 레이아웃에 다층적인 공간감을 부여한다.",
+      "category": "web",
+      "tags": [
+        "컬러",
+        "레이어",
+        "혼합"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-167",
+      "title": "웹 워커의 연산 예술",
+      "body": "브라우저의 백그라운드에서 실행되는 무거운 연산은 복잡한 물리 시뮬레이션이나 실시간 데이터 시각화를 가능하게 한다. 끊김 없는 부드러운 움직임은 기술적 최적화가 선사하는 가장 아름다운 사용자 경험이다. 눈에 보이지 않는 노동이 화면 위에서 우아한 퍼포먼스로 꽃피운다.",
+      "category": "web",
+      "tags": [
+        "성능",
+        "기술",
+        "최적화"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-168",
+      "title": "파티클의 공기감",
+      "body": "화면 곳곳을 부유하는 작은 입자들은 정적인 웹 공간에 대기의 흐름과 밀도를 부여한다. 사용자의 움직임에 따라 흩어지거나 모이는 파티클은 상호작용의 즐거움을 극대화하는 시각적 장치이다. 공기 중에 떠다니는 먼지나 별무리처럼 섬세한 감성을 자극한다.",
+      "category": "web",
+      "tags": [
+        "파티클",
+        "분위기",
+        "상호작용"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-169",
+      "title": "다층적 패럴랙스",
+      "body": "서로 다른 속도로 움직이는 배경 레이어들은 스크롤을 통해 깊이 있는 공간감을 창조한다. 2D 화면 안에서 3D 세계를 탐험하는 듯한 착시 현상은 사용자를 웹사이트 안으로 깊숙이 끌어들인다. 움직임의 차이가 만들어내는 조화는 시각적 서사의 긴장감을 유지시킨다.",
+      "category": "web",
+      "tags": [
+        "패럴랙스",
+        "스크롤",
+        "입체감"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-170",
+      "title": "무한 캔버스의 확장",
+      "body": "페이지의 경계를 허물고 상하좌우 어디로든 확장되는 캔버스는 자유로운 탐색의 경험을 제공한다. 격자에 갇힌 사고를 벗어나 무한한 공간 속에 정보를 자유롭게 배치할 때 새로운 창의성이 발현된다. 지도를 탐험하듯 정보를 발견해가는 과정 자체가 하나의 콘텐츠가 된다.",
+      "category": "web",
+      "tags": [
+        "레이아웃",
+        "자유도",
+        "탐험"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-171",
+      "title": "커서 자성 인터랙션",
+      "body": "마우스 커서가 버튼이나 링크 근처에서 자석처럼 끌려가는 효과는 보이지 않는 힘의 작용을 시각화한다. 디지털 요소와 사용자 사이의 물리적 거리가 좁혀지는 듯한 감각은 상호작용의 몰입도를 높인다. 부드러운 인력이 손끝으로 전달되는 듯한 착각을 불러일으킨다.",
+      "category": "web",
+      "tags": [
+        "인터랙션",
+        "자성",
+        "마우스"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-172",
+      "title": "맥락적 동적 테마",
+      "body": "시간대나 날씨, 사용자의 위치에 따라 웹사이트의 색조와 분위기가 실시간으로 변화한다. 정적인 코드를 넘어 주변 환경과 동기화되는 디자인은 살아있는 생명체와 같은 인상을 준다. 사용자가 속한 현실 세계의 흐름을 웹 공간에 반영함으로써 일체감을 형성한다.",
+      "category": "web",
+      "tags": [
+        "동적디자인",
+        "맥락",
+        "개인화"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-173",
+      "title": "시청각 동기화의 전율",
+      "body": "웹사이트의 시각적 움직임이 배경 음악이나 효과음의 주파수와 정교하게 일치할 때 폭발적인 몰입감이 발생한다. 눈으로 보는 소리와 귀로 듣는 이미지가 결합된 공감각적 경험은 사용자의 기억에 강렬하게 각인된다. 브라우저는 이제 단순한 문서 뷰어를 넘어 하나의 공연장이 된다.",
+      "category": "web",
+      "tags": [
+        "공감각",
+        "오디오",
+        "비주얼"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-174",
+      "title": "로우폴리의 조형미",
+      "body": "최소한의 삼각형 면들로 구성된 형태는 디지털적 추상과 현대적인 세련미를 동시에 담아낸다. 복잡함을 걷어내고 본질적인 구조만 남긴 디자인은 가벼우면서도 강렬한 시각적 임팩트를 준다. 기하학적인 조각들이 모여 완성되는 세계는 웹에 독특한 조형적 가치를 부여한다.",
+      "category": "web",
+      "tags": [
+        "로우폴리",
+        "3D",
+        "추상"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-175",
+      "title": "뉴모피즘의 입체적 진화",
+      "body": "부드러운 그림자와 하이라이트만으로 배경에서 튀어나온 듯한 질감은 버튼에 실제 누르는 듯한 물리적 직관을 부여한다. 평면적인 UI에 부드러운 가소성을 더해 디지털 요소에 물리적인 부피감을 선사한다. 이는 미니멀리즘과 스큐어모피즘의 우아한 절충안이자 진화이다.",
+      "category": "web",
+      "tags": [
+        "뉴모피즘",
+        "질감",
+        "입체감"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-176",
+      "title": "글래스모피즘의 굴절",
+      "body": "흐릿한 배경 위에 얹어진 투명한 유리의 질감은 레이어 사이의 관계를 시각적으로 분리하고 공간감을 확장한다. 빛이 유리를 통과하며 생기는 굴절과 산란은 차가운 화면에 보석 같은 영롱함을 더한다. 가벼움과 세련미를 동시에 잡는 현대적 웹 미학의 정점이다.",
+      "category": "web",
+      "tags": [
+        "투명도",
+        "질감",
+        "유리"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-177",
+      "title": "경로 그리기의 생동감",
+      "body": "스크롤이나 로딩에 따라 선이 살아 움직이듯 그려지는 연출은 정적인 페이지에 동적인 생명력을 부여한다. 보이지 않는 설계도가 현실로 나타나는 듯한 과정은 사용자에게 제작의 즐거움을 공유하는 듯한 기분을 준다. 선의 흐름은 곧 시선의 흐름이자 정보의 안내자가 된다.",
+      "category": "web",
+      "tags": [
+        "SVG",
+        "애니메이션",
+        "라인"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-178",
+      "title": "WebGL 유체의 흐름",
+      "body": "물감이나 연기가 섞이는 듯한 유체 역학 시뮬레이션은 화면 전체에 몽환적이고 예술적인 배경을 선사한다. 사용자의 손가락 끝을 따라 소용돌이치는 유체는 디지털 공간을 물리적 상호작용이 가능한 액체로 바꾼다. 기술이 예술적 감성과 만날 때 웹은 살아있는 캔버스가 된다.",
+      "category": "web",
+      "tags": [
+        "시뮬레이션",
+        "유체",
+        "예술"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-179",
+      "title": "데이터의 예술적 승화",
+      "body": "차가운 숫자와 통계가 화려한 색채와 기하학적 형태의 유기적인 결합으로 재탄생한다. 데이터 시각화는 정보를 전달하는 단계를 넘어 데이터 뒤에 숨겨진 이야기와 통찰을 시각적인 감동으로 전달한다. 정보는 이제 감상할 수 있는 하나의 예술 작품이 된다.",
+      "category": "web",
+      "tags": [
+        "데이터",
+        "시각화",
+        "인포그래픽"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-180",
+      "title": "레트로 웹의 현대적 해석",
+      "body": "90년대의 거친 픽셀과 원색, 투박한 레이아웃을 현대적인 기술로 재해석하여 향수와 신선함을 동시에 제공한다. 완벽한 매끄러움에 지친 사용자들에게 레트로 감성은 인간적이고 친근한 연결 고리가 된다. 과거의 불편함은 의도적인 디자인 요소로서 힙한 감성을 자아낸다.",
+      "category": "web",
+      "tags": [
+        "레트로",
+        "픽셀",
+        "향수"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-181",
+      "title": "3D 제품의 인터랙션",
+      "body": "사용자가 직접 돌려보고 줌인하며 제품을 탐색하는 경험은 오프라인 매장의 한계를 디지털로 극복하게 한다. 실시간 조명과 질감 변화는 제품의 가치를 사진보다 훨씬 생생하게 전달하는 강력한 무기가 된다. 상호작용은 곧 제품에 대한 확신과 신뢰로 이어진다.",
+      "category": "web",
+      "tags": [
+        "3D",
+        "전자상거래",
+        "경험"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-182",
+      "title": "인터랙티브 타이포",
+      "body": "글자가 사용자의 움직임에 따라 왜곡되거나 해체되고 다시 조립되는 과정은 텍스트에 새로운 차원을 부여한다. 언어는 단순히 읽는 대상이 아니라 만지고 소통하는 시각적 매개체가 된다. 의미의 전달을 넘어 텍스트 자체가 자아내는 표정이 디자인의 핵심이 된다.",
+      "category": "web",
+      "tags": [
+        "타이포그래피",
+        "모션",
+        "언어"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-183",
+      "title": "기하학적 캔버스 추상",
+      "body": "코드 기반으로 생성되는 기하학적 문양들은 웹사이트에 수학적 질서와 예술적 우아함을 동시에 부여한다. 고정되지 않고 끊임없이 재배열되는 도형들은 매 방문마다 새로운 인상을 남기는 살아있는 배경이 된다. 질서 있는 혼돈은 디자인에 현대적이고 지적인 분위기를 자아낸다.",
+      "category": "web",
+      "tags": [
+        "추상",
+        "기하학",
+        "코드"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-184",
+      "title": "실시간 환경 맵핑",
+      "body": "웹사이트 배경에 주변의 환경광을 반사하는 맵핑 기술을 적용하여 입체적인 오브제의 실재감을 극대화한다. 가상의 빛이 물체 표면에서 굴절되고 반사되는 모습은 디지털 공간의 현실감을 한 차원 높인다. 스크린 안의 세계는 이제 바깥 세상의 빛과 연결되어 호흡한다.",
+      "category": "web",
+      "tags": [
+        "렌더링",
+        "빛",
+        "현실감"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-185",
+      "title": "픽셀 아트의 미학",
+      "body": "제한된 픽셀로 형태를 구축하는 방식은 추상적인 아름다움과 향수를 동시에 자극하는 독특한 시각 언어이다. 픽셀 하나하나가 의도를 가지고 배치될 때 디지털 본연의 질감이 예술로 승화된다. 이는 해상도의 경쟁에서 벗어나 스타일의 본질로 돌아가는 용기 있는 선택이다.",
+      "category": "web",
+      "tags": [
+        "픽셀",
+        "아트",
+        "디지털"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-186",
+      "title": "핏츠 법칙과 거리의 미학",
+      "body": "사용자가 목표 지점에 도달하는 시간은 거리와 크기에 비례하며, 이를 고려한 배치는 직관적인 편의성을 완성한다. 가장 중요한 버튼은 가장 닿기 쉬운 곳에, 그리고 충분한 크기로 존재해야 한다. 인체 공학적 설계는 사용자의 손가락이 피로를 느끼지 않게 돕는 보이지 않는 배려이다.",
+      "category": "ux",
+      "tags": [
+        "심리학",
+        "사용성",
+        "설계"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-187",
+      "title": "힉 법칙과 선택의 무게",
+      "body": "선택지가 많아질수록 결정에 필요한 시간과 에너지는 기하급수적으로 증가하며 이는 사용자의 이탈을 부른다. 정보를 덜어내고 선택의 폭을 좁힐 때 사용자는 역설적으로 더 자유롭고 명확한 결정을 내릴 수 있다. 디자인은 최상의 선택을 제안하는 큐레이션 과정이어야 한다.",
+      "category": "ux",
+      "tags": [
+        "심리학",
+        "효율성",
+        "의사결정"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-188",
+      "title": "피크엔드 법칙의 마법",
+      "body": "사용자는 전체 여정보다 가장 강렬했던 순간과 마지막 기억으로 전체 경험을 평가하는 경향이 있다. 여정의 끝에 배치된 감동적인 메시지나 사소한 보상은 서비스에 대한 긍정적인 이미지를 각인시키는 핵심 전략이다. 마지막 마무리가 전체 브랜드의 품격을 결정짓는다.",
+      "category": "ux",
+      "tags": [
+        "경험",
+        "심리학",
+        "기억"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-189",
+      "title": "단계적 정보 공개",
+      "body": "사용자에게 한꺼번에 모든 정보를 쏟아붓지 않고 필요한 순간에 적절한 양만큼만 공개하는 것은 몰입을 유지하는 기술이다. 점진적인 정보의 노출은 학습의 부담을 줄이고 사용자가 자연스럽게 서비스에 적응하도록 유도한다. 숨겨진 정보는 발견의 즐거움을 주는 콘텐츠가 된다.",
+      "category": "ux",
+      "tags": [
+        "정보설계",
+        "몰입",
+        "배려"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-190",
+      "title": "스켈레톤 화면의 심리",
+      "body": "데이터가 로딩되기 전 화면의 뼈대를 미리 보여줌으로써 사용자는 서비스가 원활하게 작동하고 있다는 심리적 안도감을 얻는다. 텅 빈 흰 화면보다 구조화된 미리보기는 대기 시간을 더 짧게 느껴지게 만드는 인지적 장치이다. 기술적 지연을 사용자 경험의 일부로 우아하게 통합한다.",
+      "category": "ux",
+      "tags": [
+        "심리학",
+        "로딩",
+        "안도감"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-191",
+      "title": "마이크로카피의 목소리",
+      "body": "단추 위의 짧은 문구나 에러 메시지 하나에도 브랜드의 성격과 온기가 담겨야 한다. 딱딱한 명령어 대신 친절한 대화체 문구는 사용자에게 웹사이트가 아닌 인격체와 소통하는 듯한 경험을 준다. 작은 글자가 만드는 큰 차이는 사용자의 마음을 여는 열쇠가 된다.",
+      "category": "ux",
+      "tags": [
+        "카피라이팅",
+        "보이스",
+        "친절함"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-192",
+      "title": "게이미피케이션의 루프",
+      "body": "성취감을 자극하는 배지나 진행 상태 바와 같은 장치들은 사용자가 서비스에 지속적으로 참여하게 만드는 동력이 된다. 일상적인 행동에 재미와 보상이라는 층위를 덧입힐 때 단순한 도구는 즐거운 놀이터로 변모한다. 성장은 사용자뿐만 아니라 서비스도 함께하게 만드는 강력한 고리이다.",
+      "category": "ux",
+      "tags": [
+        "동기부여",
+        "재미",
+        "성취"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-193",
+      "title": "접근성이라는 혁신",
+      "body": "장애를 가진 사용자를 배려하는 디자인은 결국 모든 사용자가 더 쉽고 편하게 정보를 얻을 수 있는 혁신으로 이어진다. 소외되는 사람 없는 보편적 설계는 브랜드의 사회적 가치를 증명하는 가장 확실한 방법이다. 접근성은 제약이 아니라 새로운 디자인적 가능성을 여는 문이다.",
+      "category": "ux",
+      "tags": [
+        "보편적디자인",
+        "배려",
+        "가치"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-194",
+      "title": "다크모드의 시각적 배려",
+      "body": "어두운 환경에서 눈의 피로를 줄여주는 다크모드는 사용자의 맥락을 이해하는 시각적 배려의 정점이다. 단순히 색상을 반전시키는 것이 아니라 저조도 환경에서도 가독성과 미적 완성도를 유지하는 정교한 설계가 필요하다. 밤을 닮은 인터페이스는 몰입을 돕는 깊은 안식을 준다.",
+      "category": "ux",
+      "tags": [
+        "다크모드",
+        "가독성",
+        "배려"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-195",
+      "title": "예측 가능한 디자인",
+      "body": "사용자가 어떤 행동을 했을 때 일어날 결과를 미리 짐작할 수 있게 설계하는 것은 신뢰 관계 구축의 핵심이다. 관습적인 기호를 따르되 세련된 변주를 더할 때 사용자는 낯선 인터페이스에서도 편안함을 느낀다. 예측 가능함은 사용자를 배려하는 가장 지적이고 친절한 태도이다.",
+      "category": "ux",
+      "tags": [
+        "일관성",
+        "신뢰",
+        "직관"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-196",
+      "title": "감성 디자인의 힘",
+      "body": "논리와 효율을 넘어 사용자의 감정을 움직이는 디자인은 강력한 브랜드 충성도를 만들어낸다. 기능이 같은 두 서비스 사이에서 사용자는 더 즐겁고 아름다운 쪽을 선택하게 마련이다. 기술은 차갑지만 그것을 표현하는 디자인은 사람의 마음을 어루만지는 따뜻한 손길이어야 한다.",
+      "category": "ux",
+      "tags": [
+        "감성",
+        "브랜딩",
+        "연결"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-197",
+      "title": "기본값의 심리적 권위",
+      "body": "사용자는 설정된 기본값을 신뢰하고 따르려는 경향이 강하며, 이는 행동을 유도하는 강력한 설계 도구가 된다. 최선의 선택을 기본값으로 제공함으로써 사용자의 고민을 줄여주고 서비스가 지향하는 가치로 자연스럽게 안내한다. 기본값은 서비스의 철학을 보여주는 첫 번째 선택이다.",
+      "category": "ux",
+      "tags": [
+        "심리학",
+        "넛지",
+        "철학"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-198",
+      "title": "클릭음의 감각적 피드백",
+      "body": "시각적 반응에 더해진 섬세한 효과음은 디지털 요소에 실제 물리적인 실재감을 부여한다. 버튼을 눌렀을 때 들리는 경쾌한 소리는 행동이 성공적으로 완료되었음을 알리는 감각적인 마침표가 된다. 소리는 인터페이스에 보이지 않는 공간감과 질감을 불어넣는 마법의 재료이다.",
+      "category": "ux",
+      "tags": [
+        "사운드",
+        "피드백",
+        "감각"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-199",
+      "title": "내비게이션의 몰입",
+      "body": "정보를 찾아가는 과정 자체가 물 흐르듯 자연스러울 때 사용자는 서비스에 깊이 몰입하게 된다. 막힘 없는 내비게이션은 사용자가 도구의 존재를 잊고 오직 콘텐츠와 목적에만 집중할 수 있게 돕는다. 좋은 내비게이션은 사용자의 손끝과 생각이 하나가 되도록 설계된 투명한 통로이다.",
+      "category": "ux",
+      "tags": [
+        "내비게이션",
+        "몰입",
+        "흐름"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-200",
+      "title": "맥락에 맞는 도움말",
+      "body": "사용자가 어려움을 겪는 그 순간, 바로 그 자리에서 제공되는 적절한 팁은 두꺼운 매뉴얼보다 훨씬 강력하다. 맥락을 읽는 도움말은 사용자에게 언제나 곁을 지키는 든든한 가이드가 있다는 느낌을 준다. 친절함은 필요한 정보를 가장 필요한 때에 건네는 타이밍의 예술이다.",
+      "category": "ux",
+      "tags": [
+        "가이드",
+        "타이밍",
+        "친절함"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-201",
+      "title": "사회적 증거의 신뢰",
+      "body": "다른 사람들의 선택과 평가는 새로운 사용자가 결정을 내릴 때 가장 강력한 심리적 이정표가 된다. 통계와 후기를 투명하게 공개함으로써 얻어지는 신뢰는 브랜드의 가장 큰 자산이 된다. 타인의 경험을 공유하는 시스템은 서비스에 인간적인 따뜻함과 객관성을 동시에 부여한다.",
+      "category": "ux",
+      "tags": [
+        "신뢰",
+        "사회적증거",
+        "후기"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-202",
+      "title": "희소성 원칙의 활용",
+      "body": "남은 시간이나 한정된 수량을 시각적으로 보여줌으로써 사용자의 행동을 즉각적으로 끌어낼 수 있다. 희소성은 가치를 높이는 심리적 기폭제가 되지만, 과하지 않게 사용될 때 비로소 진정성 있는 제안으로 받아들여진다. 긴급함은 신중함과 결합하여 행동의 동기를 완성한다.",
+      "category": "ux",
+      "tags": [
+        "심리학",
+        "마케팅",
+        "행동"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-203",
+      "title": "상호호혜의 서식 설계",
+      "body": "먼저 가치 있는 정보를 제공한 뒤에 사용자의 입력을 요청하는 방식은 긍정적인 응답을 이끌어낼 확률을 높인다. 일방적인 요구가 아닌 상호 이익을 기반으로 한 소통은 서식 작성을 부담이 아닌 대화로 변모시킨다. 배려받은 사용자는 기꺼이 서비스의 여정에 동참한다.",
+      "category": "ux",
+      "tags": [
+        "심리학",
+        "관계",
+        "데이터"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-204",
+      "title": "온보딩의 영웅 여정",
+      "body": "새로운 사용자를 맞이하는 과정은 낯선 세계를 탐험하는 영웅의 첫 발걸음과 같아야 한다. 단계별 미션과 성취감을 부여하며 기능에 익숙해지도록 돕는 설계는 이탈을 막는 가장 지능적인 전략이다. 온보딩은 단순한 설명이 아니라 브랜드와 사용자의 첫 번째 유대감 형성의 장이다.",
+      "category": "ux",
+      "tags": [
+        "온보딩",
+        "경험",
+        "성장"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-205",
+      "title": "오류 페이지의 반전",
+      "body": "길을 잃은 사용자에게 나타나는 404 페이지는 좌절이 아닌 유머러스한 반전과 브랜드의 센스를 보여줄 기회이다. 예상치 못한 실패의 순간을 유쾌하게 전환함으로써 사용자의 짜증을 미소로 바꿀 수 있다. 위트 있는 디자인은 위기 상황에서도 빛나는 브랜드의 인격이다.",
+      "category": "ux",
+      "tags": [
+        "오류",
+        "유머",
+        "전환"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-206",
+      "title": "엄지 영역의 자유",
+      "body": "스마트폰을 쥐었을 때 엄지가 닿는 하단 영역을 중심으로 설계된 인터페이스는 한 손 조작의 해방감을 선사한다. 상단의 제약을 벗어나 아래쪽에서 일어나는 모든 상호작용은 이동 중인 사용자에게 최상의 편리함을 제공한다. 손가락의 움직임을 이해하는 것이 모바일 UX의 시작이다.",
       "category": "mobile",
       "tags": [
-        "onboarding",
-        "mobile",
-        "ux",
-        "dark-pattern",
-        "conversion"
+        "인체공학",
+        "모바일",
+        "편리함"
       ],
+      "source": "gemini-discussion",
       "date": "2026-04-25",
-      "source": "external-link",
-      "added_by": "yuna",
       "status": "reviewed",
-      "url": "https://www.nngroup.com"
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-207",
+      "title": "햅틱 피드백의 질감",
+      "body": "미세한 진동의 강약과 리듬을 통해 스크린 속의 버튼이 마치 실제 물리적 질감을 가진 것처럼 느끼게 한다. 햅틱은 시각 정보가 닿지 않는 순간에도 사용자의 손바닥에 직접적인 정보를 전달하는 비밀스러운 언어이다. 진동의 디테일은 앱의 감성적인 완성도를 결정짓는 숨은 공신이다.",
+      "category": "mobile",
+      "tags": [
+        "햅틱",
+        "감각",
+        "피드백"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-208",
+      "title": "제스처 중심의 교감",
+      "body": "화면을 쓸어넘기고 집어 올리는 자연스러운 손짓은 복잡한 버튼을 대체하는 직관적인 소통 방식이 된다. 제스처는 인터페이스와 사용자 사이의 보이지 않는 물리적 연결 고리를 형성하며 상호작용에 리듬을 부여한다. 부드러운 애니메이션이 결합된 제스처는 조작을 놀이로 바꾼다.",
+      "category": "mobile",
+      "tags": [
+        "제스처",
+        "인터랙션",
+        "직관"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-209",
+      "title": "한 손 사용의 배려",
+      "body": "화면이 커질수록 한 손 조작의 범위를 고려한 콘텐츠 배치는 선택이 아닌 필수적인 배려가 된다. 중요한 기능을 하단에 집중시키고 상단은 시각적 여백이나 정보 전달용으로 활용할 때 사용성은 극대화된다. 손의 한계를 디자인의 기회로 전환하는 지혜가 필요하다.",
+      "category": "mobile",
+      "tags": [
+        "사용성",
+        "모바일",
+        "인체공학"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-210",
+      "title": "오프라인 우선 경험",
+      "body": "연결이 불안정한 환경에서도 핵심 기능을 유지하게 설계하는 것은 사용자에 대한 든든한 약속이다. 데이터가 없는 순간에도 캐싱된 정보를 통해 끊김 없는 경험을 제공할 때 앱에 대한 신뢰는 두터워진다. 기술적 공백을 디자인적 연속성으로 메우는 것이 진정한 역량이다.",
+      "category": "mobile",
+      "tags": [
+        "오프라인",
+        "연속성",
+        "신뢰"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-211",
+      "title": "생체 인증의 UX 흐름",
+      "body": "지문이나 안면 인식을 통한 인증 과정은 보안을 넘어 서비스 진입의 허들을 낮추는 매끄러운 경험이 되어야 한다. 인증의 순간에 나타나는 정교한 피드백은 사용자에게 안전하고 고도화된 서비스를 이용하고 있다는 자부심을 준다. 기술의 첨단은 가장 자연스러운 동작 안에 숨겨져 있다.",
+      "category": "mobile",
+      "tags": [
+        "보안",
+        "생체인증",
+        "경험"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-212",
+      "title": "모바일 우선의 핵심",
+      "body": "제한된 화면 크기는 가장 중요한 가치에 집중하게 만드는 강력한 디자인적 제약이자 필터가 된다. 작은 화면에서 완벽하게 작동하는 디자인은 더 큰 화면에서도 명확한 질서와 힘을 발휘한다. 모바일 우선은 단순히 크기의 문제가 아니라 정보의 정수를 추출하는 과정이다.",
+      "category": "mobile",
+      "tags": [
+        "모바일퍼스트",
+        "본질",
+        "집중"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-213",
+      "title": "당겨서 새로고침의 미학",
+      "body": "새로운 정보를 기대하며 화면을 아래로 당기는 동작은 슬롯머신을 당기는 것과 같은 원초적인 기대감을 자극한다. 당기는 과정에서 보여지는 창의적인 애니메이션은 짧은 대기 시간을 설렘의 순간으로 변모시킨다. 사소한 동작 하나에도 서비스의 재치와 온기를 담을 수 있다.",
+      "category": "mobile",
+      "tags": [
+        "인터랙션",
+        "기대감",
+        "디테일"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-214",
+      "title": "폴더블의 적응형 레이아웃",
+      "body": "화면이 접히고 펼쳐지는 물리적 변화에 따라 콘텐츠의 구성이 유기적으로 재편되는 과정은 새로운 차원의 디자인적 도전이다. 닫혔을 때는 집중도 있게, 펼쳐졌을 때는 확장감 있게 정보를 배치하여 기기의 특성을 극대화한다. 가변적인 공간은 창의적인 서사 구성을 가능하게 한다.",
+      "category": "mobile",
+      "tags": [
+        "폴더블",
+        "가변성",
+        "미래"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-215",
+      "title": "앱 전환의 미세 전환",
+      "body": "페이지와 페이지 사이를 이동할 때 발생하는 부드러운 트랜지션은 사용자가 서비스의 구조를 공간적으로 이해하게 돕는다. 갑작스러운 화면 전환이 아닌 유기적인 연결은 시각적 연속성을 보장하고 경험의 단절을 막는다. 움직임의 디테일은 앱에 고급스러운 리듬을 부여한다.",
+      "category": "mobile",
+      "tags": [
+        "트랜지션",
+        "연속성",
+        "리듬"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-216",
+      "title": "음성 인터페이스의 결합",
+      "body": "손을 사용하기 힘든 순간, 목소리로 제어하는 인터페이스는 모바일 경험의 영역을 현실의 모든 공간으로 확장한다. 시각적 정보와 음성 피드백의 조화는 더욱 다층적이고 풍부한 소통을 가능하게 한다. 말 한마디로 시작되는 상호작용은 기술에 인격적인 면모를 덧입힌다.",
+      "category": "mobile",
+      "tags": [
+        "VUI",
+        "접근성",
+        "확장"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
+    },
+    {
+      "id": "lb-217",
+      "title": "AR UI의 증강된 현실",
+      "body": "카메라를 통해 보이는 현실 세계 위에 디지털 정보를 자연스럽게 겹쳐놓을 때 새로운 인지 공간이 탄생한다. 가상과 실제의 경계가 무너지는 지점에서 사용자는 세상을 보는 새로운 렌즈를 획득한다. 현실의 물리 법칙을 존중하면서도 상상력을 더하는 디자인은 놀라운 몰입을 선사한다.",
+      "category": "mobile",
+      "tags": [
+        "AR",
+        "증강현실",
+        "미래"
+      ],
+      "source": "gemini-discussion",
+      "date": "2026-04-25",
+      "status": "reviewed",
+      "added_by": "yuna",
+      "url": ""
     }
   ]
 }
