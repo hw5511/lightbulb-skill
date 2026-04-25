@@ -1,106 +1,1970 @@
 {
   "version": "1.0",
-  "updated_at": "2026-04-25T07:30:00+09:00",
+  "updated_at": "2026-04-25T10:00:00+09:00",
   "ideas": [
-    {"id":"lb-001","title":"텍스트를 좌표처럼 다뤄라","body":"각 글자를 독립된 파티클로 취급한다. 스크롤 또는 마우스에 따라 분해/재조립되는 키네틱 타이포그래피는 방문자에게 강렬한 첫인상을 남긴다. GSAP SplitText + motionPath 조합이 효과적.","category":"web","tags":["typography","scroll","gsap","kinetic"],"date":"2026-04-25","source":"agent-discovery","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-002","title":"수직 스크롤은 목적이 있을 때만","body":"레이아웃 선택은 목적에서 시작한다. 감성 전달 목적이라면 수직 스크롤이 맞지만, 포트폴리오 임팩트 전달에는 풀스크린 갤러리가 더 적합할 수 있다. Purpose Archaeology 단계에서 반드시 검토할 것.","category":"design","tags":["layout","ux","purpose","scroll"],"date":"2026-04-25","source":"agent-discovery","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-003","title":"Data slop을 경계하라","body":"불필요한 숫자, 카운터, 아이콘 반복은 디자인을 오히려 약하게 만든다. '고객 만족도 98%' 같은 공허한 수치보다 단 하나의 강렬한 인상이 낫다. One thousand no's for every yes.","category":"design","tags":["content","minimalism","quality"],"date":"2026-04-25","source":"ceo-memo","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-004","title":"60fps는 협상 불가","body":"top/left/width/height 애니메이션은 Layout Reflow를 유발한다. transform/opacity만 애니메이션에 사용하고, will-change를 필수로 선언한다. GSAP에서는 x/y를 사용하고 scrub:true는 금지.","category":"web","tags":["performance","animation","gsap","60fps"],"date":"2026-04-25","source":"agent-discovery","added_by":"yuna","status":"in-use","url":""},
-    {"id":"lb-005","title":"클리셰를 알아야 클리셰를 피한다","body":"이 주제에서 흔히 보이는 패턴 5가지를 먼저 선언하고 금지한다. 단, 패턴은 적이 아니다. 관성이 적이다. 성공 패턴을 파악해야 올바르게 변주할 수 있다.","category":"ai","tags":["creativity","prompt","cliche","design"],"date":"2026-04-25","source":"ceo-memo","added_by":"yuna","status":"in-use","url":""},
-    {"id":"lb-006","title":"물리 기반 모션의 해방 (Spring Physics)","body":"정해진 이징 함수 대신 탄성, 무게, 마찰력을 적용한 스프링 물리 모델을 인터랙션에 도입하라. 사용자의 드래그나 클릭이 끝난 후에도 미세한 관성이 느껴질 때 웹은 비로소 살아있는 유기체로 인식된다.","category":"web","tags":["FramerMotion","Animation","Physics"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-007","title":"뷰 트랜지션의 연속성 (Morphing UI)","body":"페이지 이동 시 요소를 고유 식별자로 연결하여 끊김 없는 변형(Morphing)을 구현하라. 사용자는 이동이 아닌 상태 변화를 경험하며, 이는 인터랙션의 인지 부하를 획기적으로 줄이고 앱 수준의 부드러움을 제공한다.","category":"web","tags":["ViewTransitions","UX","Continuity"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-008","title":"커서를 주인공으로 (Cursor-as-an-Instrument)","body":"마우스 커서를 단순한 포인터가 아닌 인터랙티브한 브러시나 렌즈로 정의하라. 특정 영역 진입 시 커서가 형태를 바꾸며 내부 정보를 투영하거나 배경과 대조되는 시각적 피드백을 줄 때 사용자 경험의 밀도는 비약적으로 상승한다.","category":"web","tags":["CustomCursor","Interaction","Feedback"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-009","title":"스크롤은 애니메이션의 재생 헤드다","body":"스크롤을 위치 이동이 아닌 타임라인의 진행도로 취급하라. CSS @scroll-timeline을 활용해 스크롤 속도와 방향에 따라 요소의 스케일, 회전, 필터를 정밀하게 동기화하면 정적인 레이아웃에 서사적인 몰입감을 부여할 수 있다.","category":"web","tags":["CSS-only","Scroll-driven","Storytelling"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-010","title":"SVG 필터를 통한 디지털 유기성","body":"매끈한 픽셀 위에 feTurbulence와 feDisplacementMap 필터로 미세한 입자감과 일렁임을 부여하라. 수학적으로 완벽한 직선과 곡선에 의도적인 노이즈를 섞는 순간, 화면은 손에 잡힐 듯한 질감을 가진 공간으로 탈바꿈한다.","category":"web","tags":["SVGFilters","VisualEngine","Grainy"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-011","title":"브레이크포인트 없는 유연함 (Fluid Scale Logic)","body":"미디어 쿼리에 의존하는 단계별 크기 조절을 버리고 clamp() 함수를 통해 모든 수치를 선형적으로 설계하라. 폰트 크기뿐만 아니라 여백, 너비까지 루트 단위를 기준으로 유동적으로 변하게 하면 어떤 해상도에서도 의도한 시각적 밀도가 유지된다.","category":"web","tags":["FluidDesign","CSS-Clamp","Responsive"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-012","title":"컴포넌트 단위의 공간 인지 (Container Queries)","body":"전체 화면이 아닌 자신이 놓인 부모 컨테이너의 크기에 따라 레이아웃을 결정하라. container-type을 활용하면 배치되는 위치에 따라 내부 구조를 스스로 최적화하는 진정한 독립적 모듈을 구현할 수 있다.","category":"web","tags":["ContainerQueries","Modular","LayoutStrategy"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-013","title":"보이지 않는 정렬의 연속성 (Subgrid)","body":"중첩된 그리드 구조에서 자식 요소가 부모의 그리드 라인을 그대로 상속받게 하라. grid-template-rows: subgrid를 사용하면 서로 다른 카드 내부에 있는 제목이나 버튼들이 내용 길이에 상관없이 수평 선상에서 완벽하게 정렬된다.","category":"web","tags":["CSSGrid","Subgrid","Precision"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-014","title":"서체를 반응형 유기체로 (Variable Font Axes)","body":"가변 폰트의 굵기(wght), 너비(wdth), 기울기(slnt) 축을 인터랙션 데이터와 직접 연결하라. 사용자의 스크롤 깊이나 마우스 거리 등에 따라 서체가 미세하게 수축하고 팽창하는 반응은 텍스트에 목소리를 부여한다.","category":"web","tags":["VariableFonts","Typography","DynamicType"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-015","title":"직사각형 박스 모델의 파괴 (shape-outside)","body":"shape-outside 속성을 사용하여 텍스트가 정형화된 사각형이 아닌 유기적인 실루엣이나 원형 경로를 따라 흐르게 하라. 웹 특유의 딱딱한 블록 구조를 지우고 잡지 편집 디자인과 같은 예술적 구성을 완성한다.","category":"web","tags":["CSSShapes","EditorialDesign","LayoutHack"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-016","title":"가짜 광택의 마법 (MatCap Materials)","body":"복잡한 조명 연산 대신 미리 렌더링된 구형 텍스처(MatCap)를 사용하여 금속이나 유리 질감을 표현하라. 단 한 장의 이미지로 수십 개의 조명 효과를 흉내 낼 수 있어, 모바일 환경에서도 연산 부하 없이 극도로 화려한 쉐이딩을 구현할 수 있다.","category":"web","tags":["Threejs","MatCap","Performance"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-017","title":"기하학적 반복의 최적화 (Instanced Mesh)","body":"수천 개의 독립된 오브젝트를 렌더링해야 할 때 InstancedMesh를 사용해 단 한 번의 드로우 콜로 처리하라. 나뭇잎, 파티클, 군중 등을 구현할 때 CPU와 GPU 사이의 병목 현상을 제거하여 수만 개의 요소를 60fps로 유지하는 비결이다.","category":"web","tags":["WebGL","Instancing","Optimization"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-018","title":"정점 변위를 통한 유기적 형태 (Vertex Shader Noise)","body":"3D 모델의 기하학적 구조를 정적으로 두지 말고, 버텍스 쉐이더에서 노이즈 함수를 사용해 실시간으로 변형시켜라. 구체(Sphere)에 펄린 노이즈를 섞어 일렁이는 물방울이나 추상적인 생명체의 움직임을 만들면 생동감이 완성된다.","category":"web","tags":["GLSL","Shaders","Generative"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-019","title":"시네마틱 무드의 완성 (Post-processing Layer)","body":"생(Raw) 렌더링 결과물 위에 블룸(Bloom), 필름 그레인, 색수차(Chromatic Aberration) 효과를 겹쳐라. 캔버스 전체에 미세한 노이즈와 빛 번짐을 추가하는 것만으로도 웹 브라우저라는 이질감을 지우고 영화 한 장면 같은 깊이감을 준다.","category":"web","tags":["PostProcessing","VisualLogic","Cinematic"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-020","title":"접지력을 만드는 그림자 (Contact Shadows)","body":"무거운 실시간 그림자 대신 바닥면에 밀착된 정적인 평면 그림자(Contact Shadows)를 활용하라. 물체가 바닥에 닿는 지점만 어둡게 처리하는 텍스처를 배치하면, 복잡한 라이팅 없이도 오브젝트가 공간에 안착되어 있다는 강력한 공간감을 준다.","category":"web","tags":["Realism","ShadowHack","UX"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-021","title":"지각적 균일함의 표준 (OKLCH System)","body":"HSL 대신 인간의 눈이 느끼는 밝기를 정확히 반영하는 OKLCH를 사용하라. 서로 다른 색상(Hue)에서도 L(Lightness) 수치만 맞추면 시각적 무게감이 동일하게 유지되어, UI 구성 요소의 일관성을 완벽하게 제어할 수 있다.","category":"design","tags":["OKLCH","ColorSystem","Perceptual"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"in-use","url":""},
-    {"id":"lb-022","title":"브랜드의 DNA가 담긴 무채색 (Tinted Neutrals)","body":"순수한 검정이나 회색 대신, 브랜드의 핵심 색상을 1~5% 섞은 틴티드 그레이를 설계하라. 무채색 영역에 아주 미세한 색조가 감도는 것만으로도 화면 전체에 고급스러운 통일감이 생기며 디자인의 깊이가 달라진다.","category":"design","tags":["ColorHarmony","Branding","Neutrals"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-023","title":"대비를 넘어서는 인지성 (Contextual Luminance)","body":"다크 모드에서는 라이트 모드보다 채도를 낮추고 명도를 미세하게 올려라. 어두운 배경에서 고채도 색상은 눈부심(Vibration)을 유발하므로, 배경과의 명도 대비뿐만 아니라 눈의 피로도를 고려한 인지적 휘도를 조정해야 한다.","category":"design","tags":["DarkMode","Accessibility","UI"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-024","title":"감정을 설계하는 채도 분포 (Semantic Saturation)","body":"인터랙션의 중요도에 따라 채도를 데이터화하라. 중요한 CTA나 오류에는 고채도를, 정보의 보조 설명이나 배경 요소에는 저채도를 배치하여 사용자의 시선이 논리적인 순서에 따라 자연스럽게 흐르도록 유도해야 한다.","category":"design","tags":["VisualHierarchy","Saturation","EmotionalDesign"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-025","title":"깊이감을 만드는 투명도 레이어 (Alpha-based Surfaces)","body":"고정된 배경색 대신 불투명도(Alpha)를 활용한 오버레이 시스템을 구축하라. 베이스 컬러 위에 반투명한 레이어를 쌓으면 배경의 질감이나 색감이 자연스럽게 투영되어, 복잡한 그래픽 자산 없이도 세련된 글래스모피즘과 공간감을 구현할 수 있다.","category":"design","tags":["Depth","AlphaChannel","Layering"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-026","title":"여백을 선처럼 다뤄라 (Active Negative Space)","body":"정보의 그룹을 나누기 위해 보더나 라인을 치는 대신, 여백의 크기 차이만으로 구역을 정의하라. 더 넓은 여백은 더 강력한 단절이자 새로운 시작을 의미하며, 이는 레이아웃을 숨 쉬게 만들고 사용자가 정보의 덩어리를 직관적으로 파악하게 돕는다.","category":"design","tags":["NegativeSpace","Hierarchy","LayoutLogic"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-027","title":"크기에 따른 자간의 반비례 (Optical Tracking)","body":"폰트 사이즈가 커질수록 자간(Letter-spacing)을 미세하게 조이고, 작아질수록 넓혀라. 거대한 타이틀은 자간을 조여 시각적 응집력을 높여야 오브젝트처럼 보이며, 작은 본문은 글자 사이 공간을 확보해야 가독성이 살아난다.","category":"design","tags":["Typography","Readability","OpticalAdjustment"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-028","title":"행간은 정보의 호흡이다 (Dynamic Line Height)","body":"본문은 가독성을 위해 넓은 행간(1.5~1.7)을 확보하되, 제목은 시각적 임팩트를 위해 좁은 행간(1.1~1.2)을 유지하라. 짧고 강렬한 메시지는 행간을 좁혀 시선을 단단하게 묶어두는 수직 리듬의 설계가 필요하다.","category":"design","tags":["VerticalRhythm","LineHeight","InformationArchitecture"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-029","title":"서체 조합은 기능의 분리다 (Functional Pairing)","body":"비슷한 성격의 서체를 섞지 말고, 확실한 형태적 대조를 주라. 예리한 세리프(제목)와 기하학적인 산세리프(본문)의 조합은 단순한 미감을 넘어 주장과 설명이라는 정보의 기능을 시각적으로 분리하여 인지 부하를 줄여준다.","category":"design","tags":["TypePairing","Contrast","VisualCommunication"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-030","title":"시선의 끝을 설계하라 (Terminal Points)","body":"위계의 최상단(제목)에서 시작된 시선이 어디서 멈춰야 할지 명확한 종착지(CTA)를 제공하라. 중간 단계의 텍스트가 너무 강하면 시선이 분산되어 전환으로 이어지지 않는다. 모든 텍스트 요소는 최종 목적지를 향한 징검다리 역할을 수행해야 한다.","category":"design","tags":["VisualAnchor","Conversion","EyeTracking"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-031","title":"의도적 비대칭과 시각적 긴장 (Asymmetric Balance)","body":"완벽한 대칭이 주는 안정감 대신 6:4나 7:3의 비율로 요소를 배치하여 시각적 긴장감을 조성하라. 좌우 무게 중심이 미세하게 어긋날 때 사용자의 시선은 화면에 더 오래 머물며, 정적인 페이지에서 동적인 에너지를 느끼게 된다.","category":"design","tags":["Asymmetry","VisualTension","LayoutComposition"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-032","title":"타이포그래피의 공간화 (Type-as-Architecture)","body":"서체를 단순한 정보 전달 도구가 아닌, 레이아웃을 지탱하는 구조물로 사용하라. 거대한 타이포그래피를 배경 오브젝트로 배치하거나 이미지와 중첩시켜 공간의 깊이감을 만들면, 텍스트 자체가 디자인의 핵심 아이덴티티가 된다.","category":"design","tags":["LargeScaleType","Editorial","StructuralDesign"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-033","title":"경계를 허무는 중첩 (Intentional Overlapping)","body":"섹션과 섹션, 이미지와 텍스트의 경계를 명확히 나누지 말고 의도적으로 겹쳐라. 요소들이 서로의 영역을 침범할 때 브라우저 특유의 박스 모델 느낌이 사라지고, 마치 잡지나 포스터처럼 하나의 완결된 캔버스처럼 느껴지게 된다.","category":"design","tags":["Z-Index","Layering","BreakingTheBox"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-034","title":"그리드 이탈의 서사 (Grid-Breaking Moments)","body":"정교하게 설계된 그리드 시스템을 유지하다가, 가장 중요한 지점에서 단 하나의 요소를 그리드 밖으로 과감히 던져라. 모든 것이 규칙적일 때 나타나는 이 규칙의 파괴는 사용자의 시선을 즉각적으로 가로채며 강력한 강조 효과를 만든다.","category":"design","tags":["GridSystem","VisualEmphasis","RuleBreaking"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-035","title":"여백의 압도적 권위 (Aggressive White Space)","body":"여백을 남는 공간이 아닌 가장 비싼 오브젝트로 대우하라. 화면의 80% 이상을 비우고 단 하나의 단어나 이미지만 배치하는 극단적인 여백 활용은, 그 공간에 놓인 정보에 범접할 수 없는 권위와 미니멀한 아름다움을 부여한다.","category":"design","tags":["Minimalism","LuxuryDesign","Focus"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-036","title":"제약을 통한 창의성 강제 (Constraint-Driven Prompting)","body":"자유롭게 작성해줘 대신 동사 없이 설명해줘 혹은 색상을 단 2개만 사용하여 묘사해줘와 같은 극단적인 제약을 부여하라. AI는 논리적 병목을 해결하기 위해 기존의 학습 패턴을 비틀게 되며, 이 과정에서 예상치 못한 신선한 비유와 구조가 탄생한다.","category":"ai","tags":["CreativeConstraints","PromptEngineering","OutOfBox"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-037","title":"자기 비판적 진화 (Recursive Self-Critique)","body":"결과를 바로 요구하지 말고 먼저 이 주제에 대한 가장 뻔한 답변 5개를 리스트업하고, 그 5개를 제외한 완전히 새로운 접근법을 제시해줘라고 명령하라. AI가 스스로 클리셰를 인식하고 필터링하게 함으로써 결과물의 희소성을 비약적으로 높일 수 있다.","category":"ai","tags":["AntiCliche","IterativePrompt","QualityControl"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-038","title":"다성적 관점의 충돌 (Dialectical Prompting)","body":"단일한 전문가 페르소나가 아닌, 서로 반대되는 가치관을 가진 두 전문가(예: 미니멀리스트 디자이너 vs 맥시멀리스트 아티스트)가 논쟁하게 하라. 이들의 충돌 지점에서 발생하는 복합적인 인사이트는 평면적인 답변보다 훨씬 깊은 입체감을 제공한다.","category":"ai","tags":["Persona","DebateLogic","Synthesis"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-039","title":"이종 영역의 메타포 주입 (Cross-Domain Analogy)","body":"문제 해결의 가이드를 전혀 다른 도메인에서 가져와라. 웹 레이아웃을 설계해줘 대신 고급 파인 다이닝의 코스 요리 순서에 맞춰 웹의 사용자 여정을 설계해줘라고 요청하면, 해당 도메인의 문법이 전이되면서 독특한 서사와 리듬감이 만들어진다.","category":"ai","tags":["Metaphor","DomainTransfer","Narrative"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-040","title":"감각적 디테일의 시각화 (Sensory Detail Injection)","body":"추상적인 형용사(예: 예쁜, 세련된)를 금지하고, 물리적인 질감과 광학적 현상을 묘사하게 하라. 젖은 모래 위에 떨어진 실크 천 같은 질감과 17시의 낮은 햇살이 만드는 긴 그림자를 반영한 디자인을 요구할 때 AI는 훨씬 구체적이고 예술적인 결과물을 내놓는다.","category":"ai","tags":["VisualPrompting","SensoryLanguage","Precision"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-041","title":"페르소나 분리를 통한 내부 감사 (Dual-Agent Review)","body":"구현을 담당하는 작성자와 품질을 따지는 비평가 역할을 내부적으로 분리하라. 결과물을 출력하기 전, 스스로 비평가 모드로 전환하여 이 코드가 최신 보안 표준을 준수하는가 또는 가장 효율적인 알고리즘인가를 자문하게 하면 논리적 허점이 극적으로 줄어든다.","category":"ai","tags":["Self-Correction","Multi-Role","Reliability"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-042","title":"체크리스트 기반의 정량적 자가 진단","body":"CLAUDE.md나 시스템 프롬프트에 출력 전 필수 검증 항목을 데이터 형태로 명시하라. AI가 단순히 작업을 끝냈다고 믿는 것이 아니라, 접근성 점수, 타입 안정성, 가독성 등 각 항목에 대해 스스로 Pass/Fail을 판단하고 미달 시 자가 수정을 거치도록 강제해야 한다.","category":"ai","tags":["Guardrails","InstructionDesign","Consistency"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-043","title":"실패 시나리오 역추적 (Pre-mortem Thinking)","body":"복잡한 작업을 시작하기 직전, 이 작업이 실패한다면 가장 큰 원인은 무엇일까를 스스로 예측하게 하라. 발생 가능한 잠재적 오류나 에지 케이스를 먼저 리스트업하고 이를 회피하는 전략을 세운 뒤 실행에 옮기게 하면 작업 성공률이 비약적으로 상승한다.","category":"ai","tags":["RiskManagement","StrategicThinking","Logic"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-044","title":"추론 경로의 논리적 재검증 (Chain of Verification)","body":"최종 답변을 내놓은 후, 답변 내에 포함된 각 주장이나 코드 조각이 기초 사실과 일치하는지 단계별로 다시 확인하게 하라. 스스로 자신의 추론 과정을 의심하고 검증하는 확인 사살 단계를 거치면 할루시네이션을 최소화하고 기술적 정확도를 담보할 수 있다.","category":"ai","tags":["CoVe","Accuracy","FactChecking"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-045","title":"의도와 결과의 델타 분석 (Intent-Output Gap Analysis)","body":"작업 완료 직후, 사용자의 최초 요청 사항과 현재의 최종 결과물을 대조하여 누락된 세부 사항이 있는지 분석하게 하라. 긴 대화 과정에서 희석될 수 있는 초기 제약 조건을 이 차이(Delta) 분석 과정을 통해 다시 환기함으로써 결과물의 완결성을 확보할 수 있다.","category":"ai","tags":["Alignment","Completion","Attention"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-046","title":"선택의 역설을 해결하는 골든 패스 (Guided Path)","body":"너무 많은 옵션은 사용자를 마비시킨다. 가장 수익성이 높거나 만족도가 높은 단 하나의 옵션을 시각적으로 압도적으로 강조하여 의사결정 에너지를 아껴줘라. 사용자는 선택의 고통 대신 제안에 따르는 안도감을 느끼며 전환된다.","category":"biz","tags":["ChoiceArchitecture","CRO","DecisionLogic"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-047","title":"완성되지 않은 과업의 갈증 (Zeigarnik Onboarding)","body":"가입이나 설문 절차를 여러 단계로 나누고, 진행률 바를 0%가 아닌 15%(이미 시작됨)에서 시작하라. 인간은 미완성된 과업을 끝내려는 강력한 심리적 본능(자이가르닉 효과)이 있으며, 이는 복잡한 온보딩 완료율을 비약적으로 높인다.","category":"biz","tags":["UserEngagement","Onboarding","Psychology"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-048","title":"보상 먼저, 요구는 나중에 (Reciprocity Loop)","body":"이메일 주소를 요구하기 전에 사용자가 즉각적으로 가치를 느낄 수 있는 작은 결과를 먼저 제공하라. 먼저 받은 혜택은 심리적 부채감을 만들어, 이후의 데이터 입력이나 결제 요구에 대한 저항을 극적으로 낮춘다.","category":"biz","tags":["Reciprocity","GrowthHacking","ValueFirst"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-049","title":"마지막 1초의 확신 (Frictionless Reassurance)","body":"결제나 가입 버튼 바로 아래에 신용카드 필요 없음, 30초 만에 완료, 언제든 해지 가능과 같은 마이크로 카피를 배치하라. 클릭 직전 사용자가 느끼는 마지막 심리적 마찰(Friction)을 버튼 주변에서 즉시 해소하는 것이 페이지 전체를 고치는 것보다 효과적이다.","category":"biz","tags":["Microcopy","TrustSignals","Conversion"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-050","title":"정적 증명을 넘어선 동적 증거 (Live Social Proof)","body":"박제된 추천사 대신 현재 X명이 이 상품을 보고 있습니다 또는 방금 서울에서 Y님이 가입했습니다와 같은 실시간 데이터를 인터랙션에 녹여라. 타인의 실시간 활동은 가장 강력한 신뢰를 주며, 웹사이트에 지금 당장 참여해야 할 것 같은 활기를 부여한다.","category":"biz","tags":["SocialProof","Urgency","RealtimeData"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-051","title":"서사적 스크롤링의 미학 (Narrative Sequence)","body":"웹사이트를 단편적인 정보의 나열이 아닌, 기승전결이 있는 한 편의 이야기로 설계하라. 사용자가 스크롤을 내릴 때마다 문제 제기, 해결책 제시, 비전 공유의 순서로 정보가 전개되도록 배치하면 사용자는 구매자를 넘어 브랜드 서사의 주인공이 된다.","category":"biz","tags":["Storytelling","SequentialUX","Branding"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-052","title":"브랜드의 페르소나가 담긴 움직임 (Kinetic Identity)","body":"로고나 색상뿐만 아니라 움직임의 방식으로 브랜드를 정의하라. 민첩하고 경쾌한 튕김은 혁신적인 스타트업의 성격을, 묵직하고 부드러운 페이드 인은 신뢰 중심의 금융 브랜드의 성격을 대변한다. 일관된 인터랙션 문법은 브랜드의 보이지 않는 성격(Personality)을 구축한다.","category":"biz","tags":["MotionBranding","Identity","BrandVoice"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-053","title":"공유된 결핍과 가치관의 연대 (Belief-based Branding)","body":"제품의 기능(What)이 아니라 우리가 왜 존재하는지(Why)와 무엇을 경계하는지를 먼저 선언하라. 브랜드가 맞서 싸우는 문제나 지향하는 가치에 공감하는 사용자는 단순한 소비자를 넘어 강력한 팬덤이자 옹호자(Evangelist)로 진화한다.","category":"biz","tags":["BrandPurpose","Community","EmotionalBond"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-054","title":"디지털의 차가움을 녹이는 휴먼 터치","body":"완벽하게 정렬된 픽셀 사이에 의도적인 손글씨, 거친 질감의 종이 텍스처, 혹은 제작자의 진솔한 메시지를 삽입하라. 기술 뒤에 살아있는 사람이 있다는 느낌은 디지털 환경 특유의 불신을 제거하고 브랜드에 대한 친밀감과 깊은 신뢰를 형성한다.","category":"biz","tags":["HumanCentric","Texture","Authenticity"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-055","title":"사운드와 진동의 공감각적 브랜딩 (Sensory Branding)","body":"시각을 넘어 청각(Sound Logo)과 촉각(Haptic Feedback)으로 브랜드 경험을 확장하라. 특정 버튼을 눌렀을 때의 고유한 알림음이나 미세한 진동 패턴은 브랜드를 기억하는 또 다른 감각적 통로가 되며, 이는 무의식중에 브랜드의 독창성을 강화한다.","category":"biz","tags":["SensoryExperience","Micro-interactions","Recall"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-056","title":"전략과 실행의 분리 (Planner-Executor Pattern)","body":"복잡한 과업을 한 명의 에이전트에게 맡기지 말고, 전체 로드맵을 설계하는 전략가와 개별 모듈을 구현하는 실행자로 역할을 분리하라. 전략가는 컨텍스트 전체를 조망하며 목표를 유지하고, 실행자는 지엽적인 구현에 집중함으로써 토큰 낭비와 문맥 이탈을 방지할 수 있다.","category":"workflow","tags":["Multi-Agent","Orchestration","Efficiency"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-057","title":"표준화된 핸드오버 프로토콜","body":"에이전트 간 업무 인수인계 시 현재 상태, 완료된 작업, 다음 단계의 제약 조건을 요약한 구조화된 데이터(JSON/Markdown)만 전달하라. 전체 대화 기록을 넘기는 대신 정제된 상태값만 공유함으로써 컨텍스트 윈도우를 확보하고 정보의 왜곡을 막을 수 있다.","category":"workflow","tags":["ContextManagement","Protocol","Communication"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"in-use","url":""},
-    {"id":"lb-058","title":"공유 상태 저장소의 구축 (Blackboard Architecture)","body":"개별 에이전트의 내부 메모리에 의존하지 말고, STATE.md나 중앙 집중형 DB와 같은 공유 게시판을 운영하라. 모든 에이전트가 이 중앙 저장소를 실시간으로 참조하고 업데이트하게 하면, 병렬로 작업하는 에이전트들이 서로의 진행 상황을 즉각적으로 인지하고 동기화할 수 있다.","category":"workflow","tags":["SharedState","Synchronization","DataFlow"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-059","title":"상호 검증형 루프 (Adversarial Validation)","body":"결과물을 바로 수락하지 말고, 구현 에이전트의 출력을 검증 에이전트가 독립적으로 테스트하게 하는 피드백 루프를 설계하라. 사람이 검입하기 전 AI끼리 논리적 모순과 버그를 먼저 걸러내는 디버깅 레이어를 배치하는 것이 전체 작업 속도를 결정적으로 높인다.","category":"workflow","tags":["Self-Healing","QualityAssurance","PeerReview"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-060","title":"마이크로 체크포인트 전략","body":"거대한 작업을 한 번에 끝내려 하지 말고, 검증 가능한 최소 단위(Atomic Task)로 쪼개어 단계별로 저장하라. 각 단계가 성공할 때마다 중간 상태를 저장하면, 이후 단계에서 오류가 발생하더라도 처음부터 다시 시작할 필요 없이 마지막 성공 지점에서 즉시 복구할 수 있다.","category":"workflow","tags":["ErrorRecovery","AtomicWork","Reliability"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-061","title":"컨텍스트 증류와 요약 (Context Distillation)","body":"대화가 길어질 때 전체 기록을 유지하지 말고, 결정된 사항(Decisions)과 변경된 상태(State)만 남기는 증류 과정을 주기적으로 수행하라. 불필요한 시행착오 과정을 제거하고 핵심 논리만 요약하여 전달할 때 에이전트의 추론 정확도는 오히려 향상된다.","category":"workflow","tags":["ContextWindow","Summarization","Precision"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"in-use","url":""},
-    {"id":"lb-062","title":"계층형 메모리 아키텍처 (Tiered Memory System)","body":"기억을 프로젝트 규칙(LTM), 현재 진행 상황(STM), 전역 사용자 선호도(Global)로 계층화하여 관리하라. 모든 정보를 동일한 가중치로 처리하지 않고, 성격에 맞는 별도의 파일에 분산 저장함으로써 정보 간의 충돌과 간섭을 최소화할 수 있다.","category":"workflow","tags":["KnowledgeGraph","MemoryTiering","Organization"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-063","title":"의도적 망각을 통한 엔트로피 제어 (Selective Amnesia)","body":"실패한 시도나 폐기된 아이디어는 메모리에서 과감히 삭제하거나 아카이브로 격리하라. 모든 기록을 남기는 것은 컨텍스트 엔트로피를 높여 에이전트를 혼란에 빠뜨린다. 정답 경로(Golden Path) 위주로 메모리를 정제하는 작업이 에이전트의 지능을 유지하는 비결이다.","category":"workflow","tags":["Pruning","Entropy","InformationNoise"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-064","title":"외부 지식 베이스의 실시간 인덱싱 (Dynamic RAG)","body":"에이전트의 내부 지식에 의존하는 대신, 프로젝트 문서와 코드를 실시간 인덱싱하여 필요할 때만 호출(RAG)하게 하라. 컨텍스트 윈도우 안에 정보를 가두지 않고 외부에 거대한 도서관을 운영함으로써, 에이전트는 최소한의 메모리만 사용하면서도 방대한 정보를 정확하게 참조할 수 있다.","category":"workflow","tags":["RAG","VectorSearch","ExternalKnowledge"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-065","title":"지침의 모듈화와 동적 로딩 (On-demand Instruction)","body":"모든 규칙을 단일 파일(CLAUDE.md)에 담지 말고, 기능별로 분리된 서브 지침 파일(예: PERFORMANCE.md, STYLE.md)을 운영하라. 에이전트에게 특정 작업 시에만 관련 파일을 읽으라고 지시함으로써, 현재 작업과 무관한 지침이 컨텍스트를 오염시키고 추론력을 분산시키는 것을 방지할 수 있다.","category":"ai","tags":["ModularPrompt","ContextOptimization","Efficiency"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-066","title":"부정적 제약 조건의 선제적 정의 (Anti-Pattern Redlines)","body":"무엇을 해야 하는지(Do) 나열하는 것보다, 무엇을 하지 말아야 하는지(Don't)를 명확히 정의하는 것이 경계 설정에 더 효율적이다. 클린 코드를 작성하라는 추상적인 지침 대신 중첩된 if문을 3단계 이상 쓰지 마라와 같은 구체적인 금지 사항은 에이전트의 탐색 공간을 즉각적으로 좁혀 성능을 높인다.","category":"ai","tags":["NegativeConstraints","BoundarySetting","Precision"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"in-use","url":""},
-    {"id":"lb-067","title":"장황한 설명보다 강력한 골든 샘플 (Exemplar-Centric Design)","body":"줄글 형태의 긴 설명 대신, 가장 완벽한 형태의 코드나 텍스트 예시(Few-shot)를 1~2개 제공하라. 에이전트는 복잡한 추론 과정 없이 예시의 구조와 문체를 패턴 매칭으로 즉시 흡수하며, 이는 수십 페이지의 가이드라인보다 훨씬 정확한 결과물을 보장한다.","category":"ai","tags":["Few-Shot","PatternMatching","Accuracy"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-068","title":"가중치 기반 우선순위 태깅 (Hierarchical Weighting)","body":"지침 내의 각 항목에 [CRITICAL], [PREFER], [OPTIONAL]과 같은 가중치 태그를 부여하라. 컨텍스트가 포화 상태에 이를 때 에이전트가 어떤 지침을 최우선으로 지켜야 하고 어떤 것을 무시해도 되는지 명확한 판단 기준을 제공하여, 중요한 원칙이 망각되는 것을 막는다.","category":"ai","tags":["PriorityLogic","InstructionTuning","DecisionMaking"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"in-use","url":""},
-    {"id":"lb-069","title":"지침의 도구화 (Tool-Embodied Logic)","body":"언어적 지침으로 에이전트를 통제하려 하지 말고, 그 로직을 도구(Tool)나 스크립트의 검증 단계에 심어라. 변수명을 camelCase로 쓰라고 지침에 적는 대신, 에이전트가 파일을 저장할 때 자동으로 린트를 돌려 반려하게 만드는 것이 지침의 길이를 줄이고 실행력을 담보하는 가장 확실한 방법이다.","category":"ai","tags":["Validation","Automation","SystemDesign"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-070","title":"애니메이션의 품격 있는 후퇴 (Motion Redesign)","body":"prefers-reduced-motion 대응 시 단순히 애니메이션을 끄는 것에 그치지 말고, 이동(Translation) 효과를 불투명도(Opacity)나 블러(Blur) 전환으로 대체하라. 움직임에 민감한 사용자에게 멀미를 유발하지 않으면서도 상태 변화의 연속성을 우아하게 전달할 수 있다.","category":"web","tags":["A11y","ReducedMotion","UX"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-071","title":"포커스 링의 아이덴티티화 (Branded Focus-Visible)","body":"기본 아웃라인을 제거하는 대신 :focus-visible을 사용하여 키보드 사용자에게만 노출되는 브랜드 고유의 포커스 스타일을 설계하라. 요소의 곡률을 반영한 이중 보더나 미세한 글로우 효과는 접근성을 미적 완성도로 승화시키는 장치가 된다.","category":"web","tags":["FocusVisible","Accessibility","UI"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-072","title":"인지적 흐름을 만드는 스테거링 (Sequential Appearance)","body":"리스트나 카드 요소를 한꺼번에 노출하지 말고 0.05초 단위의 미세한 시차(Stagger)를 두어 순차적으로 등장시켜라. 이는 시선의 흐름을 자연스럽게 유도하여 사용자가 정보의 계층 구조와 양을 직관적으로 파악하게 돕는 인지적 가이드 역할을 한다.","category":"web","tags":["Micro-interaction","CognitiveLoad","Stagger"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-073","title":"맥락을 설명하는 인터랙티브 레이블 (Contextual ARIA)","body":"단순한 닫기 버튼 대신 팝업 창 닫기 혹은 장바구니에서 삭제와 같이 목적이 명확한 aria-label을 제공하라. 인터랙션의 결과가 무엇인지 스크린 리더 사용자에게 실시간으로 중계함으로써, 보이지 않는 곳에서도 사용자 여정이 끊기지 않도록 설계해야 한다.","category":"web","tags":["Aria-label","ScreenReader","Interactivity"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-074","title":"가상 광원과 다중 레이어 그림자","body":"단일 그림자 속성 대신, 농도와 퍼짐 정도가 다른 3~5개의 그림자를 겹쳐서 설계하라. 실제 물리 세계의 빛은 여러 번 회절하며 부드러운 그림자를 만드는데, 이 부드러움의 밀도가 디지털 오브젝트를 실제 손에 잡힐 듯한 고급스러운 물체로 변모시킨다.","category":"design","tags":["SoftShadows","Depth","Lighting"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-075","title":"곡률의 연속성 (G2 Continuity / Squircle)","body":"표준적인 CSS border-radius가 만드는 급격한 직선-곡선 전환 대신, 슈퍼엘립스(Squircle)와 같은 부드러운 곡률을 적용하라. 애플 제품의 모서리처럼 곡선이 시작되는 지점이 느껴지지 않을 만큼 매끄러운 연속성은 사용자의 눈에 본능적인 편안함과 프리미엄한 인상을 준다.","category":"design","tags":["Squircle","SmoothCorner","IndustrialDesign"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-076","title":"1픽셀의 미학, 헤어라인 디테일","body":"면과 면이 만나는 지점에 배경보다 아주 미세하게 밝거나 어두운 1px(또는 0.5px)의 헤어라인 보더를 삽입하라. 이 미세한 선은 금속 시계의 모서리가 빛을 받아 반짝이는 듯한 효과를 주며, 디자인이 극도로 정밀하게 관리되고 있다는 장인 정신의 인상을 심어준다.","category":"design","tags":["Precision","Micro-detail","Elegance"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-077","title":"심도를 통한 공간의 위계 (Atmospheric Blur)","body":"단순히 요소를 위에 쌓지 말고, 배경 요소에 backdrop-filter: blur()를 적용하여 카메라의 보케(Bokeh) 효과를 흉내 내라. 사용자는 초점이 맞은 레이어와 공간적 배경을 본능적으로 구분하게 되며, 이는 화면 안에 깊이 있는 입체적 공간이 존재한다는 감각을 일깨운다.","category":"design","tags":["BlurFilter","SpatialDesign","DepthOfField"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-078","title":"디지털의 살결을 만드는 미세 노이즈 (Film Grain)","body":"완벽하게 매끄러운 단색 배경 위에 투명도 2~3%의 미세한 노이즈(Grain) 텍스처를 오버레이하라. 픽셀의 결이 느껴지는 미세한 질감은 디지털 특유의 차갑고 가공된 느낌을 지우고, 마치 고급 종이나 필름 인화물 같은 아날로그적인 따뜻함과 예술적 깊이를 부여한다.","category":"design","tags":["Texture","AnalogAesthetic","VisualDepth"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-079","title":"의도 중심의 컨텍스트 동기화 (Intent-First Alignment)","body":"구현 요청 전, 해당 작업의 기술적 의도와 디자인 철학을 먼저 설명하라. AI가 무엇을(What) 만드는지보다 왜(Why) 그렇게 해야 하는지를 이해할 때, 예외 상황에서도 일관된 품질의 결과물을 내놓으며 인간의 의도를 벗어나지 않는 수준 높은 제안을 한다.","category":"workflow","tags":["Alignment","Intent","Communication"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-080","title":"점진적 구조 설계 (Structural Scaffolding)","body":"한 번에 완성된 코드를 요구하지 말고, 아키텍처 설계 → 인터페이스 정의 → 세부 구현 순으로 단계를 쪼개어 승인하라. 각 단계에서 인간이 구조적 방향을 확정해주면, AI는 잘못된 방향으로 질주하지 않고 견고한 논리적 토대 위에서 살을 붙여 완결성을 높인다.","category":"workflow","tags":["Iterative","Architecture","Scaffolding"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-081","title":"샌드위치 워크플로우 (Human-AI Sandwich)","body":"인간이 핵심 아이디어를 제시(Bottom)하고, AI가 이를 구체화/확장(Middle)한 뒤, 다시 인간이 최종 디테일과 엣지를 다듬는(Top) 3단계 방식을 습관화하라. AI의 폭발적인 생산성과 인간의 날카로운 직관이 결합되어 평균 이상의 완성도를 보장하는 가장 확실한 방법이다.","category":"workflow","tags":["Collaboration","Efficiency","Quality"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-082","title":"AI를 도전자로 활용한 레드팀 검증 (Red-Teaming)","body":"작업 중간에 AI에게 지금 내 논리에서 가장 취약한 점 3가지는 무엇인가? 혹은 이 디자인이 실패할 이유는 무엇인가?를 질문하라. 협력자가 아닌 도전자로서 AI를 활용할 때, 인간은 자신의 인지 편향을 발견하고 결과물의 품질을 한 단계 더 끌어올릴 수 있다.","category":"workflow","tags":["CriticalThinking","RedTeaming","Insight"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-083","title":"독보적 관점의 시대 (E-E-A-T & Perspectives)","body":"AI가 생성한 일반 정보는 상품화되었다. 이제 검색 엔진은 뻔한 설명보다 저자만이 가진 독특한 경험, 실패 사례, 주관적 통찰이 담긴 관점을 최상단에 배치한다. 무엇인가가 아닌 나는 어떻게 했는가를 말하는 콘텐츠만이 AI 검색 엔진의 선택을 받는다.","category":"biz","tags":["SEO","E-E-A-T","ContentStrategy"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-084","title":"키워드에서 엔티티로 (Semantic SEO)","body":"개별 키워드 순위에 집착하지 말고 주제 간의 관계를 정의하는 엔티티(Entity) 중심으로 콘텐츠를 설계하라. AI 모델은 웹을 지식 그래프로 인식한다. 특정 주제에 대해 구조적이고 깊이 있는 답변(Topic Cluster)을 제공하여 당신의 사이트를 해당 분야의 권위자로 인식하게 만들어야 한다.","category":"biz","tags":["KnowledgeGraph","TopicCluster","SemanticSearch"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-085","title":"클릭 너머의 브랜딩 (Zero-Click Strategy)","body":"제로 클릭 시대에는 사용자가 사이트에 유입되지 않아도 누가 이 정보를 줬는지 기억하게 해야 한다. 검색 스니펫에 노출되는 강렬한 브랜드 메시지와 로고는 SERP(검색 결과 페이지) 자체를 브랜딩 보드로 활용하여 잠재적 신뢰를 쌓는 기회가 된다.","category":"biz","tags":["BrandAwareness","SERP","Zero-Click"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-086","title":"규모의 자동화와 개인화 (Programmatic SEO)","body":"반복적인 데이터 기반 페이지는 AI를 활용해 대량 생성(Programmatic)하되, 사용자 의도(Intent)에 맞춘 마이크로 세그먼트화를 진행하라. 수만 개의 니즈별 페이지를 자동화하면서도 각 페이지가 사용자의 특정 문제에 대한 정밀한 해답을 줄 때, 롱테일 키워드를 통한 폭발적인 유기적 성장이 가능하다.","category":"biz","tags":["GrowthHacking","Automation","Personalization"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-087","title":"멀티모달 최적화 (Multi-modal Search Discovery)","body":"AI 비서는 이제 텍스트뿐만 아니라 이미지, 영상, 오디오를 동시에 이해하고 검색 결과에 반영한다. 시각 자료에 상세한 구조화 데이터(Schema.org)를 입히고, 영상의 핵심 구간을 텍스트화하여 제공하라. 어떤 형태의 질문을 받아도 당신의 자산을 가장 먼저 추천할 수 있는 공감각적 최적화가 필수적이다.","category":"biz","tags":["Schema","Multi-modal","SearchTrends"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-088","title":"실패를 기회로 바꾸는 회복 탄력적 오류 설계","body":"에러 메시지를 단순히 잘못을 지적하는 경고문이 아니라, 해결책을 제시하는 가이드로 정의하라. 유머러스한 어조나 명확한 액션 플랜(비밀번호 찾기 링크 포함)을 제공할 때, 사용자는 좌절 대신 브랜드에 대한 의외의 호감과 신뢰를 얻는다.","category":"design","tags":["ErrorUX","Copywriting","Resilience"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-089","title":"인지적 흐름을 깨지 않는 실시간 검증 (Dynamic Validation)","body":"데이터 입력 중(Focus-on)에 에러를 띄워 흐름을 끊지 말고, 입력을 마치고 다음 필드로 넘어갈 때(Blur) 검증하라. 반대로 성공 시에는 즉각적인 시각적 피드백(체크 표시 등)을 주어 성취감을 부여함으로써 폼 작성을 하나의 능동적인 게임처럼 느끼게 유도해야 한다.","category":"design","tags":["FormUX","FeedbackLoop","CognitiveFlow"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-090","title":"빈 상태를 통한 시작의 두려움 해소 (Active Empty States)","body":"내역이 없습니다라는 무미건조한 문구 대신, 첫 데이터를 생성하도록 유도하는 템플릿이나 예시 가이드를 배치하라. 비어있는 공간은 정보의 부재를 알리는 곳이 아니라, 사용자가 무엇을 할 수 있는지 알려주는 기회의 공간으로 인지되어야 한다.","category":"design","tags":["EmptyState","Onboarding","Engagement"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-091","title":"인지적 과부하를 막는 정보의 덩어리화 (Progressive Disclosure)","body":"20개의 입력 필드를 한 화면에 보여주지 말고, 성격이 같은 3~5개씩 묶어 단계별로 노출하라. 한 단계씩 완료하며 얻는 작은 승리의 경험은 복잡한 작업에 따르는 심리적 저항을 낮추고 전체 완수율을 비약적으로 높인다.","category":"design","tags":["Miller'sLaw","InformationArchitecture","CompletionRate"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-092","title":"불안을 제거하는 미래 예측적 버튼 (Descriptive Action)","body":"확인이나 제출 같은 모호한 단어 대신 결제하고 강의 시작하기처럼 클릭 후 벌어질 일을 구체적으로 서술하라. 버튼을 누르기 직전 사용자가 느끼는 미세한 망설임(Anxiety)을 제거하는 가장 강력한 방법은 다음 단계에 대한 명확한 약속이다.","category":"design","tags":["Affordance","Microcopy","UXPsychology"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-093","title":"이커머스: 구매 심리를 활용한 전환 트리거 주입","body":"제품 설명 생성 시 단순 스펙이 아닌 손실 회피나 사회적 증거와 같은 심리적 트리거를 컨텍스트로 명시하라. 이 제품은 가볍습니다 대신 이미 1만 명의 캠퍼가 무게의 한계를 극복했습니다와 같이 타겟 페르소나의 결핍과 행동 데이터를 연결할 때 AI는 설득의 언어를 생성한다.","category":"ai","tags":["EcommerceAI","ConversionCopy","Persuasion"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-094","title":"포트폴리오: 결과물이 아닌 사고의 궤적 우선순위화","body":"AI에게 프로젝트를 설명하게 할 때 최종 결과물 묘사보다 문제 정의 → 제약 조건 → 해결 논리 → 결과의 서사 구조를 강제하라. AI가 의사결정 이유(The Why)를 중심으로 내용을 구성하게 하면, 포트폴리오는 전문가로서의 문제 해결 능력을 입증하는 강력한 증거가 된다.","category":"ai","tags":["PortfolioStrategy","Storytelling","ProfessionalIdentity"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-095","title":"랜딩 페이지: 주의력 자산 관리를 위한 3초 룰","body":"랜딩 페이지의 컨텍스트 설계 시 모든 정보를 동등하게 취급하지 말고 3초 안에 전달해야 할 단 하나의 핵심 가치(USP)를 최상단에 고정하라. AI가 부가적인 설명을 생성하느라 핵심 메시지를 희석하지 않도록, 정보의 위계와 사용자 시선 이동 경로를 논리적으로 규정하는 구조적 제약을 부여해야 한다.","category":"ai","tags":["LandingPage","AttentionEconomy","USP"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-096","title":"도메인별 언어적 DNA 스타일 전이 (Tone-of-Voice DNA)","body":"도메인에 따라 AI가 참조할 벤치마크 텍스트나 단어 집합(Lexicon)을 다르게 제공하라. 금융 서비스는 신뢰와 정밀함을 강조하는 격식 있는 어조를, 패션 브랜드는 감각과 영감을 자극하는 형용사 중심의 어조를 컨텍스트에 심어줌으로써, 도메인의 공기를 그대로 머금은 듯한 현장감 있는 결과물을 얻을 수 있다.","category":"ai","tags":["ToneOfVoice","BrandDNA","ContentQuality"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-097","title":"전환을 부르는 전략적 마찰 (Strategic Friction)","body":"모든 사용자 경험에서 마찰을 제거하는 것이 정답은 아니다. 고관여 제품이나 프리미엄 서비스에서는 의도적인 질문이나 복잡한 단계를 배치하라. 사용자는 자신이 들인 노력만큼 결과물의 가치를 높게 평가하며(이케아 효과), 이 과정을 통과한 사용자만이 진정한 충성 고객이 된다.","category":"biz","tags":["Friction","ValuePerception","LuxuryUX"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-098","title":"의도 기반의 자율 생성 UI (Just-in-Time UI)","body":"고정된 컴포넌트 라이브러리를 버리고, 사용자의 현재 의도(Intent)에 따라 실시간으로 UI를 생성(Generative)하라. 버튼의 위치나 메뉴의 구조가 사용자의 다음 행동을 예측하여 그 순간에만 존재했다가 사라지는 유동적 인터페이스는 앱의 개념을 도구에서 지능형 비서로 바꾼다.","category":"web","tags":["GenerativeUI","AdaptiveDesign","FutureWeb"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-099","title":"창의적 오역의 미학 (Creative Misinterpretation)","body":"AI에게 완벽한 프롬프트를 주려 애쓰지 말고, 의도적으로 모호하거나 상충하는 개념을 던져 AI의 오역을 유도하라. 논리적 결함에서 발생하는 뜻밖의 시각적 조합이나 비유는 인간의 상상력 범위를 넘어서는 진정한 독창성(Originality)의 씨앗이 된다.","category":"ai","tags":["AbstractPrompting","AI-Artistry","Serendipity"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""},
-    {"id":"lb-100","title":"실패를 먹고 자라는 안티프래질 시스템","body":"에러를 숨기거나 수정하는 데 급급하지 말고, 발생하는 모든 버그와 실패 사례를 즉시 학습 데이터로 전환하는 자동화 루프를 구축하라. 시스템이 오류를 겪을수록 더 견고해지고 지능화되는 구조를 만들면, 실패는 위기가 아닌 시스템 진화의 가장 강력한 연료가 된다.","category":"workflow","tags":["Antifragile","Self-Evolving","AI-Ops"],"date":"2026-04-25","source":"gemini-discussion","added_by":"yuna","status":"reviewed","url":""}
+    {
+      "id": "lb-001",
+      "title": "텍스트를 좌표처럼 다뤄라",
+      "body": "각 글자를 독립된 파티클로 취급한다. 스크롤 또는 마우스에 따라 분해/재조립되는 키네틱 타이포그래피는 방문자에게 강렬한 첫인상을 남긴다. GSAP SplitText + motionPath 조합이 효과적.",
+      "category": "web",
+      "tags": [
+        "typography",
+        "scroll",
+        "gsap",
+        "kinetic"
+      ],
+      "date": "2026-04-25",
+      "source": "agent-discovery",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-002",
+      "title": "수직 스크롤은 목적이 있을 때만",
+      "body": "레이아웃 선택은 목적에서 시작한다. 감성 전달 목적이라면 수직 스크롤이 맞지만, 포트폴리오 임팩트 전달에는 풀스크린 갤러리가 더 적합할 수 있다. Purpose Archaeology 단계에서 반드시 검토할 것.",
+      "category": "design",
+      "tags": [
+        "layout",
+        "ux",
+        "purpose",
+        "scroll"
+      ],
+      "date": "2026-04-25",
+      "source": "agent-discovery",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-003",
+      "title": "Data slop을 경계하라",
+      "body": "불필요한 숫자, 카운터, 아이콘 반복은 디자인을 오히려 약하게 만든다. '고객 만족도 98%' 같은 공허한 수치보다 단 하나의 강렬한 인상이 낫다. One thousand no's for every yes.",
+      "category": "design",
+      "tags": [
+        "content",
+        "minimalism",
+        "quality"
+      ],
+      "date": "2026-04-25",
+      "source": "ceo-memo",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-004",
+      "title": "60fps는 협상 불가",
+      "body": "top/left/width/height 애니메이션은 Layout Reflow를 유발한다. transform/opacity만 애니메이션에 사용하고, will-change를 필수로 선언한다. GSAP에서는 x/y를 사용하고 scrub:true는 금지.",
+      "category": "web",
+      "tags": [
+        "performance",
+        "animation",
+        "gsap",
+        "60fps"
+      ],
+      "date": "2026-04-25",
+      "source": "agent-discovery",
+      "added_by": "yuna",
+      "status": "in-use",
+      "url": ""
+    },
+    {
+      "id": "lb-005",
+      "title": "클리셰를 알아야 클리셰를 피한다",
+      "body": "이 주제에서 흔히 보이는 패턴 5가지를 먼저 선언하고 금지한다. 단, 패턴은 적이 아니다. 관성이 적이다. 성공 패턴을 파악해야 올바르게 변주할 수 있다.",
+      "category": "ai",
+      "tags": [
+        "creativity",
+        "prompt",
+        "cliche",
+        "design"
+      ],
+      "date": "2026-04-25",
+      "source": "ceo-memo",
+      "added_by": "yuna",
+      "status": "in-use",
+      "url": ""
+    },
+    {
+      "id": "lb-006",
+      "title": "물리 기반 모션의 해방 (Spring Physics)",
+      "body": "정해진 이징 함수 대신 탄성, 무게, 마찰력을 적용한 스프링 물리 모델을 인터랙션에 도입하라. 사용자의 드래그나 클릭이 끝난 후에도 미세한 관성이 느껴질 때 웹은 비로소 살아있는 유기체로 인식된다.",
+      "category": "web",
+      "tags": [
+        "FramerMotion",
+        "Animation",
+        "Physics"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-007",
+      "title": "뷰 트랜지션의 연속성 (Morphing UI)",
+      "body": "페이지 이동 시 요소를 고유 식별자로 연결하여 끊김 없는 변형(Morphing)을 구현하라. 사용자는 이동이 아닌 상태 변화를 경험하며, 이는 인터랙션의 인지 부하를 획기적으로 줄이고 앱 수준의 부드러움을 제공한다.",
+      "category": "web",
+      "tags": [
+        "ViewTransitions",
+        "UX",
+        "Continuity"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-008",
+      "title": "커서를 주인공으로 (Cursor-as-an-Instrument)",
+      "body": "마우스 커서를 단순한 포인터가 아닌 인터랙티브한 브러시나 렌즈로 정의하라. 특정 영역 진입 시 커서가 형태를 바꾸며 내부 정보를 투영하거나 배경과 대조되는 시각적 피드백을 줄 때 사용자 경험의 밀도는 비약적으로 상승한다.",
+      "category": "web",
+      "tags": [
+        "CustomCursor",
+        "Interaction",
+        "Feedback"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-009",
+      "title": "스크롤은 애니메이션의 재생 헤드다",
+      "body": "스크롤을 위치 이동이 아닌 타임라인의 진행도로 취급하라. CSS @scroll-timeline을 활용해 스크롤 속도와 방향에 따라 요소의 스케일, 회전, 필터를 정밀하게 동기화하면 정적인 레이아웃에 서사적인 몰입감을 부여할 수 있다.",
+      "category": "web",
+      "tags": [
+        "CSS-only",
+        "Scroll-driven",
+        "Storytelling"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-010",
+      "title": "SVG 필터를 통한 디지털 유기성",
+      "body": "매끈한 픽셀 위에 feTurbulence와 feDisplacementMap 필터로 미세한 입자감과 일렁임을 부여하라. 수학적으로 완벽한 직선과 곡선에 의도적인 노이즈를 섞는 순간, 화면은 손에 잡힐 듯한 질감을 가진 공간으로 탈바꿈한다.",
+      "category": "web",
+      "tags": [
+        "SVGFilters",
+        "VisualEngine",
+        "Grainy"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-011",
+      "title": "브레이크포인트 없는 유연함 (Fluid Scale Logic)",
+      "body": "미디어 쿼리에 의존하는 단계별 크기 조절을 버리고 clamp() 함수를 통해 모든 수치를 선형적으로 설계하라. 폰트 크기뿐만 아니라 여백, 너비까지 루트 단위를 기준으로 유동적으로 변하게 하면 어떤 해상도에서도 의도한 시각적 밀도가 유지된다.",
+      "category": "web",
+      "tags": [
+        "FluidDesign",
+        "CSS-Clamp",
+        "Responsive"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-012",
+      "title": "컴포넌트 단위의 공간 인지 (Container Queries)",
+      "body": "전체 화면이 아닌 자신이 놓인 부모 컨테이너의 크기에 따라 레이아웃을 결정하라. container-type을 활용하면 배치되는 위치에 따라 내부 구조를 스스로 최적화하는 진정한 독립적 모듈을 구현할 수 있다.",
+      "category": "web",
+      "tags": [
+        "ContainerQueries",
+        "Modular",
+        "LayoutStrategy"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-013",
+      "title": "보이지 않는 정렬의 연속성 (Subgrid)",
+      "body": "중첩된 그리드 구조에서 자식 요소가 부모의 그리드 라인을 그대로 상속받게 하라. grid-template-rows: subgrid를 사용하면 서로 다른 카드 내부에 있는 제목이나 버튼들이 내용 길이에 상관없이 수평 선상에서 완벽하게 정렬된다.",
+      "category": "web",
+      "tags": [
+        "CSSGrid",
+        "Subgrid",
+        "Precision"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-014",
+      "title": "서체를 반응형 유기체로 (Variable Font Axes)",
+      "body": "가변 폰트의 굵기(wght), 너비(wdth), 기울기(slnt) 축을 인터랙션 데이터와 직접 연결하라. 사용자의 스크롤 깊이나 마우스 거리 등에 따라 서체가 미세하게 수축하고 팽창하는 반응은 텍스트에 목소리를 부여한다.",
+      "category": "web",
+      "tags": [
+        "VariableFonts",
+        "Typography",
+        "DynamicType"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-015",
+      "title": "직사각형 박스 모델의 파괴 (shape-outside)",
+      "body": "shape-outside 속성을 사용하여 텍스트가 정형화된 사각형이 아닌 유기적인 실루엣이나 원형 경로를 따라 흐르게 하라. 웹 특유의 딱딱한 블록 구조를 지우고 잡지 편집 디자인과 같은 예술적 구성을 완성한다.",
+      "category": "web",
+      "tags": [
+        "CSSShapes",
+        "EditorialDesign",
+        "LayoutHack"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-016",
+      "title": "가짜 광택의 마법 (MatCap Materials)",
+      "body": "복잡한 조명 연산 대신 미리 렌더링된 구형 텍스처(MatCap)를 사용하여 금속이나 유리 질감을 표현하라. 단 한 장의 이미지로 수십 개의 조명 효과를 흉내 낼 수 있어, 모바일 환경에서도 연산 부하 없이 극도로 화려한 쉐이딩을 구현할 수 있다.",
+      "category": "web",
+      "tags": [
+        "Threejs",
+        "MatCap",
+        "Performance"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-017",
+      "title": "기하학적 반복의 최적화 (Instanced Mesh)",
+      "body": "수천 개의 독립된 오브젝트를 렌더링해야 할 때 InstancedMesh를 사용해 단 한 번의 드로우 콜로 처리하라. 나뭇잎, 파티클, 군중 등을 구현할 때 CPU와 GPU 사이의 병목 현상을 제거하여 수만 개의 요소를 60fps로 유지하는 비결이다.",
+      "category": "web",
+      "tags": [
+        "WebGL",
+        "Instancing",
+        "Optimization"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-018",
+      "title": "정점 변위를 통한 유기적 형태 (Vertex Shader Noise)",
+      "body": "3D 모델의 기하학적 구조를 정적으로 두지 말고, 버텍스 쉐이더에서 노이즈 함수를 사용해 실시간으로 변형시켜라. 구체(Sphere)에 펄린 노이즈를 섞어 일렁이는 물방울이나 추상적인 생명체의 움직임을 만들면 생동감이 완성된다.",
+      "category": "web",
+      "tags": [
+        "GLSL",
+        "Shaders",
+        "Generative"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-019",
+      "title": "시네마틱 무드의 완성 (Post-processing Layer)",
+      "body": "생(Raw) 렌더링 결과물 위에 블룸(Bloom), 필름 그레인, 색수차(Chromatic Aberration) 효과를 겹쳐라. 캔버스 전체에 미세한 노이즈와 빛 번짐을 추가하는 것만으로도 웹 브라우저라는 이질감을 지우고 영화 한 장면 같은 깊이감을 준다.",
+      "category": "web",
+      "tags": [
+        "PostProcessing",
+        "VisualLogic",
+        "Cinematic"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-020",
+      "title": "접지력을 만드는 그림자 (Contact Shadows)",
+      "body": "무거운 실시간 그림자 대신 바닥면에 밀착된 정적인 평면 그림자(Contact Shadows)를 활용하라. 물체가 바닥에 닿는 지점만 어둡게 처리하는 텍스처를 배치하면, 복잡한 라이팅 없이도 오브젝트가 공간에 안착되어 있다는 강력한 공간감을 준다.",
+      "category": "web",
+      "tags": [
+        "Realism",
+        "ShadowHack",
+        "UX"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-021",
+      "title": "지각적 균일함의 표준 (OKLCH System)",
+      "body": "HSL 대신 인간의 눈이 느끼는 밝기를 정확히 반영하는 OKLCH를 사용하라. 서로 다른 색상(Hue)에서도 L(Lightness) 수치만 맞추면 시각적 무게감이 동일하게 유지되어, UI 구성 요소의 일관성을 완벽하게 제어할 수 있다.",
+      "category": "design",
+      "tags": [
+        "OKLCH",
+        "ColorSystem",
+        "Perceptual"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "in-use",
+      "url": ""
+    },
+    {
+      "id": "lb-022",
+      "title": "브랜드의 DNA가 담긴 무채색 (Tinted Neutrals)",
+      "body": "순수한 검정이나 회색 대신, 브랜드의 핵심 색상을 1~5% 섞은 틴티드 그레이를 설계하라. 무채색 영역에 아주 미세한 색조가 감도는 것만으로도 화면 전체에 고급스러운 통일감이 생기며 디자인의 깊이가 달라진다.",
+      "category": "design",
+      "tags": [
+        "ColorHarmony",
+        "Branding",
+        "Neutrals"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-023",
+      "title": "대비를 넘어서는 인지성 (Contextual Luminance)",
+      "body": "다크 모드에서는 라이트 모드보다 채도를 낮추고 명도를 미세하게 올려라. 어두운 배경에서 고채도 색상은 눈부심(Vibration)을 유발하므로, 배경과의 명도 대비뿐만 아니라 눈의 피로도를 고려한 인지적 휘도를 조정해야 한다.",
+      "category": "design",
+      "tags": [
+        "DarkMode",
+        "Accessibility",
+        "UI"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-024",
+      "title": "감정을 설계하는 채도 분포 (Semantic Saturation)",
+      "body": "인터랙션의 중요도에 따라 채도를 데이터화하라. 중요한 CTA나 오류에는 고채도를, 정보의 보조 설명이나 배경 요소에는 저채도를 배치하여 사용자의 시선이 논리적인 순서에 따라 자연스럽게 흐르도록 유도해야 한다.",
+      "category": "design",
+      "tags": [
+        "VisualHierarchy",
+        "Saturation",
+        "EmotionalDesign"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-025",
+      "title": "깊이감을 만드는 투명도 레이어 (Alpha-based Surfaces)",
+      "body": "고정된 배경색 대신 불투명도(Alpha)를 활용한 오버레이 시스템을 구축하라. 베이스 컬러 위에 반투명한 레이어를 쌓으면 배경의 질감이나 색감이 자연스럽게 투영되어, 복잡한 그래픽 자산 없이도 세련된 글래스모피즘과 공간감을 구현할 수 있다.",
+      "category": "design",
+      "tags": [
+        "Depth",
+        "AlphaChannel",
+        "Layering"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-026",
+      "title": "여백을 선처럼 다뤄라 (Active Negative Space)",
+      "body": "정보의 그룹을 나누기 위해 보더나 라인을 치는 대신, 여백의 크기 차이만으로 구역을 정의하라. 더 넓은 여백은 더 강력한 단절이자 새로운 시작을 의미하며, 이는 레이아웃을 숨 쉬게 만들고 사용자가 정보의 덩어리를 직관적으로 파악하게 돕는다.",
+      "category": "design",
+      "tags": [
+        "NegativeSpace",
+        "Hierarchy",
+        "LayoutLogic"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-027",
+      "title": "크기에 따른 자간의 반비례 (Optical Tracking)",
+      "body": "폰트 사이즈가 커질수록 자간(Letter-spacing)을 미세하게 조이고, 작아질수록 넓혀라. 거대한 타이틀은 자간을 조여 시각적 응집력을 높여야 오브젝트처럼 보이며, 작은 본문은 글자 사이 공간을 확보해야 가독성이 살아난다.",
+      "category": "design",
+      "tags": [
+        "Typography",
+        "Readability",
+        "OpticalAdjustment"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-028",
+      "title": "행간은 정보의 호흡이다 (Dynamic Line Height)",
+      "body": "본문은 가독성을 위해 넓은 행간(1.5~1.7)을 확보하되, 제목은 시각적 임팩트를 위해 좁은 행간(1.1~1.2)을 유지하라. 짧고 강렬한 메시지는 행간을 좁혀 시선을 단단하게 묶어두는 수직 리듬의 설계가 필요하다.",
+      "category": "design",
+      "tags": [
+        "VerticalRhythm",
+        "LineHeight",
+        "InformationArchitecture"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-029",
+      "title": "서체 조합은 기능의 분리다 (Functional Pairing)",
+      "body": "비슷한 성격의 서체를 섞지 말고, 확실한 형태적 대조를 주라. 예리한 세리프(제목)와 기하학적인 산세리프(본문)의 조합은 단순한 미감을 넘어 주장과 설명이라는 정보의 기능을 시각적으로 분리하여 인지 부하를 줄여준다.",
+      "category": "design",
+      "tags": [
+        "TypePairing",
+        "Contrast",
+        "VisualCommunication"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-030",
+      "title": "시선의 끝을 설계하라 (Terminal Points)",
+      "body": "위계의 최상단(제목)에서 시작된 시선이 어디서 멈춰야 할지 명확한 종착지(CTA)를 제공하라. 중간 단계의 텍스트가 너무 강하면 시선이 분산되어 전환으로 이어지지 않는다. 모든 텍스트 요소는 최종 목적지를 향한 징검다리 역할을 수행해야 한다.",
+      "category": "design",
+      "tags": [
+        "VisualAnchor",
+        "Conversion",
+        "EyeTracking"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-031",
+      "title": "의도적 비대칭과 시각적 긴장 (Asymmetric Balance)",
+      "body": "완벽한 대칭이 주는 안정감 대신 6:4나 7:3의 비율로 요소를 배치하여 시각적 긴장감을 조성하라. 좌우 무게 중심이 미세하게 어긋날 때 사용자의 시선은 화면에 더 오래 머물며, 정적인 페이지에서 동적인 에너지를 느끼게 된다.",
+      "category": "design",
+      "tags": [
+        "Asymmetry",
+        "VisualTension",
+        "LayoutComposition"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-032",
+      "title": "타이포그래피의 공간화 (Type-as-Architecture)",
+      "body": "서체를 단순한 정보 전달 도구가 아닌, 레이아웃을 지탱하는 구조물로 사용하라. 거대한 타이포그래피를 배경 오브젝트로 배치하거나 이미지와 중첩시켜 공간의 깊이감을 만들면, 텍스트 자체가 디자인의 핵심 아이덴티티가 된다.",
+      "category": "design",
+      "tags": [
+        "LargeScaleType",
+        "Editorial",
+        "StructuralDesign"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-033",
+      "title": "경계를 허무는 중첩 (Intentional Overlapping)",
+      "body": "섹션과 섹션, 이미지와 텍스트의 경계를 명확히 나누지 말고 의도적으로 겹쳐라. 요소들이 서로의 영역을 침범할 때 브라우저 특유의 박스 모델 느낌이 사라지고, 마치 잡지나 포스터처럼 하나의 완결된 캔버스처럼 느껴지게 된다.",
+      "category": "design",
+      "tags": [
+        "Z-Index",
+        "Layering",
+        "BreakingTheBox"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-034",
+      "title": "그리드 이탈의 서사 (Grid-Breaking Moments)",
+      "body": "정교하게 설계된 그리드 시스템을 유지하다가, 가장 중요한 지점에서 단 하나의 요소를 그리드 밖으로 과감히 던져라. 모든 것이 규칙적일 때 나타나는 이 규칙의 파괴는 사용자의 시선을 즉각적으로 가로채며 강력한 강조 효과를 만든다.",
+      "category": "design",
+      "tags": [
+        "GridSystem",
+        "VisualEmphasis",
+        "RuleBreaking"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-035",
+      "title": "여백의 압도적 권위 (Aggressive White Space)",
+      "body": "여백을 남는 공간이 아닌 가장 비싼 오브젝트로 대우하라. 화면의 80% 이상을 비우고 단 하나의 단어나 이미지만 배치하는 극단적인 여백 활용은, 그 공간에 놓인 정보에 범접할 수 없는 권위와 미니멀한 아름다움을 부여한다.",
+      "category": "design",
+      "tags": [
+        "Minimalism",
+        "LuxuryDesign",
+        "Focus"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-036",
+      "title": "제약을 통한 창의성 강제 (Constraint-Driven Prompting)",
+      "body": "자유롭게 작성해줘 대신 동사 없이 설명해줘 혹은 색상을 단 2개만 사용하여 묘사해줘와 같은 극단적인 제약을 부여하라. AI는 논리적 병목을 해결하기 위해 기존의 학습 패턴을 비틀게 되며, 이 과정에서 예상치 못한 신선한 비유와 구조가 탄생한다.",
+      "category": "ai",
+      "tags": [
+        "CreativeConstraints",
+        "PromptEngineering",
+        "OutOfBox"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-037",
+      "title": "자기 비판적 진화 (Recursive Self-Critique)",
+      "body": "결과를 바로 요구하지 말고 먼저 이 주제에 대한 가장 뻔한 답변 5개를 리스트업하고, 그 5개를 제외한 완전히 새로운 접근법을 제시해줘라고 명령하라. AI가 스스로 클리셰를 인식하고 필터링하게 함으로써 결과물의 희소성을 비약적으로 높일 수 있다.",
+      "category": "ai",
+      "tags": [
+        "AntiCliche",
+        "IterativePrompt",
+        "QualityControl"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-038",
+      "title": "다성적 관점의 충돌 (Dialectical Prompting)",
+      "body": "단일한 전문가 페르소나가 아닌, 서로 반대되는 가치관을 가진 두 전문가(예: 미니멀리스트 디자이너 vs 맥시멀리스트 아티스트)가 논쟁하게 하라. 이들의 충돌 지점에서 발생하는 복합적인 인사이트는 평면적인 답변보다 훨씬 깊은 입체감을 제공한다.",
+      "category": "ai",
+      "tags": [
+        "Persona",
+        "DebateLogic",
+        "Synthesis"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-039",
+      "title": "이종 영역의 메타포 주입 (Cross-Domain Analogy)",
+      "body": "문제 해결의 가이드를 전혀 다른 도메인에서 가져와라. 웹 레이아웃을 설계해줘 대신 고급 파인 다이닝의 코스 요리 순서에 맞춰 웹의 사용자 여정을 설계해줘라고 요청하면, 해당 도메인의 문법이 전이되면서 독특한 서사와 리듬감이 만들어진다.",
+      "category": "ai",
+      "tags": [
+        "Metaphor",
+        "DomainTransfer",
+        "Narrative"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-040",
+      "title": "감각적 디테일의 시각화 (Sensory Detail Injection)",
+      "body": "추상적인 형용사(예: 예쁜, 세련된)를 금지하고, 물리적인 질감과 광학적 현상을 묘사하게 하라. 젖은 모래 위에 떨어진 실크 천 같은 질감과 17시의 낮은 햇살이 만드는 긴 그림자를 반영한 디자인을 요구할 때 AI는 훨씬 구체적이고 예술적인 결과물을 내놓는다.",
+      "category": "ai",
+      "tags": [
+        "VisualPrompting",
+        "SensoryLanguage",
+        "Precision"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-041",
+      "title": "페르소나 분리를 통한 내부 감사 (Dual-Agent Review)",
+      "body": "구현을 담당하는 작성자와 품질을 따지는 비평가 역할을 내부적으로 분리하라. 결과물을 출력하기 전, 스스로 비평가 모드로 전환하여 이 코드가 최신 보안 표준을 준수하는가 또는 가장 효율적인 알고리즘인가를 자문하게 하면 논리적 허점이 극적으로 줄어든다.",
+      "category": "ai",
+      "tags": [
+        "Self-Correction",
+        "Multi-Role",
+        "Reliability"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-042",
+      "title": "체크리스트 기반의 정량적 자가 진단",
+      "body": "CLAUDE.md나 시스템 프롬프트에 출력 전 필수 검증 항목을 데이터 형태로 명시하라. AI가 단순히 작업을 끝냈다고 믿는 것이 아니라, 접근성 점수, 타입 안정성, 가독성 등 각 항목에 대해 스스로 Pass/Fail을 판단하고 미달 시 자가 수정을 거치도록 강제해야 한다.",
+      "category": "ai",
+      "tags": [
+        "Guardrails",
+        "InstructionDesign",
+        "Consistency"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-043",
+      "title": "실패 시나리오 역추적 (Pre-mortem Thinking)",
+      "body": "복잡한 작업을 시작하기 직전, 이 작업이 실패한다면 가장 큰 원인은 무엇일까를 스스로 예측하게 하라. 발생 가능한 잠재적 오류나 에지 케이스를 먼저 리스트업하고 이를 회피하는 전략을 세운 뒤 실행에 옮기게 하면 작업 성공률이 비약적으로 상승한다.",
+      "category": "ai",
+      "tags": [
+        "RiskManagement",
+        "StrategicThinking",
+        "Logic"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-044",
+      "title": "추론 경로의 논리적 재검증 (Chain of Verification)",
+      "body": "최종 답변을 내놓은 후, 답변 내에 포함된 각 주장이나 코드 조각이 기초 사실과 일치하는지 단계별로 다시 확인하게 하라. 스스로 자신의 추론 과정을 의심하고 검증하는 확인 사살 단계를 거치면 할루시네이션을 최소화하고 기술적 정확도를 담보할 수 있다.",
+      "category": "ai",
+      "tags": [
+        "CoVe",
+        "Accuracy",
+        "FactChecking"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-045",
+      "title": "의도와 결과의 델타 분석 (Intent-Output Gap Analysis)",
+      "body": "작업 완료 직후, 사용자의 최초 요청 사항과 현재의 최종 결과물을 대조하여 누락된 세부 사항이 있는지 분석하게 하라. 긴 대화 과정에서 희석될 수 있는 초기 제약 조건을 이 차이(Delta) 분석 과정을 통해 다시 환기함으로써 결과물의 완결성을 확보할 수 있다.",
+      "category": "ai",
+      "tags": [
+        "Alignment",
+        "Completion",
+        "Attention"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-046",
+      "title": "선택의 역설을 해결하는 골든 패스 (Guided Path)",
+      "body": "너무 많은 옵션은 사용자를 마비시킨다. 가장 수익성이 높거나 만족도가 높은 단 하나의 옵션을 시각적으로 압도적으로 강조하여 의사결정 에너지를 아껴줘라. 사용자는 선택의 고통 대신 제안에 따르는 안도감을 느끼며 전환된다.",
+      "category": "biz",
+      "tags": [
+        "ChoiceArchitecture",
+        "CRO",
+        "DecisionLogic"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-047",
+      "title": "완성되지 않은 과업의 갈증 (Zeigarnik Onboarding)",
+      "body": "가입이나 설문 절차를 여러 단계로 나누고, 진행률 바를 0%가 아닌 15%(이미 시작됨)에서 시작하라. 인간은 미완성된 과업을 끝내려는 강력한 심리적 본능(자이가르닉 효과)이 있으며, 이는 복잡한 온보딩 완료율을 비약적으로 높인다.",
+      "category": "biz",
+      "tags": [
+        "UserEngagement",
+        "Onboarding",
+        "Psychology"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-048",
+      "title": "보상 먼저, 요구는 나중에 (Reciprocity Loop)",
+      "body": "이메일 주소를 요구하기 전에 사용자가 즉각적으로 가치를 느낄 수 있는 작은 결과를 먼저 제공하라. 먼저 받은 혜택은 심리적 부채감을 만들어, 이후의 데이터 입력이나 결제 요구에 대한 저항을 극적으로 낮춘다.",
+      "category": "biz",
+      "tags": [
+        "Reciprocity",
+        "GrowthHacking",
+        "ValueFirst"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-049",
+      "title": "마지막 1초의 확신 (Frictionless Reassurance)",
+      "body": "결제나 가입 버튼 바로 아래에 신용카드 필요 없음, 30초 만에 완료, 언제든 해지 가능과 같은 마이크로 카피를 배치하라. 클릭 직전 사용자가 느끼는 마지막 심리적 마찰(Friction)을 버튼 주변에서 즉시 해소하는 것이 페이지 전체를 고치는 것보다 효과적이다.",
+      "category": "biz",
+      "tags": [
+        "Microcopy",
+        "TrustSignals",
+        "Conversion"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-050",
+      "title": "정적 증명을 넘어선 동적 증거 (Live Social Proof)",
+      "body": "박제된 추천사 대신 현재 X명이 이 상품을 보고 있습니다 또는 방금 서울에서 Y님이 가입했습니다와 같은 실시간 데이터를 인터랙션에 녹여라. 타인의 실시간 활동은 가장 강력한 신뢰를 주며, 웹사이트에 지금 당장 참여해야 할 것 같은 활기를 부여한다.",
+      "category": "biz",
+      "tags": [
+        "SocialProof",
+        "Urgency",
+        "RealtimeData"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-051",
+      "title": "서사적 스크롤링의 미학 (Narrative Sequence)",
+      "body": "웹사이트를 단편적인 정보의 나열이 아닌, 기승전결이 있는 한 편의 이야기로 설계하라. 사용자가 스크롤을 내릴 때마다 문제 제기, 해결책 제시, 비전 공유의 순서로 정보가 전개되도록 배치하면 사용자는 구매자를 넘어 브랜드 서사의 주인공이 된다.",
+      "category": "biz",
+      "tags": [
+        "Storytelling",
+        "SequentialUX",
+        "Branding"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-052",
+      "title": "브랜드의 페르소나가 담긴 움직임 (Kinetic Identity)",
+      "body": "로고나 색상뿐만 아니라 움직임의 방식으로 브랜드를 정의하라. 민첩하고 경쾌한 튕김은 혁신적인 스타트업의 성격을, 묵직하고 부드러운 페이드 인은 신뢰 중심의 금융 브랜드의 성격을 대변한다. 일관된 인터랙션 문법은 브랜드의 보이지 않는 성격(Personality)을 구축한다.",
+      "category": "biz",
+      "tags": [
+        "MotionBranding",
+        "Identity",
+        "BrandVoice"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-053",
+      "title": "공유된 결핍과 가치관의 연대 (Belief-based Branding)",
+      "body": "제품의 기능(What)이 아니라 우리가 왜 존재하는지(Why)와 무엇을 경계하는지를 먼저 선언하라. 브랜드가 맞서 싸우는 문제나 지향하는 가치에 공감하는 사용자는 단순한 소비자를 넘어 강력한 팬덤이자 옹호자(Evangelist)로 진화한다.",
+      "category": "biz",
+      "tags": [
+        "BrandPurpose",
+        "Community",
+        "EmotionalBond"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-054",
+      "title": "디지털의 차가움을 녹이는 휴먼 터치",
+      "body": "완벽하게 정렬된 픽셀 사이에 의도적인 손글씨, 거친 질감의 종이 텍스처, 혹은 제작자의 진솔한 메시지를 삽입하라. 기술 뒤에 살아있는 사람이 있다는 느낌은 디지털 환경 특유의 불신을 제거하고 브랜드에 대한 친밀감과 깊은 신뢰를 형성한다.",
+      "category": "biz",
+      "tags": [
+        "HumanCentric",
+        "Texture",
+        "Authenticity"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-055",
+      "title": "사운드와 진동의 공감각적 브랜딩 (Sensory Branding)",
+      "body": "시각을 넘어 청각(Sound Logo)과 촉각(Haptic Feedback)으로 브랜드 경험을 확장하라. 특정 버튼을 눌렀을 때의 고유한 알림음이나 미세한 진동 패턴은 브랜드를 기억하는 또 다른 감각적 통로가 되며, 이는 무의식중에 브랜드의 독창성을 강화한다.",
+      "category": "biz",
+      "tags": [
+        "SensoryExperience",
+        "Micro-interactions",
+        "Recall"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-056",
+      "title": "전략과 실행의 분리 (Planner-Executor Pattern)",
+      "body": "복잡한 과업을 한 명의 에이전트에게 맡기지 말고, 전체 로드맵을 설계하는 전략가와 개별 모듈을 구현하는 실행자로 역할을 분리하라. 전략가는 컨텍스트 전체를 조망하며 목표를 유지하고, 실행자는 지엽적인 구현에 집중함으로써 토큰 낭비와 문맥 이탈을 방지할 수 있다.",
+      "category": "workflow",
+      "tags": [
+        "Multi-Agent",
+        "Orchestration",
+        "Efficiency"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-057",
+      "title": "표준화된 핸드오버 프로토콜",
+      "body": "에이전트 간 업무 인수인계 시 현재 상태, 완료된 작업, 다음 단계의 제약 조건을 요약한 구조화된 데이터(JSON/Markdown)만 전달하라. 전체 대화 기록을 넘기는 대신 정제된 상태값만 공유함으로써 컨텍스트 윈도우를 확보하고 정보의 왜곡을 막을 수 있다.",
+      "category": "workflow",
+      "tags": [
+        "ContextManagement",
+        "Protocol",
+        "Communication"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "in-use",
+      "url": ""
+    },
+    {
+      "id": "lb-058",
+      "title": "공유 상태 저장소의 구축 (Blackboard Architecture)",
+      "body": "개별 에이전트의 내부 메모리에 의존하지 말고, STATE.md나 중앙 집중형 DB와 같은 공유 게시판을 운영하라. 모든 에이전트가 이 중앙 저장소를 실시간으로 참조하고 업데이트하게 하면, 병렬로 작업하는 에이전트들이 서로의 진행 상황을 즉각적으로 인지하고 동기화할 수 있다.",
+      "category": "workflow",
+      "tags": [
+        "SharedState",
+        "Synchronization",
+        "DataFlow"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-059",
+      "title": "상호 검증형 루프 (Adversarial Validation)",
+      "body": "결과물을 바로 수락하지 말고, 구현 에이전트의 출력을 검증 에이전트가 독립적으로 테스트하게 하는 피드백 루프를 설계하라. 사람이 검입하기 전 AI끼리 논리적 모순과 버그를 먼저 걸러내는 디버깅 레이어를 배치하는 것이 전체 작업 속도를 결정적으로 높인다.",
+      "category": "workflow",
+      "tags": [
+        "Self-Healing",
+        "QualityAssurance",
+        "PeerReview"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-060",
+      "title": "마이크로 체크포인트 전략",
+      "body": "거대한 작업을 한 번에 끝내려 하지 말고, 검증 가능한 최소 단위(Atomic Task)로 쪼개어 단계별로 저장하라. 각 단계가 성공할 때마다 중간 상태를 저장하면, 이후 단계에서 오류가 발생하더라도 처음부터 다시 시작할 필요 없이 마지막 성공 지점에서 즉시 복구할 수 있다.",
+      "category": "workflow",
+      "tags": [
+        "ErrorRecovery",
+        "AtomicWork",
+        "Reliability"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-061",
+      "title": "컨텍스트 증류와 요약 (Context Distillation)",
+      "body": "대화가 길어질 때 전체 기록을 유지하지 말고, 결정된 사항(Decisions)과 변경된 상태(State)만 남기는 증류 과정을 주기적으로 수행하라. 불필요한 시행착오 과정을 제거하고 핵심 논리만 요약하여 전달할 때 에이전트의 추론 정확도는 오히려 향상된다.",
+      "category": "workflow",
+      "tags": [
+        "ContextWindow",
+        "Summarization",
+        "Precision"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "in-use",
+      "url": ""
+    },
+    {
+      "id": "lb-062",
+      "title": "계층형 메모리 아키텍처 (Tiered Memory System)",
+      "body": "기억을 프로젝트 규칙(LTM), 현재 진행 상황(STM), 전역 사용자 선호도(Global)로 계층화하여 관리하라. 모든 정보를 동일한 가중치로 처리하지 않고, 성격에 맞는 별도의 파일에 분산 저장함으로써 정보 간의 충돌과 간섭을 최소화할 수 있다.",
+      "category": "workflow",
+      "tags": [
+        "KnowledgeGraph",
+        "MemoryTiering",
+        "Organization"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-063",
+      "title": "의도적 망각을 통한 엔트로피 제어 (Selective Amnesia)",
+      "body": "실패한 시도나 폐기된 아이디어는 메모리에서 과감히 삭제하거나 아카이브로 격리하라. 모든 기록을 남기는 것은 컨텍스트 엔트로피를 높여 에이전트를 혼란에 빠뜨린다. 정답 경로(Golden Path) 위주로 메모리를 정제하는 작업이 에이전트의 지능을 유지하는 비결이다.",
+      "category": "workflow",
+      "tags": [
+        "Pruning",
+        "Entropy",
+        "InformationNoise"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-064",
+      "title": "외부 지식 베이스의 실시간 인덱싱 (Dynamic RAG)",
+      "body": "에이전트의 내부 지식에 의존하는 대신, 프로젝트 문서와 코드를 실시간 인덱싱하여 필요할 때만 호출(RAG)하게 하라. 컨텍스트 윈도우 안에 정보를 가두지 않고 외부에 거대한 도서관을 운영함으로써, 에이전트는 최소한의 메모리만 사용하면서도 방대한 정보를 정확하게 참조할 수 있다.",
+      "category": "workflow",
+      "tags": [
+        "RAG",
+        "VectorSearch",
+        "ExternalKnowledge"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-065",
+      "title": "지침의 모듈화와 동적 로딩 (On-demand Instruction)",
+      "body": "모든 규칙을 단일 파일(CLAUDE.md)에 담지 말고, 기능별로 분리된 서브 지침 파일(예: PERFORMANCE.md, STYLE.md)을 운영하라. 에이전트에게 특정 작업 시에만 관련 파일을 읽으라고 지시함으로써, 현재 작업과 무관한 지침이 컨텍스트를 오염시키고 추론력을 분산시키는 것을 방지할 수 있다.",
+      "category": "ai",
+      "tags": [
+        "ModularPrompt",
+        "ContextOptimization",
+        "Efficiency"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-066",
+      "title": "부정적 제약 조건의 선제적 정의 (Anti-Pattern Redlines)",
+      "body": "무엇을 해야 하는지(Do) 나열하는 것보다, 무엇을 하지 말아야 하는지(Don't)를 명확히 정의하는 것이 경계 설정에 더 효율적이다. 클린 코드를 작성하라는 추상적인 지침 대신 중첩된 if문을 3단계 이상 쓰지 마라와 같은 구체적인 금지 사항은 에이전트의 탐색 공간을 즉각적으로 좁혀 성능을 높인다.",
+      "category": "ai",
+      "tags": [
+        "NegativeConstraints",
+        "BoundarySetting",
+        "Precision"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "in-use",
+      "url": ""
+    },
+    {
+      "id": "lb-067",
+      "title": "장황한 설명보다 강력한 골든 샘플 (Exemplar-Centric Design)",
+      "body": "줄글 형태의 긴 설명 대신, 가장 완벽한 형태의 코드나 텍스트 예시(Few-shot)를 1~2개 제공하라. 에이전트는 복잡한 추론 과정 없이 예시의 구조와 문체를 패턴 매칭으로 즉시 흡수하며, 이는 수십 페이지의 가이드라인보다 훨씬 정확한 결과물을 보장한다.",
+      "category": "ai",
+      "tags": [
+        "Few-Shot",
+        "PatternMatching",
+        "Accuracy"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-068",
+      "title": "가중치 기반 우선순위 태깅 (Hierarchical Weighting)",
+      "body": "지침 내의 각 항목에 [CRITICAL], [PREFER], [OPTIONAL]과 같은 가중치 태그를 부여하라. 컨텍스트가 포화 상태에 이를 때 에이전트가 어떤 지침을 최우선으로 지켜야 하고 어떤 것을 무시해도 되는지 명확한 판단 기준을 제공하여, 중요한 원칙이 망각되는 것을 막는다.",
+      "category": "ai",
+      "tags": [
+        "PriorityLogic",
+        "InstructionTuning",
+        "DecisionMaking"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "in-use",
+      "url": ""
+    },
+    {
+      "id": "lb-069",
+      "title": "지침의 도구화 (Tool-Embodied Logic)",
+      "body": "언어적 지침으로 에이전트를 통제하려 하지 말고, 그 로직을 도구(Tool)나 스크립트의 검증 단계에 심어라. 변수명을 camelCase로 쓰라고 지침에 적는 대신, 에이전트가 파일을 저장할 때 자동으로 린트를 돌려 반려하게 만드는 것이 지침의 길이를 줄이고 실행력을 담보하는 가장 확실한 방법이다.",
+      "category": "ai",
+      "tags": [
+        "Validation",
+        "Automation",
+        "SystemDesign"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-070",
+      "title": "애니메이션의 품격 있는 후퇴 (Motion Redesign)",
+      "body": "prefers-reduced-motion 대응 시 단순히 애니메이션을 끄는 것에 그치지 말고, 이동(Translation) 효과를 불투명도(Opacity)나 블러(Blur) 전환으로 대체하라. 움직임에 민감한 사용자에게 멀미를 유발하지 않으면서도 상태 변화의 연속성을 우아하게 전달할 수 있다.",
+      "category": "web",
+      "tags": [
+        "A11y",
+        "ReducedMotion",
+        "UX"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-071",
+      "title": "포커스 링의 아이덴티티화 (Branded Focus-Visible)",
+      "body": "기본 아웃라인을 제거하는 대신 :focus-visible을 사용하여 키보드 사용자에게만 노출되는 브랜드 고유의 포커스 스타일을 설계하라. 요소의 곡률을 반영한 이중 보더나 미세한 글로우 효과는 접근성을 미적 완성도로 승화시키는 장치가 된다.",
+      "category": "web",
+      "tags": [
+        "FocusVisible",
+        "Accessibility",
+        "UI"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-072",
+      "title": "인지적 흐름을 만드는 스테거링 (Sequential Appearance)",
+      "body": "리스트나 카드 요소를 한꺼번에 노출하지 말고 0.05초 단위의 미세한 시차(Stagger)를 두어 순차적으로 등장시켜라. 이는 시선의 흐름을 자연스럽게 유도하여 사용자가 정보의 계층 구조와 양을 직관적으로 파악하게 돕는 인지적 가이드 역할을 한다.",
+      "category": "web",
+      "tags": [
+        "Micro-interaction",
+        "CognitiveLoad",
+        "Stagger"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-073",
+      "title": "맥락을 설명하는 인터랙티브 레이블 (Contextual ARIA)",
+      "body": "단순한 닫기 버튼 대신 팝업 창 닫기 혹은 장바구니에서 삭제와 같이 목적이 명확한 aria-label을 제공하라. 인터랙션의 결과가 무엇인지 스크린 리더 사용자에게 실시간으로 중계함으로써, 보이지 않는 곳에서도 사용자 여정이 끊기지 않도록 설계해야 한다.",
+      "category": "web",
+      "tags": [
+        "Aria-label",
+        "ScreenReader",
+        "Interactivity"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-074",
+      "title": "가상 광원과 다중 레이어 그림자",
+      "body": "단일 그림자 속성 대신, 농도와 퍼짐 정도가 다른 3~5개의 그림자를 겹쳐서 설계하라. 실제 물리 세계의 빛은 여러 번 회절하며 부드러운 그림자를 만드는데, 이 부드러움의 밀도가 디지털 오브젝트를 실제 손에 잡힐 듯한 고급스러운 물체로 변모시킨다.",
+      "category": "design",
+      "tags": [
+        "SoftShadows",
+        "Depth",
+        "Lighting"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-075",
+      "title": "곡률의 연속성 (G2 Continuity / Squircle)",
+      "body": "표준적인 CSS border-radius가 만드는 급격한 직선-곡선 전환 대신, 슈퍼엘립스(Squircle)와 같은 부드러운 곡률을 적용하라. 애플 제품의 모서리처럼 곡선이 시작되는 지점이 느껴지지 않을 만큼 매끄러운 연속성은 사용자의 눈에 본능적인 편안함과 프리미엄한 인상을 준다.",
+      "category": "design",
+      "tags": [
+        "Squircle",
+        "SmoothCorner",
+        "IndustrialDesign"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-076",
+      "title": "1픽셀의 미학, 헤어라인 디테일",
+      "body": "면과 면이 만나는 지점에 배경보다 아주 미세하게 밝거나 어두운 1px(또는 0.5px)의 헤어라인 보더를 삽입하라. 이 미세한 선은 금속 시계의 모서리가 빛을 받아 반짝이는 듯한 효과를 주며, 디자인이 극도로 정밀하게 관리되고 있다는 장인 정신의 인상을 심어준다.",
+      "category": "design",
+      "tags": [
+        "Precision",
+        "Micro-detail",
+        "Elegance"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-077",
+      "title": "심도를 통한 공간의 위계 (Atmospheric Blur)",
+      "body": "단순히 요소를 위에 쌓지 말고, 배경 요소에 backdrop-filter: blur()를 적용하여 카메라의 보케(Bokeh) 효과를 흉내 내라. 사용자는 초점이 맞은 레이어와 공간적 배경을 본능적으로 구분하게 되며, 이는 화면 안에 깊이 있는 입체적 공간이 존재한다는 감각을 일깨운다.",
+      "category": "design",
+      "tags": [
+        "BlurFilter",
+        "SpatialDesign",
+        "DepthOfField"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-078",
+      "title": "디지털의 살결을 만드는 미세 노이즈 (Film Grain)",
+      "body": "완벽하게 매끄러운 단색 배경 위에 투명도 2~3%의 미세한 노이즈(Grain) 텍스처를 오버레이하라. 픽셀의 결이 느껴지는 미세한 질감은 디지털 특유의 차갑고 가공된 느낌을 지우고, 마치 고급 종이나 필름 인화물 같은 아날로그적인 따뜻함과 예술적 깊이를 부여한다.",
+      "category": "design",
+      "tags": [
+        "Texture",
+        "AnalogAesthetic",
+        "VisualDepth"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-079",
+      "title": "의도 중심의 컨텍스트 동기화 (Intent-First Alignment)",
+      "body": "구현 요청 전, 해당 작업의 기술적 의도와 디자인 철학을 먼저 설명하라. AI가 무엇을(What) 만드는지보다 왜(Why) 그렇게 해야 하는지를 이해할 때, 예외 상황에서도 일관된 품질의 결과물을 내놓으며 인간의 의도를 벗어나지 않는 수준 높은 제안을 한다.",
+      "category": "workflow",
+      "tags": [
+        "Alignment",
+        "Intent",
+        "Communication"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-080",
+      "title": "점진적 구조 설계 (Structural Scaffolding)",
+      "body": "한 번에 완성된 코드를 요구하지 말고, 아키텍처 설계 → 인터페이스 정의 → 세부 구현 순으로 단계를 쪼개어 승인하라. 각 단계에서 인간이 구조적 방향을 확정해주면, AI는 잘못된 방향으로 질주하지 않고 견고한 논리적 토대 위에서 살을 붙여 완결성을 높인다.",
+      "category": "workflow",
+      "tags": [
+        "Iterative",
+        "Architecture",
+        "Scaffolding"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-081",
+      "title": "샌드위치 워크플로우 (Human-AI Sandwich)",
+      "body": "인간이 핵심 아이디어를 제시(Bottom)하고, AI가 이를 구체화/확장(Middle)한 뒤, 다시 인간이 최종 디테일과 엣지를 다듬는(Top) 3단계 방식을 습관화하라. AI의 폭발적인 생산성과 인간의 날카로운 직관이 결합되어 평균 이상의 완성도를 보장하는 가장 확실한 방법이다.",
+      "category": "workflow",
+      "tags": [
+        "Collaboration",
+        "Efficiency",
+        "Quality"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-082",
+      "title": "AI를 도전자로 활용한 레드팀 검증 (Red-Teaming)",
+      "body": "작업 중간에 AI에게 지금 내 논리에서 가장 취약한 점 3가지는 무엇인가? 혹은 이 디자인이 실패할 이유는 무엇인가?를 질문하라. 협력자가 아닌 도전자로서 AI를 활용할 때, 인간은 자신의 인지 편향을 발견하고 결과물의 품질을 한 단계 더 끌어올릴 수 있다.",
+      "category": "workflow",
+      "tags": [
+        "CriticalThinking",
+        "RedTeaming",
+        "Insight"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-083",
+      "title": "독보적 관점의 시대 (E-E-A-T & Perspectives)",
+      "body": "AI가 생성한 일반 정보는 상품화되었다. 이제 검색 엔진은 뻔한 설명보다 저자만이 가진 독특한 경험, 실패 사례, 주관적 통찰이 담긴 관점을 최상단에 배치한다. 무엇인가가 아닌 나는 어떻게 했는가를 말하는 콘텐츠만이 AI 검색 엔진의 선택을 받는다.",
+      "category": "biz",
+      "tags": [
+        "SEO",
+        "E-E-A-T",
+        "ContentStrategy"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-084",
+      "title": "키워드에서 엔티티로 (Semantic SEO)",
+      "body": "개별 키워드 순위에 집착하지 말고 주제 간의 관계를 정의하는 엔티티(Entity) 중심으로 콘텐츠를 설계하라. AI 모델은 웹을 지식 그래프로 인식한다. 특정 주제에 대해 구조적이고 깊이 있는 답변(Topic Cluster)을 제공하여 당신의 사이트를 해당 분야의 권위자로 인식하게 만들어야 한다.",
+      "category": "biz",
+      "tags": [
+        "KnowledgeGraph",
+        "TopicCluster",
+        "SemanticSearch"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-085",
+      "title": "클릭 너머의 브랜딩 (Zero-Click Strategy)",
+      "body": "제로 클릭 시대에는 사용자가 사이트에 유입되지 않아도 누가 이 정보를 줬는지 기억하게 해야 한다. 검색 스니펫에 노출되는 강렬한 브랜드 메시지와 로고는 SERP(검색 결과 페이지) 자체를 브랜딩 보드로 활용하여 잠재적 신뢰를 쌓는 기회가 된다.",
+      "category": "biz",
+      "tags": [
+        "BrandAwareness",
+        "SERP",
+        "Zero-Click"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-086",
+      "title": "규모의 자동화와 개인화 (Programmatic SEO)",
+      "body": "반복적인 데이터 기반 페이지는 AI를 활용해 대량 생성(Programmatic)하되, 사용자 의도(Intent)에 맞춘 마이크로 세그먼트화를 진행하라. 수만 개의 니즈별 페이지를 자동화하면서도 각 페이지가 사용자의 특정 문제에 대한 정밀한 해답을 줄 때, 롱테일 키워드를 통한 폭발적인 유기적 성장이 가능하다.",
+      "category": "biz",
+      "tags": [
+        "GrowthHacking",
+        "Automation",
+        "Personalization"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-087",
+      "title": "멀티모달 최적화 (Multi-modal Search Discovery)",
+      "body": "AI 비서는 이제 텍스트뿐만 아니라 이미지, 영상, 오디오를 동시에 이해하고 검색 결과에 반영한다. 시각 자료에 상세한 구조화 데이터(Schema.org)를 입히고, 영상의 핵심 구간을 텍스트화하여 제공하라. 어떤 형태의 질문을 받아도 당신의 자산을 가장 먼저 추천할 수 있는 공감각적 최적화가 필수적이다.",
+      "category": "biz",
+      "tags": [
+        "Schema",
+        "Multi-modal",
+        "SearchTrends"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-088",
+      "title": "실패를 기회로 바꾸는 회복 탄력적 오류 설계",
+      "body": "에러 메시지를 단순히 잘못을 지적하는 경고문이 아니라, 해결책을 제시하는 가이드로 정의하라. 유머러스한 어조나 명확한 액션 플랜(비밀번호 찾기 링크 포함)을 제공할 때, 사용자는 좌절 대신 브랜드에 대한 의외의 호감과 신뢰를 얻는다.",
+      "category": "design",
+      "tags": [
+        "ErrorUX",
+        "Copywriting",
+        "Resilience"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-089",
+      "title": "인지적 흐름을 깨지 않는 실시간 검증 (Dynamic Validation)",
+      "body": "데이터 입력 중(Focus-on)에 에러를 띄워 흐름을 끊지 말고, 입력을 마치고 다음 필드로 넘어갈 때(Blur) 검증하라. 반대로 성공 시에는 즉각적인 시각적 피드백(체크 표시 등)을 주어 성취감을 부여함으로써 폼 작성을 하나의 능동적인 게임처럼 느끼게 유도해야 한다.",
+      "category": "design",
+      "tags": [
+        "FormUX",
+        "FeedbackLoop",
+        "CognitiveFlow"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-090",
+      "title": "빈 상태를 통한 시작의 두려움 해소 (Active Empty States)",
+      "body": "내역이 없습니다라는 무미건조한 문구 대신, 첫 데이터를 생성하도록 유도하는 템플릿이나 예시 가이드를 배치하라. 비어있는 공간은 정보의 부재를 알리는 곳이 아니라, 사용자가 무엇을 할 수 있는지 알려주는 기회의 공간으로 인지되어야 한다.",
+      "category": "design",
+      "tags": [
+        "EmptyState",
+        "Onboarding",
+        "Engagement"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-091",
+      "title": "인지적 과부하를 막는 정보의 덩어리화 (Progressive Disclosure)",
+      "body": "20개의 입력 필드를 한 화면에 보여주지 말고, 성격이 같은 3~5개씩 묶어 단계별로 노출하라. 한 단계씩 완료하며 얻는 작은 승리의 경험은 복잡한 작업에 따르는 심리적 저항을 낮추고 전체 완수율을 비약적으로 높인다.",
+      "category": "design",
+      "tags": [
+        "Miller'sLaw",
+        "InformationArchitecture",
+        "CompletionRate"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-092",
+      "title": "불안을 제거하는 미래 예측적 버튼 (Descriptive Action)",
+      "body": "확인이나 제출 같은 모호한 단어 대신 결제하고 강의 시작하기처럼 클릭 후 벌어질 일을 구체적으로 서술하라. 버튼을 누르기 직전 사용자가 느끼는 미세한 망설임(Anxiety)을 제거하는 가장 강력한 방법은 다음 단계에 대한 명확한 약속이다.",
+      "category": "design",
+      "tags": [
+        "Affordance",
+        "Microcopy",
+        "UXPsychology"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-093",
+      "title": "이커머스: 구매 심리를 활용한 전환 트리거 주입",
+      "body": "제품 설명 생성 시 단순 스펙이 아닌 손실 회피나 사회적 증거와 같은 심리적 트리거를 컨텍스트로 명시하라. 이 제품은 가볍습니다 대신 이미 1만 명의 캠퍼가 무게의 한계를 극복했습니다와 같이 타겟 페르소나의 결핍과 행동 데이터를 연결할 때 AI는 설득의 언어를 생성한다.",
+      "category": "ai",
+      "tags": [
+        "EcommerceAI",
+        "ConversionCopy",
+        "Persuasion"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-094",
+      "title": "포트폴리오: 결과물이 아닌 사고의 궤적 우선순위화",
+      "body": "AI에게 프로젝트를 설명하게 할 때 최종 결과물 묘사보다 문제 정의 → 제약 조건 → 해결 논리 → 결과의 서사 구조를 강제하라. AI가 의사결정 이유(The Why)를 중심으로 내용을 구성하게 하면, 포트폴리오는 전문가로서의 문제 해결 능력을 입증하는 강력한 증거가 된다.",
+      "category": "ai",
+      "tags": [
+        "PortfolioStrategy",
+        "Storytelling",
+        "ProfessionalIdentity"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-095",
+      "title": "랜딩 페이지: 주의력 자산 관리를 위한 3초 룰",
+      "body": "랜딩 페이지의 컨텍스트 설계 시 모든 정보를 동등하게 취급하지 말고 3초 안에 전달해야 할 단 하나의 핵심 가치(USP)를 최상단에 고정하라. AI가 부가적인 설명을 생성하느라 핵심 메시지를 희석하지 않도록, 정보의 위계와 사용자 시선 이동 경로를 논리적으로 규정하는 구조적 제약을 부여해야 한다.",
+      "category": "ai",
+      "tags": [
+        "LandingPage",
+        "AttentionEconomy",
+        "USP"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-096",
+      "title": "도메인별 언어적 DNA 스타일 전이 (Tone-of-Voice DNA)",
+      "body": "도메인에 따라 AI가 참조할 벤치마크 텍스트나 단어 집합(Lexicon)을 다르게 제공하라. 금융 서비스는 신뢰와 정밀함을 강조하는 격식 있는 어조를, 패션 브랜드는 감각과 영감을 자극하는 형용사 중심의 어조를 컨텍스트에 심어줌으로써, 도메인의 공기를 그대로 머금은 듯한 현장감 있는 결과물을 얻을 수 있다.",
+      "category": "ai",
+      "tags": [
+        "ToneOfVoice",
+        "BrandDNA",
+        "ContentQuality"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-097",
+      "title": "전환을 부르는 전략적 마찰 (Strategic Friction)",
+      "body": "모든 사용자 경험에서 마찰을 제거하는 것이 정답은 아니다. 고관여 제품이나 프리미엄 서비스에서는 의도적인 질문이나 복잡한 단계를 배치하라. 사용자는 자신이 들인 노력만큼 결과물의 가치를 높게 평가하며(이케아 효과), 이 과정을 통과한 사용자만이 진정한 충성 고객이 된다.",
+      "category": "biz",
+      "tags": [
+        "Friction",
+        "ValuePerception",
+        "LuxuryUX"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-098",
+      "title": "의도 기반의 자율 생성 UI (Just-in-Time UI)",
+      "body": "고정된 컴포넌트 라이브러리를 버리고, 사용자의 현재 의도(Intent)에 따라 실시간으로 UI를 생성(Generative)하라. 버튼의 위치나 메뉴의 구조가 사용자의 다음 행동을 예측하여 그 순간에만 존재했다가 사라지는 유동적 인터페이스는 앱의 개념을 도구에서 지능형 비서로 바꾼다.",
+      "category": "web",
+      "tags": [
+        "GenerativeUI",
+        "AdaptiveDesign",
+        "FutureWeb"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-099",
+      "title": "창의적 오역의 미학 (Creative Misinterpretation)",
+      "body": "AI에게 완벽한 프롬프트를 주려 애쓰지 말고, 의도적으로 모호하거나 상충하는 개념을 던져 AI의 오역을 유도하라. 논리적 결함에서 발생하는 뜻밖의 시각적 조합이나 비유는 인간의 상상력 범위를 넘어서는 진정한 독창성(Originality)의 씨앗이 된다.",
+      "category": "ai",
+      "tags": [
+        "AbstractPrompting",
+        "AI-Artistry",
+        "Serendipity"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-100",
+      "title": "실패를 먹고 자라는 안티프래질 시스템",
+      "body": "에러를 숨기거나 수정하는 데 급급하지 말고, 발생하는 모든 버그와 실패 사례를 즉시 학습 데이터로 전환하는 자동화 루프를 구축하라. 시스템이 오류를 겪을수록 더 견고해지고 지능화되는 구조를 만들면, 실패는 위기가 아닌 시스템 진화의 가장 강력한 연료가 된다.",
+      "category": "workflow",
+      "tags": [
+        "Antifragile",
+        "Self-Evolving",
+        "AI-Ops"
+      ],
+      "date": "2026-04-25",
+      "source": "gemini-discussion",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": ""
+    },
+    {
+      "id": "lb-101",
+      "title": "비정형 마스크 타이포그래피 (Amorphous Masking)",
+      "body": "배경 영상이나 텍스처가 텍스트 내부에서만 흐르는 방식에서 더 나아가, 마우스 움직임에 따라 텍스트 마스크가 유동적으로 변형된다. 텍스트 자체가 창문(Window) 역할을 해 깊이감을 부여한다. background-clip: text + Canvas 메타볼 + Three.js ShaderMaterial 조합.",
+      "category": "web",
+      "tags": [
+        "typography",
+        "masking",
+        "threejs",
+        "shader",
+        "awwwards"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://www.awwwards.com/sites/of-the-year"
+    },
+    {
+      "id": "lb-102",
+      "title": "초정밀 스크롤 기반 내러티브 (Scrollytelling)",
+      "body": "사용자의 스크롤 속도와 방향에 맞춰 3D 모델 각도가 변하거나 레이아웃이 완전히 재배치된다. 단순 애니메이션을 넘어 내러티브의 완급을 조절하는 것이 핵심. Lenis + GSAP ScrollTrigger + 스크롤 속도 감지로 구현.",
+      "category": "web",
+      "tags": [
+        "scroll",
+        "narrative",
+        "gsap",
+        "lenis",
+        "awwwards"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://www.awwwards.com"
+    },
+    {
+      "id": "lb-103",
+      "title": "Bento Grid 2.0 (Dynamic Grid Systems)",
+      "body": "애플 스타일의 고정된 벤토 그리드에서 진화하여, 마우스 오버 시 각 칸의 크기가 유기적으로 변하거나 그리드 자체가 비틀리는 형태. CSS Grid + aspect-ratio + GSAP Flip 플러그인으로 레이아웃 전환을 60fps로 처리.",
+      "category": "web",
+      "tags": [
+        "grid",
+        "layout",
+        "gsap",
+        "bento",
+        "interaction"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://linear.app"
+    },
+    {
+      "id": "lb-104",
+      "title": "마이크로 노이즈와 아날로그 텍스처 (Grainy Analog)",
+      "body": "디지털의 매끈함 대신 종이 질감, 필름 노이즈, 하프톤 패턴을 섞어 시각적 피로감을 줄이고 따뜻한 감성을 전달한다. mix-blend-mode Overlay + SVG feTurbulence + CSS grain 레이어를 ::after 가상 요소로 오버레이.",
+      "category": "design",
+      "tags": [
+        "texture",
+        "noise",
+        "analog",
+        "blend-mode",
+        "awwwards"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://studiofreight.com"
+    },
+    {
+      "id": "lb-105",
+      "title": "WebGL 실시간 물리 시뮬레이션 (Interactive Physics)",
+      "body": "웹사이트 내 요소들이 중력, 탄성, 마찰력에 반응해 실제 물체처럼 움직인다. 사용자가 요소를 던지거나 찌그러뜨리는 상호작용이 핵심 차별점. Three.js + Rapier.js (WebAssembly 물리 엔진) 조합이 최고 성능.",
+      "category": "web",
+      "tags": [
+        "threejs",
+        "physics",
+        "webgl",
+        "rapier",
+        "fwa"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://thefwa.com"
+    },
+    {
+      "id": "lb-106",
+      "title": "비선형 내비게이션 (Zoom-In Navigation)",
+      "body": "상하 스크롤이 아닌 줌인(Zoom-in) 방식이나 가상 공간을 자유롭게 유영하는 탐색 구조. Three.js PerspectiveCamera의 fov 값과 position.z를 GSAP으로 제어하면 카메라가 공간 속을 날아가는 효과를 구현할 수 있다.",
+      "category": "web",
+      "tags": [
+        "navigation",
+        "threejs",
+        "camera",
+        "zoom",
+        "fwa"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://thefwa.com"
+    },
+    {
+      "id": "lb-107",
+      "title": "브루탈리스트 UI (Lo-Fi Brutalism)",
+      "body": "세련된 그래픽 대신 투박한 시스템 폰트, 기본 단추, 그리드 라인을 노출시켜 날것의 느낌과 힙한 감성을 강조한다. 과도한 장식 없이 CSS border/outline 속성과 모노스페이스 폰트만으로 강렬한 개성을 만들 수 있다.",
+      "category": "design",
+      "tags": [
+        "brutalism",
+        "minimal",
+        "typography",
+        "border",
+        "fwa"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://thefwa.com"
+    },
+    {
+      "id": "lb-108",
+      "title": "세리프-산세리프 극단적 대조",
+      "body": "매우 큰 장식적 세리프 폰트와 아주 작은 산세리프 텍스트를 한 화면에 배치해 시각적 위계를 극대화한다. clamp() 함수로 유동적 타이포그래피를 설정하면 반응형에서도 비율이 깨지지 않는다.",
+      "category": "design",
+      "tags": [
+        "typography",
+        "contrast",
+        "serif",
+        "hierarchy",
+        "siteinspire"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://www.siteinspire.com"
+    },
+    {
+      "id": "lb-109",
+      "title": "미묘한 이미지 호버 (Soft Hover Displacement)",
+      "body": "이미지에 마우스 오버 시 갑작스러운 변화가 아닌 안개처럼 나타나거나 물결처럼 일렁이는 부드러운 전환. SVG feDisplacementMap + feTurbulence scale을 CSS transition으로 0에서 30까지 올리면 자연스러운 왜곡 호버를 구현한다.",
+      "category": "web",
+      "tags": [
+        "hover",
+        "svg",
+        "filter",
+        "displacement",
+        "siteinspire"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://www.siteinspire.com"
+    },
+    {
+      "id": "lb-110",
+      "title": "세로형 텍스트와 그리드 교차",
+      "body": "동양적 감성이나 실험적 레이아웃을 위해 텍스트를 세로로 배치하거나 그리드 선을 의도적으로 어긋나게 한다. writing-mode: vertical-rl과 CSS Grid span을 조합하면 전통과 실험성이 공존하는 독특한 레이아웃이 탄생한다.",
+      "category": "design",
+      "tags": [
+        "typography",
+        "writing-mode",
+        "grid",
+        "vertical",
+        "siteinspire"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://www.siteinspire.com"
+    },
+    {
+      "id": "lb-111",
+      "title": "CSS 스크롤 드리븐 애니메이션 (No JS Required)",
+      "body": "JS 없이 CSS만으로 스크롤 위치에 따른 애니메이션을 제어해 성능을 극대화한다. animation-timeline: scroll() + animation-range: entry/exit로 요소가 뷰포트에 진입/퇴장할 때 애니메이션을 트리거할 수 있다.",
+      "category": "web",
+      "tags": [
+        "css",
+        "scroll",
+        "animation",
+        "performance",
+        "no-js"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://css-tricks.com"
+    },
+    {
+      "id": "lb-112",
+      "title": "컬러 폰트 + 가변 폰트 애니메이션",
+      "body": "하나의 폰트 파일로 굵기, 기울기뿐 아니라 애니메이션까지 제어한다. font-variation-settings의 wght 축을 GSAP으로 100에서 900까지 변화시키면 타이포그래피 자체가 생명을 가진다. Recursive, Fraunces 폰트 추천.",
+      "category": "web",
+      "tags": [
+        "variable-font",
+        "typography",
+        "animation",
+        "gsap"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://www.smashingmagazine.com"
+    },
+    {
+      "id": "lb-113",
+      "title": "다크 모드 2.0 - 지능형 대비 조절",
+      "body": "단순한 색상 반전이 아닌 사용자 환경에 맞춰 대비(Contrast)를 조절하는 지능형 테마. prefers-color-scheme + prefers-contrast 조합으로 저시력 사용자와 일반 사용자 모두를 위한 최적 대비를 자동 제공한다.",
+      "category": "design",
+      "tags": [
+        "dark-mode",
+        "accessibility",
+        "css",
+        "contrast",
+        "a11y"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://www.smashingmagazine.com"
+    },
+    {
+      "id": "lb-114",
+      "title": "글래스모피즘 2.0 (Frosted Glass Evolution)",
+      "body": "배경 흐림(Blur)에 정교한 그라데이션 테두리와 내부 광채(Inner Glow)를 더해 더욱 입체적인 유리 느낌을 구현한다. backdrop-filter: blur(20px) + border: 1px solid rgba(255,255,255,0.2) + box-shadow: inset 조합이 핵심.",
+      "category": "design",
+      "tags": [
+        "glassmorphism",
+        "backdrop-filter",
+        "blur",
+        "ui",
+        "dribbble"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://dribbble.com"
+    },
+    {
+      "id": "lb-115",
+      "title": "3D 아이콘과 마이크로 인터랙션",
+      "body": "평면적인 아이콘 대신 정교하게 렌더링된 3D 아이콘을 사용하며 클릭 시 통통 튀거나 회전하는 반응을 준다. Spline으로 제작한 3D 장면을 iframe으로 임베드하거나 Lottie JSON 애니메이션으로 경량화해 사용.",
+      "category": "web",
+      "tags": [
+        "3d",
+        "icon",
+        "lottie",
+        "spline",
+        "micro-interaction",
+        "dribbble"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://dribbble.com"
+    },
+    {
+      "id": "lb-116",
+      "title": "메쉬 그라데이션 배경 (Mesh Gradient Animation)",
+      "body": "정적인 그라데이션이 아닌 여러 색상이 살아있는 생물처럼 섞이고 움직이는 메쉬 그라데이션. CSS @keyframes로 여러 radial-gradient를 독립적으로 이동시키면 JS 없이도 유동적인 생명감을 표현할 수 있다.",
+      "category": "design",
+      "tags": [
+        "gradient",
+        "mesh",
+        "animation",
+        "css",
+        "dribbble"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://dribbble.com"
+    },
+    {
+      "id": "lb-117",
+      "title": "플로팅 아일랜드 내비게이션",
+      "body": "화면에 고정된 바 대신 콘텐츠 위에 떠 있는 섬 형태의 내비게이션으로 가볍고 현대적인 인상을 준다. position: fixed + border-radius: 9999px + backdrop-filter + 스크롤에 따른 width 축소 애니메이션으로 세련된 네비게이션을 구현한다.",
+      "category": "web",
+      "tags": [
+        "navigation",
+        "floating",
+        "island",
+        "ui",
+        "dribbble"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://dribbble.com"
+    },
+    {
+      "id": "lb-118",
+      "title": "뷰포트 기반 텍스트 스케일링 (Fluid Typography)",
+      "body": "px/rem 고정값 대신 vw/vh 기반 fluid typography로 모든 화면 크기에서 완벽한 비율을 유지한다. clamp(min, preferred, max) 패턴으로 최소/최대 크기를 제한하면서 중간 범위에서 유동적으로 확대/축소.",
+      "category": "design",
+      "tags": [
+        "typography",
+        "fluid",
+        "clamp",
+        "responsive",
+        "css-tricks"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://css-tricks.com"
+    },
+    {
+      "id": "lb-119",
+      "title": "스크롤 기반 색상 팔레트 전환",
+      "body": "페이지를 내려갈수록 전체 색상 팔레트가 부드럽게 전환되어 각 섹션만의 감성을 강화한다. CSS 변수(Custom Properties)를 GSAP ScrollTrigger로 실시간 업데이트하면 모든 컴포넌트가 동기화되어 변환된다.",
+      "category": "web",
+      "tags": [
+        "color",
+        "scroll",
+        "css-variables",
+        "gsap",
+        "awwwards"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://www.awwwards.com"
+    },
+    {
+      "id": "lb-120",
+      "title": "스플릿 뷰포트 레이아웃 (Split Screen Storytelling)",
+      "body": "화면을 두 영역으로 나누어 각각 독립적으로 스크롤되거나 한 쪽이 고정된 상태에서 다른 쪽이 움직이는 구조. position: sticky를 한 패널에 적용하고 나머지를 스크롤하면 복잡한 JS 없이도 영화적 연출이 가능하다.",
+      "category": "web",
+      "tags": [
+        "layout",
+        "split",
+        "sticky",
+        "scroll",
+        "storytelling"
+      ],
+      "date": "2026-04-25",
+      "source": "external-link",
+      "added_by": "yuna",
+      "status": "reviewed",
+      "url": "https://www.siteinspire.com"
+    }
   ]
 }
